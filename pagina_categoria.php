@@ -4,34 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IAPA</title>
-  <style>
-    .tooltip {
-      position: relative;
-      display: inline-block;
-    }
-
-    .tooltip .tooltiptext {
-      visibility: hidden;
-      width: 200px;
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      border-radius: 6px;
-      padding: 5px;
-      position: absolute;
-      z-index: 1;
-      bottom: 125%;
-      left: 50%;
-      margin-left: -100px;
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-
-    .tooltip:hover .tooltiptext {
-      visibility: visible;
-      opacity: 1;
-    }
-  </style>
 </head>
 <body>
 <?php
@@ -56,6 +28,8 @@ if (isset($_SESSION['id'])) {
         $instituicao = $row["instituicao"];
         $curso = $row["curso"];
         $nomesocial = $row["nomesocial"];
+        $funcao = $row["funcao"];
+        $programaposgraduacao = $row["programaposgraduacao"];
 ?>
 
 <img src="img/cropped-logo.png" alt="Logotipo do Laima" lang="en">
@@ -131,11 +105,25 @@ if ($nomesocial != null) {
         <option value="RelatoExperiencia">Relato de Experiência</option>
         <option value="Relatorio">Relatório</option>
         <option value="Traducao">Tradução</option>
+        <?php
+        // Consulta na tabela categoria para obter os campos
+        $sql = "SELECT * FROM categoria WHERE instituicao = '$instituicao' AND curso = '$curso' AND posgraduacao = '$programaposgraduacao'";
+
+        $result = $mysqli->query($sql);
+
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                echo '<option value="' . $row['categoria'] . '">' . $row['categoria'] . '</option>';
+            }
+        }
+
+        ?>
     </select>
 
     <br>
     <input type="submit" Value="Inicia a Construção do IAPA Escolhido" accesskey="2" class="tooltip" aria-label="continuar" role="button">
 </form>
+<?php  if($funcao == 0 || $funcao == 2 || $funcao == 3){ ?><a href="cria_categoria.php">Não tem categoria pretendida? Crie aqui</a> <br><?php } ?>
 <button onclick="window.location.href='home.php'" accesskey="1" title="Volta para a página inicial do IAPA">
   Voltar
 </button>
@@ -147,7 +135,6 @@ if ($nomesocial != null) {
 </script>
 
 <?php
-    // ... exiba os outros campos do usuário que você deseja mostrar
 } else {
     echo "Nenhum usuário encontrado.";
 }
