@@ -30,7 +30,7 @@ if (isset($_SESSION['id'])) {
         $stmt->execute();
         
 
-        echo "Categoria: " .$nomeCategoria. "  cadastrado com sucesso!";
+        echo "Categoria: " .$nomeCategoria. "  cadastrada com sucesso!";
         echo"<br> <a href='pagina_categoria.php'>Voltar</a>";
     } else {
         echo "Nenhum usuário encontrado.";
