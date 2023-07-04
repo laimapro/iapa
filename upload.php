@@ -287,11 +287,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <br>
         <br><br>
 
-        <a href="home.php" title="Voltar para página inicial do IAPA" accesskey="1" class="tooltip">
-            Voltar para a página inicial<span class="tooltiptext">Pressione 1 para voltar para a página inicial</span>
-        </a>
-        <a href="avaliacao.php" title="Avançar para avaliação" accesskey="2" class="tooltip">
-            Avançar para Avaliação<span class="tooltiptext">Pressione 2 para avançar para a avaliação</span>
+        <a href="home.php" title="Voltar para página inicial do IAPA" accesskey="1" title ="Pressione 1 para voltar para a página inicial">
+            Voltar para a página inicial
+        </a> <br>
+        <a href="avaliacao.php" title="Avançar para avaliação" accesskey="2" title="Pressione 2 para avançar para a avaliação">
+            Avançar para Avaliação
         </a>
 
 
