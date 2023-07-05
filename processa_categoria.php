@@ -20,7 +20,7 @@ if (isset($_SESSION['id'])) {
         $instituicao = $row["instituicao"];
         $curso = $row["curso"];
         $nomesocial = $row["nomesocial"];
-        $posgraduacao = isset($row["posgraduacao"]) ? $row["posgraduacao"] : '';
+        $posgraduacao = $row["programaposgraduacao"];
 
         $nomeCategoria = isset($_POST['nomeCategoria']) ? $_POST['nomeCategoria'] : '';
         $nomeCategoria = filter_var($nomeCategoria, FILTER_SANITIZE_STRING);
