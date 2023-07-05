@@ -121,9 +121,10 @@ if ($nomesocial != null) {
     </select>
 
     <br>
+    <?php  if($funcao == 0 || $funcao == 2 || $funcao == 3){ ?><button onclick="window.location.href='cria_categoria.php'" accesskey="3">Não encontrou a categoria pretendida, Crie-a aqui</a> <br><?php } ?>
     <input type="submit" Value="Inicia a Construção do IAPA Escolhido" accesskey="2" class="tooltip" aria-label="continuar" role="button">
 </form>
-<?php  if($funcao == 0 || $funcao == 2 || $funcao == 3){ ?><a href="cria_categoria.php">Não encontrou a categoria pretendida, Crie-a aqui</a> <br><?php } ?>
+
 <button onclick="window.location.href='home.php'" accesskey="1" title="Volta para a página inicial do IAPA">
   Voltar
 </button>
