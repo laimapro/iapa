@@ -35,6 +35,9 @@ if (isset($_SESSION['id'])) {
                 // Obtenha os itens selecionados
                 $itensSelecionados = $_POST['item'];
 
+                // Remova os itens vazios do array
+                $itensSelecionados = array_filter($itensSelecionados);
+
                 // Verifique se $itensSelecionados é um array
                 if (!is_array($itensSelecionados)) {
                     $itensSelecionados = array($itensSelecionados);
@@ -45,8 +48,19 @@ if (isset($_SESSION['id'])) {
 
                 // Percorra os itens selecionados
                 foreach ($itensSelecionados as $item) {
-                    // Adicione cada item ao array de dados selecionados
-                    $dadosSelecionados[] = $item;
+                    // Verifique se o item contém o caractere ;
+                    if (strpos($item, ';') !== false) {
+                        // Divida o item em um array usando o caractere ;
+                        $subItens = explode(';', $item);
+
+                        // Adicione cada subitem ao array de dados selecionados
+                        foreach ($subItens as $subItem) {
+                            $dadosSelecionados[] = $subItem;
+                        }
+                    } else {
+                        // Adicione o item ao array de dados selecionados
+                        $dadosSelecionados[] = $item;
+                    }
                 }
 
                 // Converta o array para formato JSON

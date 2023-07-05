@@ -85,39 +85,46 @@ if (isset($_SESSION['id'])) {
         <input type="checkbox" name="item[]" value="Aspectos Gerais: Completude e organização das seções da Produção Acadêmica"> Completude e organização das seções da Produção Acadêmica<br>
         <input type="checkbox" name="item[]" value="Aspectos Gerais: Uso de vocabulário acadêmico/científico"> Uso de vocabulário acadêmico/científico<br>
         <input type="checkbox" name="item[]" value="Aspectos Gerais: Originalidade e relevância da Produção Acadêmica"> Originalidade e relevância da Produção Acadêmica<br>
-        
+        <p> Deseja adicionar mais algum item?</p>
+      <textarea name="item[]" id=""></textarea>
     </fieldset>
     <fieldset>
         <legend><h4>Resumo</h4></legend>
             <input type="checkbox" name="item[]" value="Resumo: Adequação científica do Resumo"> Adequação científica do Resumo<br>
             <input type="checkbox" name="item[]" value="Resumo: Qualidade do resumo"> Qualidade do resumo<br>
             <input type="checkbox" name="item[]" value="Resumo: Qualidade do resumo em língua estrangeira"> Qualidade do resumo em língua estrangeira<br>
-            
+            <p> Deseja adicionar mais algum item?</p>
+            <textarea name="item[]" id=""></textarea>
     </fieldset>
     <fieldset>
         <legend><h4>Palavra-chave</h4></legend>
             <input type="checkbox" name="item[]" value="Palavra-chave: Adequação das palavras-chaves apresentadas ao tema da Produção Acadêmica"> Adequação das palavras-chaves apresentadas ao tema da Produção Acadêmica<br>
-            
+            <p> Deseja adicionar mais algum item?</p>
+            <textarea name="item[]" id=""></textarea>
         </fieldset>
     <fieldset>
         <legend><h4>Introdução</h4></legend>
         <input type="checkbox" name="item[]" value="Introdução: Completude da Introdução e da contextualização da Produção Acadêmica"> Completude da Introdução e da contextualização da Produção Acadêmica<br>
         <input type="checkbox" name="item[]" value="Introdução: Qualidade da Introdução e da contextualização da Produção Acadêmica"> Qualidade da Introdução e da contextualização da Produção Acadêmica<br>
-        
-    </fieldset>
+        <p> Deseja adicionar mais algum item?</p>
+        <textarea name="item[]" id=""></textarea>
+      </fieldset>
     <fieldset>
         <legend><h4>Objetivo Gerais e especificos</h4></legend>
         <input type="checkbox" name="item[]" value="Objetivo Gerais e especificos: Adequação dos objetivos"> Adequação dos objetivos <br>
         <input type="checkbox" name="item[]" value="Objetivo Gerais e especificos: Relevancia dos objetivos"> Relevancia dos objetivos <br>
         <input type="checkbox" name="item[]" value="Objetivo Gerais e especificos: Completude dos objetivos especificos"> Completude dos objetivos especificos<br>
         <input type="checkbox" name="item[]" value="Objetivo Gerais e especificos: Qualidade dos objetivos"> Qualidade dos objetivos<br>
+        <p> Deseja adicionar mais algum item?</p>
+    <textarea name="item[]" id=""></textarea>
         
     </fieldset>
     <fieldset>
         <legend><h4>justificativa</h4></legend>
         <input type="checkbox" name="item[]" value="justificativa: Fundamentação da justificativa"> Fundamentação da justificativa <br>
         <input type="checkbox" name="item[]" value="justificativa: Relevancia da justificativa"> Relevancia da justificativa <br>
-        
+        <p> Deseja adicionar mais algum item?</p>
+    <textarea name="item[]" id=""></textarea>
     </fieldset>
     
     <fieldset>
@@ -125,44 +132,49 @@ if (isset($_SESSION['id'])) {
     
             <input type="checkbox" name="item[]" value="Estado da arte: Completude do estado da arte"> Completude do estado da arte<br>
             <input type="checkbox" name="item[]" value="Estado da arte: Qualidade do estado da arte"> Qualidade do estado da arte<br>
-            
+            <p> Deseja adicionar mais algum item?</p>
+    <textarea name="item[]" id=""></textarea>
     </fieldset>
     
     <fieldset>
         <legend><h4>Método</h4></legend>
     
         <input type="checkbox" name="item[]" value="Método: Qualidade da estrutura científico-metodológica utilizada"> Qualidade da estrutura científico-metodológica utilizada<br>
-        <input type="checkbox" name="item[]" value="Método: Adequação e qualidade das figuras, gráficos, tabelas ou esquemas usados"> Adequação e qualidade das figuras, gráficos, tabelas ou esquemas usados<br>
-        
-    </fieldset>
+        <input type="checkbox" name="item[]" value="Método: Adequação e qualidade das figuras, gráficos, tabelas ou esquemas usados"> Adequação e qualidade das figuras, gráficos, tabelas ou esquemas usados
+        <p> Deseja adicionar mais algum item?</p>
+    <textarea name="item[]" id=""></textarea>
+      </fieldset>
     <fieldset>
         <legend><h4>Análise</h4></legend>
             <input type="checkbox" name="item[]" value="Análise: Profundidade da análise"> Profundidade da análise<br>
             <input type="checkbox" name="item[]" value="Análise: Coerência da análise com os dados coletados"> Coerência da análise com os dados coletados<br>
             <input type="checkbox" name="item[]" value="Análise: Coerência da analise com a fundamentação teorica">Coerência da analise com a fundamentação teorica<br>
-            
+            <p> Deseja adicionar mais algum item?</p>
+    <textarea name="item[]" id=""></textarea>
         </fieldset>
     <fieldset>
         <legend><h4>Conclusão</h4></legend>
             <input type="checkbox" name="item[]" value="Conclusão: Profundidade das conclusões"> Profundidade das conclusões<br>
             <input type="checkbox" name="item[]" value="Conclusão: Coerência das conclusões com os dados coletados"> Coerência das conclusões com os dados coletados<br>
             <input type="checkbox" name="item[]" value="Conclusão: Coerência da conclusões com a fundamentação teorica">Coerência da conclusões com a fundamentação teorica<br>
-            
+            <p> Deseja adicionar mais algum item?</p>
+    <textarea name="item[]" id=""></textarea>
         </fieldset>
     
     <fieldset>
         <legend><h4>Referências bibliográficas</h4></legend>
             <input type="checkbox" name="item[]" value="Referências bibliográficas: Relevância e atualidade das referências bibliográficas"> Relevância e atualidade das referências bibliográficas<br>
             <input type="checkbox" name="item[]" value="Referências bibliográficas: Conformidade das referências com as normas da ABNT"> Conformidade das referências com as normas da ABNT<br>
-            
-       </fieldset>
+            <p> Deseja adicionar mais algum item?</p>
+    <textarea name="item[]" id=""></textarea>
+          </fieldset>
     <br>
 <button type="submit" class="tooltip" aria-label="Salvar e Avançar" title="Salva e finaliza a edição deste Instrumento de Avaliação">
   Salvar e Avançar
 </button>
 
   </form>
-
+ 
 <?php
 
 
