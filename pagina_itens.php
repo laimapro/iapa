@@ -166,8 +166,52 @@ if (isset($_SESSION['id'])) {
             <input type="checkbox" name="item[]" value="Referências bibliográficas: Relevância e atualidade das referências bibliográficas"> Relevância e atualidade das referências bibliográficas<br>
             <input type="checkbox" name="item[]" value="Referências bibliográficas: Conformidade das referências com as normas da ABNT"> Conformidade das referências com as normas da ABNT<br>
             <p> Deseja adicionar mais algum item?</p>
-    <textarea name="item[]" id=""></textarea>
-          </fieldset>
+            <textarea name="item[]" id=""></textarea>
+    </fieldset>
+
+    <fieldset>
+        <legend><h4>Assinale quais dos itens abaixo se aplicam ao Projeto Acadêmico em avaliação: </h4></legend>
+            <input type="checkbox" id="titulo" name="item[]" value="Apresenta título da Produção Acadêmica">
+            <label for="titulo">Apresenta título da Produção Acadêmica</label><br>
+
+            <input type="checkbox" id="resumo" name="item[]" value="Apresenta resumo">
+            <label for="resumo">Apresenta resumo</label><br>
+
+            <input type="checkbox" id="palavrasChaves" name="item[]" value="Apresenta palavras-chaves">
+            <label for="palavrasChaves">Apresenta palavras-chaves</label><br>
+
+            <input type="checkbox" id="resumoEstrangeira" name="item[]" value="Apresenta resumo em língua estrangeira">
+            <label for="resumoEstrangeira">Apresenta resumo em língua estrangeira</label><br>
+
+            <input type="checkbox" id="palavrasChavesEstrangeira" name="item[]" value="Apresenta palavras-chaves em língua estrangeira">
+            <label for="palavrasChavesEstrangeira">Apresenta palavras-chaves em língua estrangeira</label><br>
+
+            <input type="checkbox" id="introducao" name="item[]" value="Apresenta Introdução e contextualização">
+            <label for="introducao">Apresenta Introdução e contextualização</label><br>
+
+            <input type="checkbox" id="objetivos" name="item[]" value="Apresenta objetivos e justificativa">
+            <label for="objetivos">Apresenta objetivos e justificativa</label><br>
+
+            <input type="checkbox" id="estadoArte" name="item[]" value="Apresenta estado da arte">
+            <label for="estadoArte">Apresenta estado da arte</label><br>
+
+            <input type="checkbox" id="estrutura" name="item[]" value="Apresenta estrutura científico-metodológica">
+            <label for="estrutura">Apresenta estrutura científico-metodológica</label><br>
+
+            <input type="checkbox" id="analise" name="item[]" value="Apresenta análise, considerações ou conclusões">
+            <label for="analise">Apresenta análise, considerações ou conclusões</label><br>
+
+            <input type="checkbox" id="referencias" name="item[]" value="Apresenta referências bibliográficas">
+            <label for="referencias">Apresenta referências bibliográficas</label><br>
+
+            <p> Deseja adicionar mais algum item?</p>
+            <textarea name="item[]" id=""></textarea>
+        </fieldset>
+
+
+
+
+
     <br>
 <button type="submit" class="tooltip" aria-label="Salvar e Avançar" title="Salva e finaliza a edição deste Instrumento de Avaliação">
   Salvar e Avançar
