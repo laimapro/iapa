@@ -150,7 +150,8 @@ $stmt->close();
             <p id="itens"></p>
         <fieldset>
             <legend>Estamos quase lá, agora você precisa escolher um tópico e avaliar cada item. Ai calcularei a média para você. Quando você terminar de avaliar pressione o botão Salvar e Avançar e eu farei isso para você</legend>
-            <div id="itemContainer"></div>
+            <div id="itemContainer">
+            </div>
 
             <div id="mediaContainer"></div>
 
@@ -208,7 +209,6 @@ $stmt->close();
 
                     data.forEach(function(item, index) {
                         var div = document.createElement("div");
-
                         var itemContainer = document.getElementById("itemContainer");
 
                         var label1 = document.createElement("label");
@@ -218,6 +218,7 @@ $stmt->close();
                         var label = document.createElement("input");
                         label.type = "hidden";
                         label.name = "label[]";
+                        label.id = "inputMensagem";
                         label.value = item;
                         div.appendChild(label);
 
@@ -225,42 +226,55 @@ $stmt->close();
                         input.type = "number";
                         input.min = 1;
                         input.max = 10;
-                        input.name = "nota[]"; // Define o nome do input como o valor do item
-                        input.value = valoresAvaliados[index]; // Valor padrão
+                        input.name = "nota[]";
+                        input.value = valoresAvaliados[index];
+                        input.id = "inputNota";
                         div.appendChild(input);
 
                         itemContainer.appendChild(div);
+
+                        var mensagemComparar = "Apresenta";
+                        var primeiraPalavraInput = item.trim().split(" ")[0];
+
+                        if (primeiraPalavraInput.toLowerCase() === mensagemComparar.toLowerCase()) {
+                            input.remove();
+                            // Criação da checkbox
+                        var apresenta = document.createElement("input");
+                        apresenta.type = "checkbox";
+                        apresenta.value = label.value;
+                        apresenta.name = "apresenta[]";
+
+                        // Adiciona a checkbox ao elemento pai do input
+                        div.appendChild(apresenta);
+                                        
+                        }
 
 
                         input.addEventListener("input", function() {
                             var valor = parseInt(input.value);
                             if (isNaN(valor) || valor < 1 || valor > 10) {
-                                alert("Digite uma nota válida entre 1 e 10.");
-                                input.value = valoresAvaliados[index]; // Restaura o valor padrão
-                                return;
+                            alert("Digite uma nota válida entre 1 e 10.");
+                            input.value = valoresAvaliados[index];
+                            return;
                             }
 
                             valoresAvaliados[index] = valor;
                             var media = calcularMedia(valoresAvaliados);
                             localStorage.setItem("medianota", mediaContainer.textContent = "Média: " + media);
                             mediaContainer.textContent = "Média: " + media;
-                            
+
                             var mensagem = "";
                             if (media >= 8) {
-                                mensagem = "Produção Acadêmica Aprovada";
+                            mensagem = "Produção Acadêmica Aprovada";
                             } else if (media >= 6.5) {
-                                mensagem = "Produção Acadêmica Aprovada com Restrições";
+                            mensagem = "Produção Acadêmica Aprovada com Restrições";
                             } else {
-                                mensagem = "Produção Acadêmica Reprovada";
+                            mensagem = "Produção Acadêmica Reprovada";
                             }
                             document.getElementById("result").textContent = mensagem;
                         });
+                        });
 
-                        div.appendChild(label);
-                        div.appendChild(input);
-
-                        itemContainer.appendChild(div);
-                    });
 
                     var media = calcularMedia(valoresAvaliados);
                      mediaContainer.textContent = "Média: " + media;
@@ -289,17 +303,22 @@ $stmt->close();
             }
         }
 
-        function calcularMedia(valores) {
+        function calcularMedia() {
+            var inputs = document.getElementsByName("nota[]");
             var soma = 0;
             var contador = 0;
-            for (var i = 0; i < valores.length; i++) {
-                if (!isNaN(valores[i])) {
-                    soma += valores[i];
-                    contador++;
+
+            for (var i = 0; i < inputs.length; i++) {
+                var valor = parseInt(inputs[i].value);
+                if (!isNaN(valor)) {
+                soma += valor;
+                contador++;
                 }
             }
+
             return contador > 0 ? (soma / contador).toFixed(2) : 0;
-        }
+            }
+
 </script>  
   
   <?php

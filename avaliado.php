@@ -31,10 +31,10 @@ if (isset($_SESSION['id'])) {
     $html = '<h1>'.$instituicao.', '.$curso.', '.$programaposgraduacao.'<br> <hr> Título da produção acadêmica: '. $titulo.'</h1><br><h3>Tendo lido e avaliado a produção acadêmica, de acordo com os quesitos formais pré-estabelecidos, apresento meu parecer nestes termos: O trabalho avaliado</h3>';
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-      if (isset($_POST["item"])) {
+      if (isset($_POST["apresenta"])) {
         $numeracao = 1;
 
-        foreach ($_POST["item"] as $checkbox) {
+        foreach ($_POST["apresenta"] as $checkbox) {
           $html .= "<h2>".$numeracao.". ".$checkbox."</h2>";
           $numeracao++;
 
