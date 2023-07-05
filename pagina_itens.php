@@ -204,8 +204,13 @@ if (isset($_SESSION['id'])) {
             <input type="checkbox" id="referencias" name="item[]" value="Apresenta referências bibliográficas">
             <label for="referencias">Apresenta referências bibliográficas</label><br>
 
+             
+            <input type="checkbox" id="aprovacaoComite" name="item[]" value="Apresenta Aprovação do Comitê de Ética em Pesquisa">
+            <label for="aprovacaoComite">Apresenta Aprovação do Comitê de Ética em Pesquisa</label><br>
+
             <p> Deseja adicionar mais algum item?</p>
             <textarea name="item[]" id=""></textarea>
+
         </fieldset>
 
 
