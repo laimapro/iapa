@@ -85,6 +85,11 @@ if (isset($_SESSION['id'])) {
         <input type="checkbox" name="item[]" value="Aspectos Gerais: Completude e organização das seções da Produção Acadêmica"> Completude e organização das seções da Produção Acadêmica<br>
         <input type="checkbox" name="item[]" value="Aspectos Gerais: Uso de vocabulário acadêmico/científico"> Uso de vocabulário acadêmico/científico<br>
         <input type="checkbox" name="item[]" value="Aspectos Gerais: Originalidade e relevância da Produção Acadêmica"> Originalidade e relevância da Produção Acadêmica<br>
+        <input type="checkbox" name="item[]" value="Aspectos Gerais: Contribuição para a prática profissional na área"> Contribuição para a prática profissional na área<br>
+        <input type="checkbox" name="item[]" value="Aspectos Gerais: Abrangência local do tema"> Abrangência local do tema<br>
+        <input type="checkbox" name="item[]" value="Aspectos Gerais: Abrangência regional do tema"> Abrangência regional do tema<br>
+        <input type="checkbox" name="item[]" value="Aspectos Gerais: Abrangência nacional do tema"> Abrangência nacional do tema<br>
+        <input type="checkbox" name="item[]" value="Aspectos Gerais: Abrangência internacional do tema"> Abrangência internacional do tema<br>
         <p> Deseja adicionar mais algum item?</p>
       <textarea name="item[]" id=""></textarea>
     </fieldset>
@@ -104,21 +109,24 @@ if (isset($_SESSION['id'])) {
         </fieldset>
     <fieldset>
         <legend><h4>Introdução</h4></legend>
+        <input type="checkbox" name="item[]" value="Introdução: Problema de Pesquisa"> Problema de Pesquisa<br>
+        <input type="checkbox" name="item[]" value="Introdução: Formulação do problema de pesquisa"> Formulação do problema de pesquisa<br>
+        <input type="checkbox" name="item[]" value="Introdução: Delimitação do tema da pesquisa"> Delimitação do tema da pesquisa<br>
+        <input type="checkbox" name="item[]" value="Introdução: Contextualização do problema da pesquisa"> Contextualização do problema da pesquisa<br>
         <input type="checkbox" name="item[]" value="Introdução: Completude da Introdução e da contextualização da Produção Acadêmica"> Completude da Introdução e da contextualização da Produção Acadêmica<br>
         <input type="checkbox" name="item[]" value="Introdução: Qualidade da Introdução e da contextualização da Produção Acadêmica"> Qualidade da Introdução e da contextualização da Produção Acadêmica<br>
         <p> Deseja adicionar mais algum item?</p>
         <textarea name="item[]" id=""></textarea>
       </fieldset>
     <fieldset>
-        <legend><h4>Objetivo Gerais e especificos</h4></legend>
-        <input type="checkbox" name="item[]" value="Objetivo Gerais e especificos: Adequação dos objetivos"> Adequação dos objetivos <br>
-        <input type="checkbox" name="item[]" value="Objetivo Gerais e especificos: Relevancia dos objetivos"> Relevancia dos objetivos <br>
-        <input type="checkbox" name="item[]" value="Objetivo Gerais e especificos: Completude dos objetivos especificos"> Completude dos objetivos especificos<br>
-        <input type="checkbox" name="item[]" value="Objetivo Gerais e especificos: Qualidade dos objetivos"> Qualidade dos objetivos<br>
+        <legend><h4>Hipótese</h4></legend>
+        <input type="checkbox" name="item[]" value="Hipótese: Adequação"> Adequação <br>
+        <input type="checkbox" name="item[]" value="Hipótese: Relevância"> Relevância <br>
         <p> Deseja adicionar mais algum item?</p>
     <textarea name="item[]" id=""></textarea>
         
     </fieldset>
+
     <fieldset>
         <legend><h4>justificativa</h4></legend>
         <input type="checkbox" name="item[]" value="justificativa: Fundamentação da justificativa"> Fundamentação da justificativa <br>
@@ -131,6 +139,7 @@ if (isset($_SESSION['id'])) {
         <legend><h4>Estado da arte</h4></legend>
     
             <input type="checkbox" name="item[]" value="Estado da arte: Completude do estado da arte"> Completude do estado da arte<br>
+            <input type="checkbox" name="item[]" value="Estado da arte: Profundidade da revisão da literatura"> Profundidade da revisão da literatura<br>
             <input type="checkbox" name="item[]" value="Estado da arte: Qualidade do estado da arte"> Qualidade do estado da arte<br>
             <p> Deseja adicionar mais algum item?</p>
     <textarea name="item[]" id=""></textarea>
@@ -141,6 +150,15 @@ if (isset($_SESSION['id'])) {
     
         <input type="checkbox" name="item[]" value="Método: Qualidade da estrutura científico-metodológica utilizada"> Qualidade da estrutura científico-metodológica utilizada<br>
         <input type="checkbox" name="item[]" value="Método: Adequação e qualidade das figuras, gráficos, tabelas ou esquemas usados"> Adequação e qualidade das figuras, gráficos, tabelas ou esquemas usados
+        <input type="checkbox" name="item[]" value="Método: Sujeitos: A população do estudo responde a natureza da pesquisa"> Sujeitos: A população do estudo responde a natureza da pesquisa<br>
+        <input type="checkbox" name="item[]" value="Método: Sujeitos: O número de sujeitos contempla a natureza da pesquisa"> Sujeitos: O número de sujeitos contempla a natureza da pesquisa<br>
+        <input type="checkbox" name="item[]" value="Método: Materiais e procedimentos:">Materiais e procedimentos: Os instrumentos, equipamentos e tratamentos empregados no estudo para a obtenção dos dados respondem à necessidade da pesquisa<br>
+
+        
+
+
+
+
         <p> Deseja adicionar mais algum item?</p>
     <textarea name="item[]" id=""></textarea>
       </fieldset>
