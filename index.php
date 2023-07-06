@@ -1,116 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>IAPA - Instrumento de Avaliação de Produção Acadêmica</title>
-    <style>
-        /* Estilos adicionais para melhorar a visualização */
-        body {
-            font-family: Arial, sans-serif;
-        }
-        
-        h1 {
-            font-size: 24px;
-        }
-        
-        h3 {
-            font-size: 18px;
-        }
-        
-        a {
-            display: block;
-            margin-bottom: 10px;
-        }
-        
-        .tooltip {
-            position: relative;
-            display: inline-block;
-        }
-        
-        .tooltip .tooltiptext {
-            visibility: hidden;
-            width: 200px;
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            border-radius: 6px;
-            padding: 5px;
-            position: absolute;
-            z-index: 1;
-            bottom: 125%;
-            left: 50%;
-            margin-left: -100px;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        
-        .tooltip:hover .tooltiptext {
-            visibility: visible;
-            opacity: 1;
-        }
-        
-        .contrast-btn {
-            position: fixed;
-            right: 10px;
-            bottom: 10px;
-            padding: 10px;
-            background-color: #000;
-            color: #fff;
-            z-index: 9999;
-        }
+<?php include_once('includes/header.php') ?>
+<div class="container col-xl-10 col-xxl-8 px-4 py-5">
+<div class="row p-5 align-items-start rounded-3 bg-white  border shadow-lg">
+    <div class="col-lg-4 col-12 text-center text-lg-start">
+      <?php include_once('includes/logo.php') ?>
+      <h2 class="pt-4 fs-6 mt-5 text-body-emphasis border-top">IAPA, Instrumento de Avaliação de Produção Acadêmica</h2>
+      <p><span id="saudacao"></span>!<br><i class="mx-2 bi bi-clock"></i>Agora são <span id="horario"></span> </p>
+    </div>
 
-        .contrast-mode {
-            /* Defina os estilos de contraste aqui */
-            background-color: #fff;
-            color: #000;
-        }
-
-        .contrast-mode-1 {
-            /* Primeiro estilo de contraste */
-            background-color: #000;
-            color: #fff;
-        }
-
-        .contrast-mode-2 {
-            /* Segundo estilo de contraste */
-            background-color: #ff0000;
-            color: #00ff00;
-        }
-
-        .contrast-mode-3 {
-            /* Terceiro estilo de contraste */
-            background-color: #0000ff;
-            color: #ffff00;
-        }
-
-        .contrast-mode-dalt {
-            /* Estilo de contraste para daltonismo */
-            background-color: #808080;
-            color: #fff;
-        }
-
-        .menu ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .menu li {
-            display: inline-block;
-            margin-right: 10px;
-        }
-
-        .menu li a {
-            text-decoration: none;
-        }
-    </style>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</head>
-<body>
-    <img src="img/cropped-logo.png" alt="logotipo do Laima"><span aria-label="Laboratory of Artificial Intelligence and Machine AID" lang="en-us">Laboratory of Artificial Intelligence and Machine AID</span> da Universidade Federal de Pernambuco (UFPE)</span>
-
-    <h1>IAPA, Instrumento de avaliação de produção Acadêmica</h1>
-    <p>Agora são: <span id="horario"></span> <span id="saudacao"></span></p><br>
-
+    <div class="col-md-8 mx-auto col-12">
     <strong>Seja bem-vindo(a) ao IAPA.</strong>
 
     <script>
@@ -167,7 +64,9 @@
 
     <button class="contrast-btn" onclick="toggleContrast()" title="Altera a aparência desta página" accesskey="4">Contraste</button>
 
-
+</div>
+</div>
+</div>
     <script>
         function toggleContrast() {
             var body = document.body;
@@ -178,5 +77,4 @@
         }
 
     </script>
-</body>
-</html>
+<?php include_once('includes/footer.php') ?>

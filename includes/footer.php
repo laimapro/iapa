@@ -2,6 +2,6 @@
 
 
 
-
+<script src="js/tempo-horario.js"></script>
 </body>
 </html>

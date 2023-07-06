@@ -45,7 +45,7 @@ if ($nomesocial != null) {
 }
 ?></h3>
 
-<p>Agora são: <span id="horario"></span> <span id="saudacao"></span></p>
+<p><span id="saudacao"></span>!<br><i class="mx-2 bi bi-clock"></i>Agora são <span id="horario"></span>: <span id="horario"></span> <span id="saudacao"></span></p>
 
 <script>
     var agora = new Date();

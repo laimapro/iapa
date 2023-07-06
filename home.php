@@ -78,44 +78,11 @@
     
             ?>
             <h1>Instrumento de avaliação de produção Acadêmica</h1>
-            <p>Agora são: <span id="horario"></span> <span id="saudacao"></span></p><br>
+            <p><span id="saudacao"></span>!<br><i class="mx-2 bi bi-clock"></i>Agora são <span id="horario"></span>: <span id="horario"></span> <span id="saudacao"></span></p><br>
 
             <strong>Oi, <?php echo $pronomeTratamento; echo " "; if ($nomesocial != null){echo $nomesocial;}else{echo $nomeUsuario; echo " "; echo $sobrenomeUsuario;} ?>, seja bem-vindo(a) ao IAPA.</strong>
     
-            <script>
-                var agora = new Date();
-                var horas = agora.getHours();
-    
-                var saudacao = "";
-    
-                if (horas >= 1 && horas < 12) {
-                    saudacao = "Bom dia";
-                } else if (horas >= 12 && horas < 18) {
-                    saudacao = "Boa tarde";
-                } else {
-                    saudacao = "Boa noite";
-                }
-    
-                var minutos = agora.getMinutes();
-                var segundos = agora.getSeconds();
-    
-                // Formate a hora para exibir sempre dois dígitos
-                if (horas < 10) {
-                    horas = "0" + horas;
-                }
-                if (minutos < 10) {
-                    minutos = "0" + minutos;
-                }
-                if (segundos < 10) {
-                    segundos = "0" + segundos;
-                }
-    
-                // Atualize o conteúdo da span com o horário e a saudação
-                document.getElementById("horario").textContent = horas + ":" + minutos + ":" + segundos;
-                document.getElementById("saudacao").textContent = saudacao;
-            </script>
-    
-    
+        
             <br>
             <h2>
             <p>Sou, Laima, seu assistente online e estou aqui para ajudá-lo(a) a criar seu instrumento de avaliação de Produção acadêmica, ou se você desejar, guia-lo(a) a avaliar uma produção acadêmica, de forma simples e eficiente.</p>
@@ -185,5 +152,5 @@
         exit();
     }
     ?>
-</body>
-</html>
+<?php include_once('includes/footer.php') ?>
+

@@ -76,39 +76,8 @@ if (isset($_SESSION['id'])) {
         ?>
         <h1>Instrumento de avaliação de produção Acadêmica</h1>
         <p id="orientacao"> Oi, <?php echo $pronomeTratamento; echo " "; if ($nomesocial != null){echo $nomesocial;}else{echo $nomeUsuario; echo " "; echo $sobrenomeUsuario;} ?>
-        <p>Agora são: <span id="horario"></span> <span id="saudacao"></span></p><br>
-        <script>
-            var agora = new Date();
-            var horas = agora.getHours();
-
-            var saudacao = "";
-
-            if (horas >= 1 && horas < 12) {
-                saudacao = "Bom dia";
-            } else if (horas >= 12 && horas < 18) {
-                saudacao = "Boa tarde";
-            } else {
-                saudacao = "Boa noite";
-            }
-
-            var minutos = agora.getMinutes();
-            var segundos = agora.getSeconds();
-
-
-            if (horas < 10) {
-                horas = "0" + horas;
-            }
-            if (minutos < 10) {
-                minutos = "0" + minutos;
-            }
-            if (segundos < 10) {
-                segundos = "0" + segundos;
-            }
-
-            // Atualize o conteúdo da span com o horário e a saudação
-            document.getElementById("horario").textContent = horas + ":" + minutos + ":" + segundos;
-            document.getElementById("saudacao").textContent = saudacao;
-        </script>
+        <p><span id="saudacao"></span>!<br><i class="mx-2 bi bi-clock"></i>Agora são <span id="horario"></span>: <span id="horario"></span> <span id="saudacao"></span></p><br>
+       
         <?php
         if ($funcao == 1 || $funcao == 3 || $funcao == 0) {
             ?>
@@ -307,5 +276,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     exit();
 }
 ?>
-</body>
-</html>
+<?php include_once('includes/footer.php') ?>
+

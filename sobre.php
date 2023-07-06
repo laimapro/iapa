@@ -12,40 +12,8 @@
 <br>
 
 <center><h1>Sobre Este Programa</h1></center>
-<p>Agora são: <span id="horario"></span> <span id="saudacao"></span></p><br>
+<p><span id="saudacao"></span>!<br><i class="mx-2 bi bi-clock"></i>Agora são <span id="horario"></span>: <span id="horario"></span> <span id="saudacao"></span></p><br>
 
-<script>
-            var agora = new Date();
-            var horas = agora.getHours();
-
-            var saudacao = "";
-
-            if (horas >= 1 && horas < 12) {
-                saudacao = "Bom dia";
-            } else if (horas >= 12 && horas < 18) {
-                saudacao = "Boa tarde";
-            } else {
-                saudacao = "Boa noite";
-            }
-
-            var minutos = agora.getMinutes();
-            var segundos = agora.getSeconds();
-
-            // Formate a hora para exibir sempre dois dígitos
-            if (horas < 10) {
-                horas = "0" + horas;
-            }
-            if (minutos < 10) {
-                minutos = "0" + minutos;
-            }
-            if (segundos < 10) {
-                segundos = "0" + segundos;
-            }
-
-            // Atualize o conteúdo da span com o horário e a saudação
-            document.getElementById("horario").textContent = horas + ":" + minutos + ":" + segundos;
-            document.getElementById("saudacao").textContent = saudacao;
-        </script>
 
 <p>Este programa é um "Instrumento de Avaliação de Produção Acadêmica", desenvolvido pelo LAIMA-UFPE </p><p lang ='en'>(Laboratory of Artificial Intelligence and Machine Aid</p> da Universidade Federal de Pernambuco).</p>
         <p>Com o IAPA, os professores das instituições de Ensino Superior poderão avaliar trabalhos como TCCs, monografias, dissertações, teses e muitas outras produções acadêmicas, de acordo com as regras e quesitos determinados pelos PPGs ou cursos, no momento da criação dos seus respectivos instrumentos de avaliação.</p>
@@ -56,6 +24,4 @@
   Voltar
 </button>
 
-
-</body>
-</html>
+<?php include_once('includes/footer.php') ?>
