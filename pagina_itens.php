@@ -76,67 +76,173 @@ if (isset($_SESSION['id'])) {
         </fieldset>
     <fieldset>
         <legend><h4>Introdução</h4></legend>
-        <input type="checkbox" name="item[]" value="Introdução: Problema de Pesquisa"> Problema de Pesquisa<br>
-        <input type="checkbox" name="item[]" value="Introdução: Formulação do problema de pesquisa"> Formulação do problema de pesquisa<br>
-        <input type="checkbox" name="item[]" value="Introdução: Delimitação do tema da pesquisa"> Delimitação do tema da pesquisa<br>
-        <input type="checkbox" name="item[]" value="Introdução: Contextualização do problema da pesquisa"> Contextualização do problema da pesquisa<br>
+        
+        <fieldset>
+            <legend><h5>Problema de Pesquisa</h5></legend>
+            <input type="checkbox" name="item[]" value="Introdução - Problema de pesquisa: Formulação do problema de pesquisa"> Formulação do problema de pesquisa<br>
+            <input type="checkbox" name="item[]" value="Introdução - Problema de pesquisa: Delimitação do tema da pesquisa"> Delimitação do tema da pesquisa<br>
+            <input type="checkbox" name="item[]" value="Introdução - Problema de pesquisa: Contextualização do problema da pesquisa"> Contextualização do problema da pesquisa<br>
+            <p> Deseja adicionar mais algum item?</p>
+           <textarea name="item[]" id=""></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend><h4>Estado da arte</h4></legend>
+                <input type="checkbox" name="item[]" value="Introdução - Estado da arte: Revisão da literatura"> Revisão da literatura<br>
+                <input type="checkbox" name="item[]" value="Introdução - Estado da arte: Profundidade da revisão da literatura"> Profundidade da revisão da literatura<br>
+                <input type="checkbox" name="item[]" value="Introdução - Estado da arte: Completude do estado da arte"> Completude do estado da arte<br>
+                <input type="checkbox" name="item[]" value="Introdução - Estado da arte: Qualidade do estado da arte"> Qualidade do estado da arte<br>
+                <p> Deseja adicionar mais algum item?</p>
+           <textarea name="item[]" id=""></textarea>
+            </fieldset>
+
+        <fieldset>
+            <legend><h4>Objetivo Gerais e especificos</h4></legend>
+                <input type="checkbox" name="item[]" value="Introdução - Objetivo Gerais e especificos: Adequação dos objetivos"> Adequação dos objetivos <br>
+                <input type="checkbox" name="item[]" value="Introdução - Objetivo Gerais e especificos: Relevancia dos objetivos"> Relevancia dos objetivos <br>
+                <input type="checkbox" name="item[]" value="Introdução - Objetivo Gerais e especificos: Completude dos objetivos especificos"> Completude dos objetivos especificos<br>
+                <input type="checkbox" name="item[]" value="Introdução - Objetivo Gerais e especificos: Qualidade dos objetivos"> Qualidade dos objetivos<br>
+                <p> Deseja adicionar mais algum item?</p>
+                <textarea name="item[]" id=""></textarea>
+            </fieldset>
+
+        <fieldset>
+            <legend><h4>Hipótese</h4></legend>
+            <input type="checkbox" name="item[]" value="Introdução - Hipótese: Adequação"> Adequação <br>
+            <input type="checkbox" name="item[]" value="Introdução - Hipótese: Relevância"> Relevância <br>
+            <p> Deseja adicionar mais algum item?</p>
+           <textarea name="item[]" id=""></textarea>
+        </fieldset>
+        
+        <br>
         <input type="checkbox" name="item[]" value="Introdução: Completude da Introdução e da contextualização da Produção Acadêmica"> Completude da Introdução e da contextualização da Produção Acadêmica<br>
         <input type="checkbox" name="item[]" value="Introdução: Qualidade da Introdução e da contextualização da Produção Acadêmica"> Qualidade da Introdução e da contextualização da Produção Acadêmica<br>
         <p> Deseja adicionar mais algum item?</p>
         <textarea name="item[]" id=""></textarea>
       </fieldset>
-    <fieldset>
-        <legend><h4>Hipótese</h4></legend>
-        <input type="checkbox" name="item[]" value="Hipótese: Adequação"> Adequação <br>
-        <input type="checkbox" name="item[]" value="Hipótese: Relevância"> Relevância <br>
-        <p> Deseja adicionar mais algum item?</p>
-    <textarea name="item[]" id=""></textarea>
-        
-    </fieldset>
 
     <fieldset>
-        <legend><h4>justificativa</h4></legend>
+        <legend><h4>Justificativa</h4></legend>
         <input type="checkbox" name="item[]" value="justificativa: Fundamentação da justificativa"> Fundamentação da justificativa <br>
         <input type="checkbox" name="item[]" value="justificativa: Relevancia da justificativa"> Relevancia da justificativa <br>
         <p> Deseja adicionar mais algum item?</p>
-    <textarea name="item[]" id=""></textarea>
-    </fieldset>
-    
-    <fieldset>
-        <legend><h4>Estado da arte</h4></legend>
-    
-            <input type="checkbox" name="item[]" value="Estado da arte: Completude do estado da arte"> Completude do estado da arte<br>
-            <input type="checkbox" name="item[]" value="Estado da arte: Profundidade da revisão da literatura"> Profundidade da revisão da literatura<br>
-            <input type="checkbox" name="item[]" value="Estado da arte: Qualidade do estado da arte"> Qualidade do estado da arte<br>
-            <p> Deseja adicionar mais algum item?</p>
-    <textarea name="item[]" id=""></textarea>
+        <textarea name="item[]" id=""></textarea>
     </fieldset>
     
     <fieldset>
         <legend><h4>Método</h4></legend>
-    
-        <input type="checkbox" name="item[]" value="Método: Qualidade da estrutura científico-metodológica utilizada"> Qualidade da estrutura científico-metodológica utilizada<br>
-        <input type="checkbox" name="item[]" value="Método: Adequação e qualidade das figuras, gráficos, tabelas ou esquemas usados"> Adequação e qualidade das figuras, gráficos, tabelas ou esquemas usados
-        <input type="checkbox" name="item[]" value="Método: Sujeitos: A população do estudo responde a natureza da pesquisa"> Sujeitos: A população do estudo responde a natureza da pesquisa<br>
-        <input type="checkbox" name="item[]" value="Método: Sujeitos: O número de sujeitos contempla a natureza da pesquisa"> Sujeitos: O número de sujeitos contempla a natureza da pesquisa<br>
-        <input type="checkbox" name="item[]" value="Método: Materiais e procedimentos:">Materiais e procedimentos: Os instrumentos, equipamentos e tratamentos empregados no estudo para a obtenção dos dados respondem à necessidade da pesquisa<br>
 
-        
+        <fieldset>
+            <legend><h4>Sujeitos</h4></legend>
+
+            <input type="checkbox" name="item[]" value="Método - Sujeitos: Adequação da escolha da População do estudo">Adequação da escolha da População do estudo<br>
+            <input type="checkbox" name="item[]" value="Método - Sujeitos: Adequação da quantidade da Amostra">Adequação da quantidade da Amostra<br>
+            <input type="checkbox" name="item[]" value="Método - Sujeitos: Adequação do Recrutamento da amostra">Adequação do Recrutamento da amostra<br>
+            <input type="checkbox" name="item[]" value="Método - Sujeitos: Caracterização da amostra">Caracterização da amostra<br>
+            <input type="checkbox" name="item[]" value="Método - Sujeitos: Caracterização da população do estudo">Caracterização da população do estudo<br>
+            <input type="checkbox" name="item[]" value="Método - Sujeitos: Adequação dos critérios de inclusão">Adequação dos critérios de inclusão<br>
+            <input type="checkbox" name="item[]" value="Método - Sujeitos: Adequação dos Critério de exclusão">Adequação dos Critério de exclusão<br>
+            <input type="checkbox" name="item[]" value="Método - Sujeitos: Adequação do Tamanho da amostra"> Adequação do Tamanho da amostra<br>
+            <input type="checkbox" name="item[]" value="Método - Sujeitos: Adequação do cálculo amostral">Adequação do cálculo amostral<br>
+            
 
 
 
+            <input type="checkbox" name="item[]" value="Método - Sujeitos: A população do estudo responde a natureza da pesquisa">A população do estudo responde a natureza da pesquisa<br>
+            <input type="checkbox" name="item[]" value="Método - Sujeitos: O número de sujeitos contempla a natureza da pesquisa">O número de sujeitos contempla a natureza da pesquisa<br>
+            <p> Deseja adicionar mais algum item?</p>
+           <textarea name="item[]" id=""></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend><h4>Materiais e procedimentos</h4></legend>
+            <input type="checkbox" name="item[]" value="Método - Materiais e procedimentos: A descrição apresentada dos laboratórios, instrumentos e equipamentos empregados no estudo permite dizer que respondem aos pré-requisitos da pesquisa">A descrição apresentada dos laboratórios, instrumentos e equipamentos empregados no estudo permite dizer que respondem aos pré-requisitos da pesquisa<br>
+            <input type="checkbox" name="item[]" value="Método - Materiais e procedimentos: A descrição das técnicas e dos tratamentos empregados na obtenção dos dados permitem deduzir que os procedimentos respondem à necessidade da pesquisa">A descrição das técnicas e dos tratamentos empregados na obtenção dos dados permitem deduzir que os procedimentos respondem à necessidade da pesquisa<br>
+            <p> Deseja adicionar mais algum item?</p>
+           <textarea name="item[]" id=""></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend><h4>Coleta de dados</h4></legend>
+            <input type="checkbox" name="item[]" value="Método - Coleta de dados: A coleta dos dados foi conduzida em local e tempo adequados">A coleta dos dados foi conduzida em local e tempo adequados<br>
+            <input type="checkbox" name="item[]" value="Método - Coleta de dados: Os instrumentos de coleta (questionários, entrevistas etc.estão coerentes com a natureza da pesquisa)">Os instrumentos de coleta (questionários, entrevistas etc.estão coerentes com a natureza da pesquisa)<br>
+            <input type="checkbox" name="item[]" value="Método - Coleta de dados: Os Materiais: equipamentos e experimentos permitiram a coleta de dados requerida pelo estudo">Os Materiais: equipamentos e experimentos permitiram a coleta de dados requerida pelo estudo<br>
+            <p> Deseja adicionar mais algum item?</p>
+           <textarea name="item[]" id=""></textarea>
+        </fieldset>
+
+
+
+       
+        <fieldset>
+            <legend><h4>Resultados</h4></legend>
+            <input type="checkbox" name="item[]" value="Método - Resultados: Coerência dos resultados com o método utilizado">Coerência dos resultados com o método utilizado<br>
+            <input type="checkbox" name="item[]" value="Método - Resultados: Precisão dos dados coletados">Precisão dos dados coletados<br>
+            <input type="checkbox" name="item[]" value="Método - Resultados: Concisão dos dados coletados">Concisão dos dados coletados<br>
+            <input type="checkbox" name="item[]" value="Método - Resultados: Clareza dos dados coletados">Clareza dos dados coletados<br>
+            <input type="checkbox" name="item[]" value="Método - Resultados: Reprodutibilidade dos resultados obtidos">Reprodutibilidade dos resultados obtidos<br>
+            <input type="checkbox" name="item[]" value="Método - Resultados: Confiabilidade e fidedignidade dos dados obtidos">Confiabilidade e fidedignidade dos dados obtidos<br>
+            <p> Deseja adicionar mais algum item?</p>
+           <textarea name="item[]" id=""></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend><h4>Análise dos dados</h4></legend>
+            <input type="checkbox" name="item[]" value="Análise: Profundidade da análise"> Profundidade da análise<br>
+            <input type="checkbox" name="item[]" value="Análise: Coerência da análise com os dados coletados"> Coerência da análise com os dados coletados<br>
+            <input type="checkbox" name="item[]" value="Análise: Coerência da analise com a fundamentação teorica">Coerência da analise com a fundamentação teorica<br>
+            <input type="checkbox" name="item[]" value="Análise: A análise apresentada não mostra vieses científicos"> A análise apresentada não mostra vieses científicos<br>
+            <input type="checkbox" name="item[]" value="Análise: A análise produzida está coerente com a Discriminação/definição das variáveis estudadas"> A análise produzida está coerente com a Discriminação/definição das variáveis estudadas<br>
+            <input type="checkbox" name="item[]" value="Análise: A análise condiz com a Organização e tabulação dos dados"> A análise condiz com a Organização e tabulação dos dados<br>
+            <input type="checkbox" name="item[]" value="Análise: A análise feita condiz com o Tratamento e testes estatísticos utilizados">A análise feita condiz com o Tratamento e testes estatísticos utilizados<br>
+            <input type="checkbox" name="item[]" value="Análise: O(s) Programa(s) utilizados para tabulação e análise deram conta dos resultados obtidos">O(s) Programa(s) utilizados para tabulação e análise deram conta dos resultados obtidos <br>
+            <p> Deseja adicionar mais algum item?</p>
+           <textarea name="item[]" id=""></textarea>
+        </fieldset>
+        <br>
+            <input type="checkbox" name="item[]" value="Método: Qualidade da estrutura científico-metodológica utilizada"> Qualidade da estrutura científico-metodológica utilizada<br>
+            <input type="checkbox" name="item[]" value="Método: Adequação e qualidade das figuras, gráficos, tabelas ou esquemas usados"> Adequação e qualidade das figuras, gráficos, tabelas ou esquemas usados
+            <input type="checkbox" name="item[]" value="Método: Materiais e procedimentos:">Materiais e procedimentos: Os instrumentos, equipamentos e tratamentos empregados no estudo para a obtenção dos dados respondem à necessidade da pesquisa<br>
 
         <p> Deseja adicionar mais algum item?</p>
-    <textarea name="item[]" id=""></textarea>
-      </fieldset>
+     <textarea name="item[]" id=""></textarea>
+    </fieldset>
+
     <fieldset>
-        <legend><h4>Análise</h4></legend>
+            <legend><h4>Cronograma</h4></legend>
+            <input type="checkbox" name="item[]" value="Método - Sujeitos: A população do estudo responde a natureza da pesquisa">A população do estudo responde a natureza da pesquisa<br>
+             <input type="checkbox" name="item[]" value="Método - Sujeitos: O número de sujeitos contempla a natureza da pesquisa">O número de sujeitos contempla a natureza da pesquisa<br>
+             <p> Deseja adicionar mais algum item?</p>
+           <textarea name="item[]" id=""></textarea>
+    
+    </fieldset>
+
+    <fieldset>
+        <legend><h4>Orçamento</h4></legend>
+            <input type="checkbox" name="item[]" value="Orçamento: Adequação do Custeio"> Adequação do Custeio<br>
+            <input type="checkbox" name="item[]" value="Orçamento: Adequação do Capital"> Adequação do Capital<br>
+            <input type="checkbox" name="item[]" value="Orçamento: Relevância da contrapartida">Relevância da contrapartida<br>
+            <input type="checkbox" name="item[]" value="Orçamento: Descrição dos materiais permanentes">Descrição dos materiais permanentes<br>
+            <input type="checkbox" name="item[]" value="Orçamento: Adequação do material de consumo">Adequação do material de consumo<br>
+            <input type="checkbox" name="item[]" value="Orçamento: Relevância/necessidade dos serviços de terceiros">Relevância/necessidade dos serviços de terceiros<br>
+            <input type="checkbox" name="item[]" value="Orçamento: Solicitação dos recursos humanos">Solicitação dos recursos humanos<br>
+            <p> Deseja adicionar mais algum item?</p>
+           <textarea name="item[]" id=""></textarea>
+    </fieldset>
+
+    <fieldset>
+        <legend><h4>Discursão</h4></legend>
             <input type="checkbox" name="item[]" value="Análise: Profundidade da análise"> Profundidade da análise<br>
             <input type="checkbox" name="item[]" value="Análise: Coerência da análise com os dados coletados"> Coerência da análise com os dados coletados<br>
             <input type="checkbox" name="item[]" value="Análise: Coerência da analise com a fundamentação teorica">Coerência da analise com a fundamentação teorica<br>
             <p> Deseja adicionar mais algum item?</p>
-    <textarea name="item[]" id=""></textarea>
-        </fieldset>
+           <textarea name="item[]" id=""></textarea>
+    </fieldset>
+
+
+
+
+        
     <fieldset>
         <legend><h4>Conclusão</h4></legend>
             <input type="checkbox" name="item[]" value="Conclusão: Profundidade das conclusões"> Profundidade das conclusões<br>
