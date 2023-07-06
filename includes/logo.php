@@ -1,2 +1,8 @@
-<img src="img/laima-hor-color.svg" class="logo w-50 img-fluid" alt="logotipo do Laima">
-<p class="my-3 fs-6 text-muted"><span aria-label="Laboratory of Artificial Intelligence and Machine AID" lang="en-us">Laboratory of Artificial Intelligence and Machine AID da <abbr title="Universidade Federal de Pernambuco">UFPE</abbr></span></p>
+
+
+
+<a href="index.php" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+    <img src="img/icone.svg" class="logo img-fluid bi me-2" width="40" height="32" alt="logotipo do Laima">
+    <span class="fs-4 fw-bold">IAPA</span>
+</a>
+<p class="my-3 fs-6 text-muted">Instrumento de Avaliação de Produção Acadêmica</p>
