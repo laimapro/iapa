@@ -238,15 +238,28 @@ $stmt->close();
 
                         if (primeiraPalavraInput.toLowerCase() === mensagemComparar.toLowerCase()) {
                             input.remove();
+
+                        var nao = document.createElement("input");
+                        nao.type = "hidden";
+                        nao.value = "Não "+label.value.toLowerCase();
+                        nao.name = "apresenta[]";
+
+                        div.appendChild(nao);
                             // Criação da checkbox
                         var apresenta = document.createElement("input");
                         apresenta.type = "checkbox";
                         apresenta.value = label.value;
                         apresenta.name = "apresenta[]";
-
+        
                         // Adiciona a checkbox ao elemento pai do input
                         div.appendChild(apresenta);
-                                        
+                        apresenta.addEventListener("change", function() {
+                        if (apresenta.checked) {
+                            div.removeChild(nao);
+                        } else {
+                            div.appendChild(nao);
+                        }
+                        });       
                         }
 
 
