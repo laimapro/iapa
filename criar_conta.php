@@ -1,35 +1,20 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="manifest" href="manifest.json">
-    <title>IAPA</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-
-    <script>
-        if(typeof navigator.serviceWorker  !== 'undefined'){
-            navigator.serviceWorker.register('pwabuilder-sw.js')
-        }
-    </script>
-</head>
-<body class="bg-body-secondary">
+<?php include_once('includes/header.php') ?>
 
 <div class="container col-xl-10 col-xxl-8 px-4 py-5">
   <div class="row p-5 align-items-start rounded-3 bg-white  border shadow-lg">
     <div class="col-12 col-md-4 text-center text-lg-start">
-      <img src="img/cropped-logo.png" alt="logotipo do Laima"><span aria-label="Laboratory of Artificial Intelligence and Machine AID" lang="en-us">Laboratory of Artificial Intelligence and Machine AID</span> da Universidade Federal de Pernambuco (UFPE)</span>
-      <h2 class="display-6 fw-bold lh-1 text-body-emphasis mb-3">
+    <?php include_once('includes/logo.php') ?>
+
+      <h2 class="page-title fw-light lh-1 text-body-emphasis mt-5 mb-3">
         Criar conta
       </h2>
-      <p class="mb-0">
-        <ul class="list-group list-group-flush">
-          <li class="px-0 list-group-item"><a href="#nome" title="Insira seu nome, sobrenome ou nome social">Identificação</a></li>
-          <li class="px-0 list-group-item"><a href="#pronomes" title="Escolha um pronome de tratamento e um pronome para referência">Pronomes</a></li>
-          <li class="px-0 list-group-item"><a href="#associacoes" title="Insira o nome da sua instituição de ensino superior e/ou  do programa de pós graduação">Associação</a></li>
-          <li class="px-0 list-group-item"><a href="#acesso" title="Insira email, senha e a função desejada para acessar o IAPA">Acesso</a></li>
-          <li class="px-0 list-group-item"><a href="#idiomas" title="Escolha um ou mais idiomas em que você pode avaliar uma produção acadêmica">Idioma</a></li>
+      <p class="sticky-top mb-0">
+        <ul class=" list-group list-group-flush">
+          <li class="px-0 list-group-item"><a class="text-decoration-none d-block" href="#nome" title="Insira seu nome, sobrenome ou nome social">Identificação</a></li>
+          <li class="px-0 list-group-item"><a class="text-decoration-none d-block" href="#pronomes" title="Escolha um pronome de tratamento e um pronome para referência">Pronomes</a></li>
+          <li class="px-0 list-group-item"><a class="text-decoration-none d-block" href="#associacoes" title="Insira o nome da sua instituição de ensino superior e/ou  do programa de pós graduação">Associação</a></li>
+          <li class="px-0 list-group-item"><a class="text-decoration-none d-block" href="#acesso" title="Insira email, senha e a função desejada para acessar o IAPA">Acesso</a></li>
+          <li class="px-0 list-group-item"><a class="text-decoration-none d-block" href="#idiomas" title="Escolha um ou mais idiomas em que você pode avaliar uma produção acadêmica">Idioma</a></li>
         </ul>
       </p>
     </div>
@@ -52,7 +37,9 @@
               <input class="form-control" type="text" id="sobrenome" name="sobrenome" aria-label="Sobrenome" aria-required="true">
               <label for="sobrenome">Sobrenome:</label>
             </div>
-            <div class="form-floating mb-4">
+          </div>
+          <div class="col-12">
+          <div class="form-floating mb-4">
               <input class="form-control" type="text" id="nomesocial" name="nomesocial" aria-label="nomesocial" aria-required="true">
               <label for="nomesocial">Nome Social:</label>
             </div>
@@ -125,14 +112,21 @@
               <label for="senha">Senha</label>
             </div>
 
-            <div class="form-floating mb-4">
-              <select class="form-select" id="funcao" name="funcao" aria-label="Função">
+            <div class="mb-4">
+              <label class="mb-2">Função</label>
+              <div class="row">
+                <div class="col"><div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="funcao" id="funcaoAvaliador" value="1"><label class="form-check-label" for="funcaoAvaliador">Avaliador</label></div></div>
+                <div class="col"><div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="funcao" id="funcaoEditor" value="2"><label class="form-check-label" for="funcaoEditor">Editor</label></div></div>
+                <div class="col"><div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="funcao" id="funcaoGerente" value="3"><label class="form-check-label" for="funcao3Gerente">Gerente</label></div></div>
+              </div>
+              
+              <!-- <select class="form-select" id="funcao" name="funcao" aria-label="Função">
                 <option value="" selected>Escolha uma opção</option>
                 <option value="2">Avaliador</option>
                 <option value="1">Editor</option>]
                 <option value="3">Gerente</option>
               </select>
-              <label for="funcao">Função:</label>
+              <label for="funcao">Função:</label> -->
             </div>
         </fieldset>
 
@@ -151,10 +145,10 @@
           </div>
         </fieldset>
 
-        <div class="text-end">
+        <div class="d-flex justify-content-between">
+          <a href="index.php"  accesskey="1" title="Volta para a página inicial do IAPA"><i class="bi bi-arrow-left me-1"></i>Voltar</a>
         <button class=" btn btn-primary" type="submit" accesskey="2" title="Salva seus dados e requisita seu acesso no IAPA." onclick="aviso()">Solicitar cadastramento</button>
-        <br>
-        <a href="index.php"  accesskey="1" title="Volta para a página inicial do IAPA">Voltar</a></p><br>
+        
         </div>
       </form>
     </div>
@@ -164,5 +158,5 @@
     window.alert("Solicitação pendente. Seu acesso será liberado assim que for aprovado. Consulte o email cadastrado!")
   }
 </script>
-</body>
-</html>
+
+<?php include_once('includes/footer.php') ?>

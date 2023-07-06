@@ -35,46 +35,12 @@ if (isset($_SESSION['id'])) {
 
 <img src="img/cropped-logo.png" alt="Logotipo do Laima" lang='en'><span aria-label="Laboratory of Artificial Intelligence and Machine AID" lang="en-us">Laboratory of Artificial Intelligence and Machine AID</span> da Universidade Federal de Pernambuco (UFPE)</span>
 <h1>IAPA - Instrumento de Avaliação de Produção Acadêmica</h1>
-<p>Agora são: <span id="horario"></span> <span id="saudacao"></span></p>
+<p><span id="saudacao"></span>!<br><i class="mx-2 bi bi-clock"></i>Agora são <span id="horario"></span></p>
 
 <p id="orientacao"> Oi, <?php echo $pronomeTratamento; echo " "; if ($nomesocial != null){echo $nomesocial;}else{echo $nomeUsuario; echo " "; echo $sobrenomeUsuario;} ?>, permita-me guiar-lhe pelos passos de nosso IAPA.
 Para isso, preciso que você escolha um arquivo na lista de produções acadêmicas.
 Quando você fizer isso, eu imediatamente exibirei os critérios que você deverá avaliar. se não deseja julgar uma produção acadêmica agora ou se quiser avaliar outro trabalho, pressione o botão voltar e estaremos na página anterior, como em um passo de mágica.</p>
 
-
-
-<script>
-  var agora = new Date();
-  var horas = agora.getHours();
-
-  var saudacao = "";
-
-  if (horas >= 01 && horas < 12) {
-    saudacao = "Bom dia";
-  } else if (horas >= 12 && horas < 18) {
-    saudacao = "Boa tarde";
-  } else {
-    saudacao = "Boa noite";
-  }
-
-  var minutos = agora.getMinutes();
-  var segundos = agora.getSeconds();
-
-  // Formate a hora para exibir sempre dois dígitos
-  if (horas < 10) {
-    horas = "0" + horas;
-  }
-  if (minutos < 10) {
-    minutos = "0" + minutos;
-  }
-  if (segundos < 10) {
-    segundos = "0" + segundos;
-  }
-
-  // Atualize o conteúdo da span com o horário e a saudação
-  document.getElementById("horario").textContent = horas + ":" + minutos + ":" + segundos;
-  document.getElementById("saudacao").textContent = saudacao;
-</script>
 
 
 <body>
@@ -349,5 +315,4 @@ header("Location: index.php");
 exit();
 }
 ?>
-</body>
-</html>
+<?php include_once('includes/footer.php') ?>

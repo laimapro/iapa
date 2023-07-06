@@ -1,0 +1,13 @@
+.sticky-top {
+    top: 10px
+}
+
+
+.footer {
+    font-size: .825rem;
+}
+
+.footer,
+.footer a {
+    color: var(--bs-secondary-color);
+}
