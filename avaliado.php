@@ -178,10 +178,10 @@ if (isset($_SESSION['id'])) {
 
     // Exibe uma mensagem informando que o arquivo foi salvo com sucesso
     echo "Parecer salvo com sucesso! <br>";
-    echo '<a href="' . $caminhoCompleto . '" download><button title="Baixa o parecer e o salva em sua pasta de download">Download do parecer </button></a> <br>'; // Adiciona botão para baixar o PDF
-    echo '<a href="avaliacao.php"><button title="Retorna a página de produção acadêmica">Avaliar outra produção acadêmica </button></a><br>';
-    echo '<a href="upload.php"><button title="Leva à página em que se pode visualizar seus pareceres ">Meus pareceres </button></a><br>';
-    echo '<a href="home.php"><button title="Volta a página inicial do IAPA">Voltar para página inicial</button></a><br>';
+    echo '<a href="' . $caminhoCompleto . '" download><button title="Baixa o parecer e o salva em sua pasta de download" accesskey="4">Download do parecer </button></a> <br>'; // Adiciona botão para baixar o PDF
+    echo '<a href="avaliacao.php"><button title="Retorna a página de produção acadêmica" accesskey="3">Avaliar outra produção acadêmica </button></a><br>';
+    echo '<a href="upload.php"><button title="Leva à página em que se pode visualizar seus pareceres " accesskey="2">Meus pareceres </button></a><br>';
+    echo '<a href="home.php"><button title="Volta a página inicial do IAPA" accesskey="1">Voltar para página inicial</button></a><br>';
 
     $nomeC = "$nomeUsuario $sobrenomeUsuario";
 
