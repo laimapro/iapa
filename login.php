@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Área exclusiva para Editores e Avaliadores / IAPA</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-</head>
+<?php include_once('includes/header.php') ?>
+
 <body class="bg-body-secondary">
   <div class="container col-xl-10 col-xxl-8 px-4 py-5">
     <div class="row p-5 align-items-center rounded-3 bg-white  border shadow-lg">
@@ -75,8 +67,5 @@
     </div>
   </div>
 </div>
-<?php include_once('includes/footer.php') ?>
-
 <script src="js/login.js"></script>
-</body>
-</html>
+<?php include_once('includes/footer.php') ?>
