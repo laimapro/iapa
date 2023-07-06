@@ -1,4 +1,2 @@
-<figure class="m-0 p-0">
-    <img src="img/laima-hor-color.svg" class="logo w-50 img-fluid" alt="logotipo do Laima">
-    <figcaption class="my-3 fs-6 text-muted"><span aria-label="Laboratory of Artificial Intelligence and Machine AID" lang="en-us">Laboratory of Artificial Intelligence and Machine AID</span></figcaption>
-</figure>
+<img src="img/laima-hor-color.svg" class="logo w-50 img-fluid" alt="logotipo do Laima">
+<p class="my-3 fs-6 text-muted"><span aria-label="Laboratory of Artificial Intelligence and Machine AID" lang="en-us">Laboratory of Artificial Intelligence and Machine AID da <abbr title="Universidade Federal de Pernambuco">UFPE</abbr></span></p>
