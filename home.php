@@ -3,52 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>IAPA - Instrumento de Avaliação de Produção Acadêmica</title>
-    <style>
-        /* Estilos adicionais para melhorar a visualização */
-        body {
-            font-family: Arial, sans-serif;
-        }
-        
-        h1 {
-            font-size: 24px;
-        }
-        
-        h3 {
-            font-size: 18px;
-        }
-        
-        a {
-            display: block;
-            margin-bottom: 10px;
-        }
-        
-        .tooltip {
-            position: relative;
-            display: inline-block;
-        }
-        
-        .tooltip .tooltiptext {
-            visibility: hidden;
-            width: 200px;
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            border-radius: 6px;
-            padding: 5px;
-            position: absolute;
-            z-index: 1;
-            bottom: 125%;
-            left: 50%;
-            margin-left: -100px;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        
-        .tooltip:hover .tooltiptext {
-            visibility: visible;
-            opacity: 1;
-        }
-    </style>
 </head>
 <body>
 <img src="img/cropped-logo.png" alt="Logotipo do Laima" lang='en'><span aria-label="Laboratory of Artificial Intelligence and Machine AID" lang="en-us">Laboratory of Artificial Intelligence and Machine AID</span> da Universidade Federal de Pernambuco (UFPE)</span>
