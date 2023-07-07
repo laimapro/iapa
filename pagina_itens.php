@@ -243,7 +243,7 @@ if (isset($_SESSION['id'])) {
         <legend><h4>Conclusão</h4></legend>
             <input type="checkbox" name="item[]" value="Conclusão: Profundidade das conclusões"> Profundidade das conclusões<br>
             <input type="checkbox" name="item[]" value="Conclusão: Coerência das conclusões com os dados coletados"> Coerência das conclusões com os dados coletados<br>
-            <input type="checkbox" name="item[]" value="Conclusão: Coerência da conclusões com a fundamentação teorica">Coerência da conclusões com a fundamentação teorica<br>
+            <input type="checkbox" name="item[]" value="Conclusão: Coerência da conclusões com a fundamentação teorica">Coerência das conclusões com a fundamentação teorica<br>
             <p> Deseja adicionar mais algum item?</p>
     <textarea name="item[]" id=""></textarea>
         </fieldset>
