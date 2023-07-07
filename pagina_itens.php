@@ -53,10 +53,7 @@ if (isset($_SESSION['id'])) {
         <input type="checkbox" name="item[]" value="Aspectos Gerais: Uso de vocabulário acadêmico/científico"> Uso de vocabulário acadêmico/científico<br>
         <input type="checkbox" name="item[]" value="Aspectos Gerais: Originalidade e relevância da Produção Acadêmica"> Originalidade e relevância da Produção Acadêmica<br>
         <input type="checkbox" name="item[]" value="Aspectos Gerais: Contribuição para a prática profissional na área"> Contribuição para a prática profissional na área<br>
-        <input type="checkbox" name="item[]" value="Aspectos Gerais: Abrangência local do tema"> Abrangência local do tema<br>
-        <input type="checkbox" name="item[]" value="Aspectos Gerais: Abrangência regional do tema"> Abrangência regional do tema<br>
-        <input type="checkbox" name="item[]" value="Aspectos Gerais: Abrangência nacional do tema"> Abrangência nacional do tema<br>
-        <input type="checkbox" name="item[]" value="Aspectos Gerais: Abrangência internacional do tema"> Abrangência internacional do tema<br>
+        <input type="checkbox" name="item[]" value="Aspectos Gerais: Abrangência geográfica do estudo"> Abrangência geográfica do estudo<br>
         <p> Deseja adicionar mais algum item?</p>
       <textarea name="item[]" id=""></textarea>
     </fieldset>
@@ -108,8 +105,8 @@ if (isset($_SESSION['id'])) {
 
         <fieldset>
             <legend><h4>Hipótese</h4></legend>
-            <input type="checkbox" name="item[]" value="Introdução - Hipótese: Adequação"> Adequação <br>
-            <input type="checkbox" name="item[]" value="Introdução - Hipótese: Relevância"> Relevância <br>
+            <input type="checkbox" name="item[]" value="Introdução - Hipótese: Adequação da hipótese"> Adequação da hipótese<br>
+            <input type="checkbox" name="item[]" value="Introdução - Hipótese: Relevância da hipótese"> Relevância da hipótese<br>
             <p> Deseja adicionar mais algum item?</p>
            <textarea name="item[]" id=""></textarea>
         </fieldset>
