@@ -1,5 +1,16 @@
-.sticky-top {
-    top: 10px
+
+.menu-nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 8rem;
+    scroll-margin-top: 8rem;
+}
+
+.menu-title {
+    text-transform: uppercase;
+    font-weight: light;
+    color: var(--bs-secondary-color);
+    font-size: .85rem;
 }
 
 
