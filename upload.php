@@ -76,7 +76,7 @@ if (isset($_SESSION['id'])) {
         ?>
         <h1>Instrumento de avaliação de produção Acadêmica</h1>
         <p id="orientacao"> Oi, <?php echo $pronomeTratamento; echo " "; if ($nomesocial != null){echo $nomesocial;}else{echo $nomeUsuario; echo " "; echo $sobrenomeUsuario;} ?>
-        <p><span id="saudacao"></span>!<br><i class="mx-2 bi bi-clock"></i>Agora são <span id="horario"></span>: <span id="horario"></span> <span id="saudacao"></span></p><br>
+        <p><i class="mx-2 bi bi-clock"></i>Agora são <span id="horario"></span> <span id="horario"></span> <br><span id="saudacao"></span>!<br> <span id="saudacao"></span></p><br>
        
         <?php
         if ($funcao == 1 || $funcao == 3 || $funcao == 0) {
