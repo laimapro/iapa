@@ -158,6 +158,9 @@ if (isset($_SESSION['id'])) {
             <legend><h4>Materiais e procedimentos</h4></legend>
             <input type="checkbox" name="item[]" value="Método - Materiais e procedimentos: A descrição apresentada dos laboratórios, instrumentos e equipamentos empregados no estudo permite dizer que respondem aos pré-requisitos da pesquisa">A descrição apresentada dos laboratórios, instrumentos e equipamentos empregados no estudo permite dizer que respondem aos pré-requisitos da pesquisa<br>
             <input type="checkbox" name="item[]" value="Método - Materiais e procedimentos: A descrição das técnicas e dos tratamentos empregados na obtenção dos dados permitem deduzir que os procedimentos respondem à necessidade da pesquisa">A descrição das técnicas e dos tratamentos empregados na obtenção dos dados permitem deduzir que os procedimentos respondem à necessidade da pesquisa<br>
+            <input type="checkbox" name="item[]" value="Método - Materiais e procedimentos: Estrutura científico-metodológica utilizada"> Estrutura científico-metodológica utilizada<br>
+            <input type="checkbox" name="item[]" value="Método - Materiais e procedimentos: Os instrumentos, equipamentos e tratamentos empregados no estudo para a obtenção dos dados respondem à necessidade da pesquisa">Os instrumentos, equipamentos e tratamentos empregados no estudo para a obtenção dos dados respondem à necessidade da pesquisa<br>
+            
             <p> Deseja adicionar mais algum item?</p>
            <textarea name="item[]" id=""></textarea>
         </fieldset>
@@ -182,6 +185,8 @@ if (isset($_SESSION['id'])) {
             <input type="checkbox" name="item[]" value="Método - Resultados: Clareza dos dados coletados">Clareza dos dados coletados<br>
             <input type="checkbox" name="item[]" value="Método - Resultados: Reprodutibilidade dos resultados obtidos">Reprodutibilidade dos resultados obtidos<br>
             <input type="checkbox" name="item[]" value="Método - Resultados: Confiabilidade e fidedignidade dos dados obtidos">Confiabilidade e fidedignidade dos dados obtidos<br>
+            <input type="checkbox" name="item[]" value="Método - Resultados: A qualidade das figuras, gráficos, tabelas ou esquemas usados expressão os dados obtidos"> A qualidade das figuras, gráficos, tabelas ou esquemas usados expressão os dados obtidos<br>
+            
             <p> Deseja adicionar mais algum item?</p>
            <textarea name="item[]" id=""></textarea>
         </fieldset>
@@ -200,9 +205,6 @@ if (isset($_SESSION['id'])) {
            <textarea name="item[]" id=""></textarea>
         </fieldset>
         <br>
-            <input type="checkbox" name="item[]" value="Método: Qualidade da estrutura científico-metodológica utilizada"> Qualidade da estrutura científico-metodológica utilizada<br>
-            <input type="checkbox" name="item[]" value="Método: Adequação e qualidade das figuras, gráficos, tabelas ou esquemas usados"> Adequação e qualidade das figuras, gráficos, tabelas ou esquemas usados<br>
-            <input type="checkbox" name="item[]" value="Método: Materiais e procedimentos:">Materiais e procedimentos: Os instrumentos, equipamentos e tratamentos empregados no estudo para a obtenção dos dados respondem à necessidade da pesquisa<br>
 
         <p> Deseja adicionar mais algum item?</p>
      <textarea name="item[]" id=""></textarea>
