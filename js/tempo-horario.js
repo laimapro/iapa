@@ -12,7 +12,7 @@ if (horas >= 01 && horas < 12) {
 }
 
 var minutos = agora.getMinutes();
-var segundos = agora.getSeconds();
+// var segundos = agora.getSeconds();
 
 // Formate a hora para exibir sempre dois dígitos
 if (horas < 10) {
@@ -21,10 +21,10 @@ if (horas < 10) {
 if (minutos < 10) {
     minutos = "0" + minutos;
 }
-if (segundos < 10) {
-    segundos = "0" + segundos;
-}
+// if (segundos < 10) {
+//     segundos = "0" + segundos;
+// }
 
 // Atualize o conteúdo da span com o horário e a saudação
 document.getElementById("saudacao").textContent = saudacao;
-document.getElementById("horario").textContent = horas + ":" + minutos + ":" + segundos;
+document.getElementById("horario").textContent = horas + ":" + minutos;
