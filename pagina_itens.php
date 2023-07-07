@@ -201,7 +201,7 @@ if (isset($_SESSION['id'])) {
         </fieldset>
         <br>
             <input type="checkbox" name="item[]" value="Método: Qualidade da estrutura científico-metodológica utilizada"> Qualidade da estrutura científico-metodológica utilizada<br>
-            <input type="checkbox" name="item[]" value="Método: Adequação e qualidade das figuras, gráficos, tabelas ou esquemas usados"> Adequação e qualidade das figuras, gráficos, tabelas ou esquemas usados
+            <input type="checkbox" name="item[]" value="Método: Adequação e qualidade das figuras, gráficos, tabelas ou esquemas usados"> Adequação e qualidade das figuras, gráficos, tabelas ou esquemas usados<br>
             <input type="checkbox" name="item[]" value="Método: Materiais e procedimentos:">Materiais e procedimentos: Os instrumentos, equipamentos e tratamentos empregados no estudo para a obtenção dos dados respondem à necessidade da pesquisa<br>
 
         <p> Deseja adicionar mais algum item?</p>
