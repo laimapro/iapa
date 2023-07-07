@@ -9,8 +9,8 @@
         <p class="lead">Instrumento de Avaliação de Produção Acadêmica</p>
         <div class="col-lg-8 mx-auto text-body-secondary">
             <p><span id="saudacao"></span> 👋. São <span id="horario"></span> <span id="horario"></span>. Que bom ter você por aqui 🙂.</p>
-            <p>Sou o seu assistente online e estou aqui ter ajudar na construçao da sua avaliação de Produção Acadêmica, ou se você desejar, te guiar a avaliar uma produção acadêmica, de forma simples e eficiente. Para que eu saiba o que você pretende fazer, basta entrar em um dos links abaixo e eu lhe levarei rapidinho para onde você pediu.</p>
-            <p>Será um processo tranquilo, te ajudarei em todas as etapas do processo e garantindo que você aproveite ao máximo todos os recursos que o IAPA tem para lhe oferecer.</p>
+            <p>Sou o seu assistente online e estou aqui para lhe ajudar na construção de seu instrumento de avaliação de Produção Acadêmica, ou se você desejar, lhe guiar na avaliação de uma produção acadêmica, de forma simples e eficiente. Para que eu saiba o que você pretende fazer, basta entrar em um dos links abaixo e lhe levarei rapidinho para onde você pediu.</p>
+            <p>Será um processo tranquilo. Eu lhe ajudarei em todas as etapas do processo, garantindo que você aproveite ao máximo todos os recursos que o IAPA tem a oferecer.</p>
         </div>
         <!-- <p>Sou Laima, seu assistente online e estou aqui para ajudá-lo(a) a criar seu instrumento de avaliação de Produção acadêmica, ou se você desejar, guia-lo(a) a avaliar uma produção acadêmica, de forma simples e eficiente.</p> -->
         <!-- <p> Fique tranquilo, (a)vou ajudá-lo(a) em todas as etapas do processo e garantir que você aproveite ao máximo todos os recursos que o IAPA tem para lhe oferecer.</p> -->
