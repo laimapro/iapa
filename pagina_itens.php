@@ -202,9 +202,6 @@ if (isset($_SESSION['id'])) {
            <textarea name="item[]" id=""></textarea>
         </fieldset>
         <br>
-
-        <p> Deseja adicionar mais algum item?</p>
-     <textarea name="item[]" id=""></textarea>
     </fieldset>
 
     <fieldset>
@@ -231,9 +228,9 @@ if (isset($_SESSION['id'])) {
 
     <fieldset>
         <legend><h4>Discursão</h4></legend>
-            <input type="checkbox" name="item[]" value="Análise: Profundidade da análise"> Profundidade da análise<br>
-            <input type="checkbox" name="item[]" value="Análise: Coerência da análise com os dados coletados"> Coerência da análise com os dados coletados<br>
-            <input type="checkbox" name="item[]" value="Análise: Coerência da analise com a fundamentação teorica">Coerência da analise com a fundamentação teorica<br>
+            <input type="checkbox" name="item[]" value="Discursão: Profundidade da discursão"> Profundidade da discursão<br>
+            <input type="checkbox" name="item[]" value="Discursão: Coerência da discursão com os dados coletados"> Coerência da discursão com os dados coletados<br>
+            <input type="checkbox" name="item[]" value="Discursão: Coerência da discursão com a fundamentação teorica">Coerência da discursão com a fundamentação teorica<br>
             <p> Deseja adicionar mais algum item?</p>
            <textarea name="item[]" id=""></textarea>
     </fieldset>
