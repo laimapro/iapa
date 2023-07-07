@@ -212,8 +212,8 @@ if (isset($_SESSION['id'])) {
 
     <fieldset>
             <legend><h4>Cronograma</h4></legend>
-            <input type="checkbox" name="item[]" value="Método - Sujeitos: A população do estudo responde a natureza da pesquisa">A população do estudo responde a natureza da pesquisa<br>
-             <input type="checkbox" name="item[]" value="Método - Sujeitos: O número de sujeitos contempla a natureza da pesquisa">O número de sujeitos contempla a natureza da pesquisa<br>
+            <input type="checkbox" name="item[]" value="Método - Cronograma: O cronograma é viável no tempo disponível para a pesquisa">O cronograma é viável no tempo disponível para a pesquisa<br>
+             <input type="checkbox" name="item[]" value="Método - Cronograma: A organização do cronograma é clara">A organização do cronograma é clara<br>
              <p> Deseja adicionar mais algum item?</p>
            <textarea name="item[]" id=""></textarea>
     
