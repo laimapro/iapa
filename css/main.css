@@ -1,3 +1,10 @@
+body {
+    font-size: 14px !important;
+}
+
+.form-floating>label {
+    white-space: pre-wrap;
+}
 
 .menu-nav {
     position: -webkit-sticky;
@@ -13,6 +20,9 @@
     font-size: .85rem;
 }
 
+.rotate45 {
+    transform: rotate(45deg);
+}
 
 .footer {
     font-size: .825rem;
