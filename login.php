@@ -1,7 +1,7 @@
 <?php include_once('includes/head.php') ?>
 <div class="container px-4 py-5">
   <div class="p-5 rounded-3 bg-white border shadow-lg text-center">
-    <img src="img/icone.svg" class="logo  bi me-2" width="100px" height="100px" alt="logotipo do Laima">
+  <?php include_once('includes/logo.php') ?>
     <h2 class="pt-4 mt-5 text-body-emphasis">Boas-vindas ao IAPA 👋</h2>
     <form class="col-lg-8 mx-auto p-5" id="signin" action="" method="POST">
       <h4 class="mb-3">Acesso ao Sistema</h4>

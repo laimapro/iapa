@@ -1,4 +1,11 @@
-
+.logo a{
+    flex-direction: row !important;
+    display: flex;
+}
+.logo img {
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+}
 .menu-nav {
     position: -webkit-sticky;
     position: sticky;
