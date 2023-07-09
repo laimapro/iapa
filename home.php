@@ -28,7 +28,7 @@
     <div class="p-5 rounded-3 bg-white border shadow-lg">
     <?php include_once('includes/logo.php') ?>
     
-    <p>Olá 👋 <?php echo $pronomeTratamento; ?> <strong class="text-uppercase"><?php if ($nomesocial != null) {echo $nomesocial;} else {echo $nomeUsuario;echo " ";echo $sobrenomeUsuario;} ?></strong>, boas-vindas ao <strong>IAPA</strong>.</p>
+    <p>Olá 👋 <?php echo $pronomeTratamento; ?> <strong><?php if ($nomesocial != null) {echo $nomesocial;} else {echo $nomeUsuario;echo " ";echo $sobrenomeUsuario;} ?></strong>, boas-vindas ao <strong>IAPA</strong>.</p>
     <p>Sou, Laima, seu assistente online e estou aqui para ajudá-lo(a) a criar seu instrumento de avaliação de Produção acadêmica, ou se você desejar, guia-lo(a) a avaliar uma produção acadêmica, de forma simples e eficiente.</p>
     <p> Fique tranquilo(a), ou ajudá-lo(a) em todas as etapas do processo e garantir que você aproveite ao máximo todos os recursos que o IAPA tem a oferecer. Siga minhas orientações e verá como vai ser fácil! Para que eu saiba o que você pretende fazer, basta pressionar um dos botões abaixo. Estamos entendidos? Então, vamos começar. É com você agora.</p>
     <ul class="my-5 list-group list-group-flush">
