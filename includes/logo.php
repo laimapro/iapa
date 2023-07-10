@@ -1,4 +1,4 @@
-<div class="pb-5">
+<div class="pb-5 text-center">
     <a href="index.php" class="link-body-emphasis text-decoration-none">
         <img src="img/icon.svg" width="85px" alt="Logotipo do Laima" lang="en">
         <h1 class="my-3 fw-bold">IAPA</h1>

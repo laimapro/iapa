@@ -1,164 +1,162 @@
 <?php include_once('includes/head.php') ?>
 
 <?php
-include('conexao.mysqli.php');
-session_start();
-// Verifique se o usuário está logado (se o ID do usuário está definido na sessão)
-if (isset($_SESSION['id'])) {
-    $idUsuario = $_SESSION['id'];
+    include('conexao.mysqli.php');
+    session_start();
+    // Verifique se o usuário está logado (se o ID do usuário está definido na sessão)
+    if (isset($_SESSION['id'])) {
+        $idUsuario = $_SESSION['id'];
 
-    // Consulta para obter todos os dados do usuário com base no ID
-    $sql = "SELECT * FROM usuarios WHERE id = $idUsuario";
-    $result = $mysqli->query($sql);
+        // Consulta para obter todos os dados do usuário com base no ID
+        $sql = "SELECT * FROM usuarios WHERE id = $idUsuario";
+        $result = $mysqli->query($sql);
 
-    if ($result->num_rows > 0) {
-        // Exibe os dados do usuário
-        $row = $result->fetch_assoc();
-        $nomeUsuario = $row["nome"];
-        $sobrenomeUsuario = $row["sobrenome"];
-        $pronomeTratamento = $row["pronomeTratamento"];
-        $pronomeReferencia = $row["pronomeReferencia"];
-        $instituicao = $row["instituicao"];
-        $curso = $row["curso"];
-        $programaposgraduacao = $row["programaposgraduacao"];
-        $nomesocial = $row["nomesocial"];
+        if ($result->num_rows > 0) {
+            // Exibe os dados do usuário
+            $row = $result->fetch_assoc();
+            $nomeUsuario = $row["nome"];
+            $sobrenomeUsuario = $row["sobrenome"];
+            $pronomeTratamento = $row["pronomeTratamento"];
+            $pronomeReferencia = $row["pronomeReferencia"];
+            $instituicao = $row["instituicao"];
+            $curso = $row["curso"];
+            $programaposgraduacao = $row["programaposgraduacao"];
+            $nomesocial = $row["nomesocial"];
 
-?>
+    ?>
 
 
-        <div class="container col-xl-10 col-xxl-8 px-4 py-5">
-            <div class="row p-5 align-items-start rounded-3 bg-white  border shadow-lg">
-                <div class="col-12 col-md-4 text-center text-lg-start">
-                    <div class="logo">
-                        <?php include_once('includes/logo.php') ?>
-                    </div>
-                    <div class="menu-nav">
-                    </div>
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+        <div class="row p-5 align-items-start rounded-3 bg-white  border shadow-lg">
+            <div class="col-12 col-md-4 text-center text-lg-start">
+                <?php include_once('includes/logo.php') ?>
+                <div class="menu-nav">
                 </div>
-                <div class="col-12 mx-auto col-md-8">
-                    <p id="orientacao"> Oi, <?php echo $pronomeTratamento;
+            </div>
+            <div class="col-12 mx-auto col-md-8">
+                <p id="orientacao"> Oi, <?php echo $pronomeTratamento;
+                                        echo " ";
+                                        if ($nomesocial != null) {
+                                            echo $nomesocial;
+                                        } else {
+                                            echo $nomeUsuario;
                                             echo " ";
-                                            if ($nomesocial != null) {
-                                                echo $nomesocial;
-                                            } else {
-                                                echo $nomeUsuario;
-                                                echo " ";
-                                                echo $sobrenomeUsuario;
-                                            } ?>, permita-me guiar-lhe pelos passos de nosso IAPA.</p>
-                    <p>Para isso, preciso que você escolha um arquivo na lista de produções acadêmicas.</p>
-                    <p>Quando você fizer isso, eu imediatamente exibirei os critérios que você deverá avaliar. se não deseja julgar uma produção acadêmica agora ou se quiser avaliar outro trabalho, pressione o botão voltar e estaremos na página anterior, como em um passo de mágica.</p>
+                                            echo $sobrenomeUsuario;
+                                        } ?>, permita-me guiar-lhe pelos passos de nosso IAPA.</p>
+                <p>Para isso, preciso que você escolha um arquivo na lista de produções acadêmicas.</p>
+                <p>Quando você fizer isso, eu imediatamente exibirei os critérios que você deverá avaliar. se não deseja julgar uma produção acadêmica agora ou se quiser avaliar outro trabalho, pressione o botão voltar e estaremos na página anterior, como em um passo de mágica.</p>
 
-                    <?php
-                    // Assuming you've already created a mysqli connection named $mysqli
+                <?php
+                // Assuming you've already created a mysqli connection named $mysqli
 
-                    // Prepare and bind the statement
-                    $stmt = $mysqli->prepare("SELECT * FROM tipo_producao WHERE instituicao = ? AND curso = ? AND programaposgraduacao = ?");
-                    $stmt->bind_param("sss", $instituicao, $curso, $programaposgraduacao);
+                // Prepare and bind the statement
+                $stmt = $mysqli->prepare("SELECT * FROM tipo_producao WHERE instituicao = ? AND curso = ? AND programaposgraduacao = ?");
+                $stmt->bind_param("sss", $instituicao, $curso, $programaposgraduacao);
 
-                    // Execute the prepared statement
-                    $stmt->execute();
+                // Execute the prepared statement
+                $stmt->execute();
 
-                    // Get the result
-                    $result = $stmt->get_result();
+                // Get the result
+                $result = $stmt->get_result();
 
-                    ?>
+                ?>
 
-                    <?php
-                    while ($arquivo = $result->fetch_assoc()) {
-                    ?>
+                <?php
+                while ($arquivo = $result->fetch_assoc()) {
+                ?>
 
-                    <?php
-                    }
-                    ?>
+                <?php
+                }
+                ?>
 
 
-                    </table>
+                </table>
 
-                    <?php
-                    // Reset pointer to the beginning of the MySQLi result set
-                    mysqli_data_seek($result, 0);
+                <?php
+                // Reset pointer to the beginning of the MySQLi result set
+                mysqli_data_seek($result, 0);
 
-                    while ($arquivo = $result->fetch_assoc()) {
-                    ?>
+                while ($arquivo = $result->fetch_assoc()) {
+                ?>
 
 
-                    <?php
-                    }
-                    ?>
-                    <?php
-                    $stmt->close();
-                    ?>
+                <?php
+                }
+                ?>
+                <?php
+                $stmt->close();
+                ?>
 
-                    <div class="form-floating" id="arquivos">
-                        <select class="form-select" id="selecionarArquivos" name="arquivos" onclick="loadFile(this.value)" aria-label="Selecione uma produção acadêmica">
-                            <option selected>Escolha uma opção</option>
-                            <?php
-                            $directoryPath = 'IAPA.CRIADOS';
+                <div class="form-floating" id="arquivos">
+                    <select class="form-select" id="selecionarArquivos" name="arquivos" onclick="loadFile(this.value)" aria-label="Selecione uma produção acadêmica">
+                        <option selected>Escolha uma opção</option>
+                        <?php
+                        $directoryPath = 'IAPA.CRIADOS';
 
-                            // Reset pointer to the beginning of the MySQLi result set
-                            mysqli_data_seek($result, 0);
+                        // Reset pointer to the beginning of the MySQLi result set
+                        mysqli_data_seek($result, 0);
 
-                            while ($arquivo = $result->fetch_assoc()) {
-                                $filepath = $directoryPath . '/' . $arquivo['arquivo'] . '.json';
-                                if (file_exists($filepath)) {
-                                    echo '<option value="' . $filepath . '">' . $arquivo['arquivo'] . '</option>';
-                                }
+                        while ($arquivo = $result->fetch_assoc()) {
+                            $filepath = $directoryPath . '/' . $arquivo['arquivo'] . '.json';
+                            if (file_exists($filepath)) {
+                                echo '<option value="' . $filepath . '">' . $arquivo['arquivo'] . '</option>';
                             }
-                            ?>
-                        </select>
-                        <label for="selecionarArquivos">Selecione uma produção acadêmica</label>
-                    </div>
+                        }
+                        ?>
+                    </select>
+                    <label for="selecionarArquivos">Selecione uma produção acadêmica</label>
+                </div>
 
-                    <div id="checkboxContainer" style="display: none;">
-                        <a class="btn btn-outline-secondary" href="avaliacao.php" title="Permite escolher outro arquivo para avaliação"><i class="me-2 bi bi-arrow-left-right"></i> <span>Selecione outro arquivo</span></a>
-                        <form action="avaliado.php" class="mt-5 " method="post">
+                <div id="checkboxContainer" style="display: none;">
+                    <a class="btn btn-outline-secondary" href="avaliacao.php" title="Permite escolher outro arquivo para avaliação"><i class="me-2 bi bi-arrow-left-right"></i> <span>Selecione outro arquivo</span></a>
+                    <form action="avaliado.php" class="mt-5 " method="post">
 
-                            <fieldset>
-                                <legend>Identificação da produção  acadêmica</legend>
+                        <fieldset>
+                            <legend>Identificação da produção  acadêmica</legend>
 
-                                <div class="form-floating ">
-                                    <textarea class="form-control" placeholder="Escreva o título da produção acadêmica" id="tituloproducaoacademica" style="height: 100px" title="Escreva o título da produção acadêmica" required></textarea>
-                                    <label for="tituloproducaoacademica">Título da produção acadêmica</label>
-                                </div>
-                            </fieldset>
-                            <p class="my-4" id="itens"></p>
-                            <p>Estamos quase lá, agora você precisa escolher um tópico e avaliar cada item. Ai calcularei a média para você. Quando você terminar de avaliar pressione o botão 'Salvar e gerar parecer' e eu farei isso para você</p>
-                            
-                            <fieldset>
-                                <div id="itemContainer">
-                                </div>
-
-                                <div id="mediaContainer"></div>
-
-                                <div id="result"></div>
-
-                                <div class="form-floating mb-5" >
-                                    <!-- id="observacao"> -->
-                                    <textarea id="observacaoAvaliador" class="form-control" name="observacaoValor" title="Escreva uma observação (opcional)" placeholder="Escreva a observações do avaliador(a)" style="height: 100px;"></textarea>
-                                    <label for="tituloproducaoacademica"> Observações do avaliador(a)</label>
-                                </div>
-
-
-
-                                <div id="aprovacao"></div>
-                            </fieldset>
-                            <div class="text-end">
-                                <button class="btn btn-primary" type="submit" title="" accesskey="2">Salvar e gerar parecer</button>
+                            <div class="form-floating ">
+                                <textarea class="form-control" placeholder="Escreva o título da produção acadêmica" id="tituloproducaoacademica" style="height: 100px" title="Escreva o título da produção acadêmica" required></textarea>
+                                <label for="tituloproducaoacademica">Título da produção acadêmica</label>
                             </div>
-                    </div>
-                    </form>
+                        </fieldset>
+                        <p class="my-4" id="itens"></p>
+                        <p>Estamos quase lá, agora você precisa escolher um tópico e avaliar cada item. Ai calcularei a média para você. Quando você terminar de avaliar pressione o botão 'Salvar e gerar parecer' e eu farei isso para você</p>
+                        
+                        <fieldset>
+                            <div id="itemContainer">
+                            </div>
+
+                            <div id="mediaContainer"></div>
+
+                            <div id="result"></div>
+
+                            <div class="form-floating mb-5" >
+                                <!-- id="observacao"> -->
+                                <textarea id="observacaoAvaliador" class="form-control" name="observacaoValor" title="Escreva uma observação (opcional)" placeholder="Escreva a observações do avaliador(a)" style="height: 100px;"></textarea>
+                                <label for="tituloproducaoacademica"> Observações do avaliador(a)</label>
+                            </div>
+
+
+
+                            <div id="aprovacao"></div>
+                        </fieldset>
+                        <div class="text-end">
+                            <button class="btn btn-primary" type="submit" title="" accesskey="2">Salvar e gerar parecer</button>
+                        </div>
+                </div>
+                </form>
 
 
 
 
 
-                    <div class="mt-5">
-                        <button class="btn btn-link" onclick="window.location.href='home.php'" accesskey="1" title="Retorna para página inicial do IAPA"><i class="bi bi-arrow-left me-1"></i>Voltar para o IAPA</button>
-                    </div>
+                <div class="mt-5">
+                    <button class="btn btn-link" onclick="window.location.href='home.php'" accesskey="1" title="Retorna para página inicial do IAPA"><i class="bi bi-arrow-left me-1"></i>Voltar para o IAPA</button>
                 </div>
             </div>
         </div>
-        <!-- <p><span id="saudacao"></span>!<br><i class="mx-2 bi bi-clock"></i>Agora são <span id="horario"></span></p> -->
+    </div>
+    <!-- <p><span id="saudacao"></span>!<br><i class="mx-2 bi bi-clock"></i>Agora são <span id="horario"></span></p> -->
 
 
         <script>

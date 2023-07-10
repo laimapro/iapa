@@ -1,18 +1,6 @@
-<?php 
-include("includes/logo.php");
-?>
+<?php include("includes/head.php"); ?>
 
-
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IAPA</title>
-</head>
-<body>
 <?php
-
 include('conexao.mysqli.php');
 session_start();
 
@@ -37,43 +25,51 @@ if (isset($_SESSION['id'])) {
 ?>
 
 
-<h1>Instrumento de avaliação de produção Acadêmica</h1>
-<h3>Olá, <?php echo $pronomeTratamento; echo " ";
-if ($nomesocial != null) {
-    echo $nomesocial;
-} else {
-    echo $nomeUsuario; echo " "; echo $sobrenomeUsuario;
-}
-?></h3>
-
-<p><span id="saudacao"></span>!<br><i class="mx-2 bi bi-clock"></i>Agora são <span id="horario"></span>: <span id="horario"></span> <span id="saudacao"></span></p>
-
-<script>
-   
-</script>
-
-
-<br>
-<h1>Crie a categoria: </h1>
-<form action="processa_categoria.php" method="post">
-    <label for="Para criar a categoria digite o nome dela">Digite o nome da categoria:</label>
-    <input type="text" name="nomeCategoria">
-    <input type="submit" value="Cadastrar">
-
-</form>
-<a href="pagina_categoria.php">Voltar para criar IAPA</a>
+        <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+            <div class="row p-5 align-items-start rounded-3 bg-white  border shadow-lg">
+                <div class="col-12 col-md-4 text-center text-lg-start">
+                    <?php include_once('includes/logo.php') ?>
+                    <div class="menu-nav">
+                    </div>
+                </div>
+                <div class="col-12 mx-auto col-md-8">
+                    <p><span id="saudacao"></span>, <?php echo $pronomeTratamento; echo " "; if ($nomesocial != null) { echo $nomesocial; } else { echo $nomeUsuario; echo " "; echo $sobrenomeUsuario;}?></p>
+                    <fieldset>
+                        <legend>Criar categoria</legend>
+                        <form action="processa_categoria.php" method="post">
+                            <div class="form-floating my-4">
+                                <input  type="text" name="nomeCategoria" class="form-control" id="nomeCategoria" placeholder="Digite o nome da categoria">
+                                <label for="nomeCategoria">Digite o nome da categoria</label>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <a href="pagina_categoria.php"><i class="bi bi-arrow-left me-1"></i>Voltar para criar IAPA</a>
+                                <input type="submit" value="Cadastrar" class="btn btn-primary">
+                            </div>
+                        </form>
+                    </fieldset>
 
 
-<?php
-} else {
-    echo "Nenhum usuário encontrado.";
-}
 
-$mysqli->close();
-} else {
-    // Se o usuário não estiver logado, redirecione-o para a página de login
-    header("Location: index.php");
-    exit();
-}
-?>
-<?php include_once('includes/footer.php') ?>
+                    
+
+
+            <?php
+        } else {
+            echo "Nenhum usuário encontrado.";
+        }
+
+        $mysqli->close();
+    } else {
+        // Se o usuário não estiver logado, redirecione-o para a página de login
+        header("Location: index.php");
+        exit();
+    }
+            ?>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <?php include_once('includes/footer.php') ?>
