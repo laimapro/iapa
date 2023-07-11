@@ -30,7 +30,7 @@
         <div class="row p-5 align-items-start rounded-3 bg-white  border shadow-lg">
             <div class="col-12 col-md-4 text-center text-lg-start">
                 <?php include_once('includes/logo.php') ?>
-                <div class="menu-nav">
+                <div class="toc">
                 </div>
             </div>
             <div class="col-12 mx-auto col-md-8">
