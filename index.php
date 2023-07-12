@@ -2,12 +2,9 @@
 <div class="container px-4 py-5">
     <div class="p-5 rounded-3 bg-white border shadow-lg text-center">
         <!-- <p><span id="saudacao"></span>!<br><i class="mx-2 bi bi-clock"></i>Agora são <span id="horario"></span> </p> -->
-        <img src="img/icone.svg" class="logo  bi me-2" width="100px" height="100px" alt="logotipo do Laima">
+        <?php include_once('includes/logo.php') ?>
 
-
-        <h1 class="mt-4 mb-4 text-body-emphasis">IAPA</h1>
-        <p class="lead">Instrumento de Avaliação de Produção Acadêmica</p>
-        <div class="col-lg-8 mx-auto text-body-secondary">
+        <div class=" py-3 text-start col-lg-8 mx-auto my-4 my-4 text-body-secondary">
             <p><span id="saudacao"></span> 👋. São <span id="horario"></span> <span id="horario"></span>. Que bom ter você por aqui 🙂.</p>
             <p>Sou o seu assistente online e estou aqui para lhe ajudar na construção de seu instrumento de avaliação de Produção Acadêmica, ou se você desejar, lhe guiar na avaliação de uma produção acadêmica, de forma simples e eficiente. Para que eu saiba o que você pretende fazer, basta entrar em um dos links abaixo e lhe levarei rapidinho para onde você pediu.</p>
             <p>Será um processo tranquilo. Eu lhe ajudarei em todas as etapas do processo, garantindo que você aproveite ao máximo todos os recursos que o IAPA tem a oferecer.</p>

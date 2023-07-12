@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IAPA</title>
-</head>
-<body>
+<?php include_once('includes/head.php'); ?>
 
 <?php
   include('conexao.mysqli.php');
@@ -33,19 +26,28 @@ if (isset($_SESSION['id'])) {
         
         ?>
 
-<img src="img/cropped-logo.png" alt="Logotipo do Laima" lang='en'><span aria-label="Laboratory of Artificial Intelligence and Machine AID" lang="en-us">Laboratory of Artificial Intelligence and Machine AID</span> da Universidade Federal de Pernambuco (UFPE)</span>
-<h1>IAPA - Instrumento de Avaliação de Produção Acadêmica</h1>
-<p><span id="saudacao"></span>!<br><i class="mx-2 bi bi-clock"></i>Agora são <span id="horario"></span></p>
+<div class="container col-xl-10 col-xxl-8 px-4 py-5">
+        <div class="row p-5 align-items-start rounded-3 bg-white  border shadow-lg">
+            <div class="col-12 col-md-4 text-center text-lg-start">
+                <?php include_once('includes/logo.php') ?>
+                <div class="toc">
+                </div>
+            </div>
+            <div class="col-12 mx-auto col-md-8">
+                <p id="orientacao"> Oi, <?php echo $pronomeTratamento;
+                                        echo " ";
+                                        if ($nomesocial != null) {
+                                            echo $nomesocial;
+                                        } else {
+                                            echo $nomeUsuario;
+                                            echo " ";
+                                            echo $sobrenomeUsuario;
+                                        } ?>, permita-me guiar-lhe pelos passos de nosso IAPA.</p>
+                <p>Para isso, preciso que você escolha um arquivo na lista de produções acadêmicas.</p>
+                <p>Quando você fizer isso, eu imediatamente exibirei os critérios que você deverá avaliar. se não deseja julgar uma produção acadêmica agora ou se quiser avaliar outro trabalho, pressione o botão voltar e estaremos na página anterior, como em um passo de mágica.</p>
 
-<p id="orientacao"> Oi, <?php echo $pronomeTratamento; echo " "; if ($nomesocial != null){echo $nomesocial;}else{echo $nomeUsuario; echo " "; echo $sobrenomeUsuario;} ?>, permita-me guiar-lhe pelos passos de nosso IAPA.
-Para isso, preciso que você escolha um arquivo na lista de produções acadêmicas.
-Quando você fizer isso, eu imediatamente exibirei os critérios que você deverá avaliar. se não deseja julgar uma produção acadêmica agora ou se quiser avaliar outro trabalho, pressione o botão voltar e estaremos na página anterior, como em um passo de mágica.</p>
+                <?php
 
-
-
-<body>
-
-<?php
 // Assuming you've already created a mysqli connection named $mysqli
 
 // Prepare and bind the statement
@@ -85,10 +87,9 @@ while($arquivo = $result->fetch_assoc()){
 $stmt->close();
 ?>
 
-
-<br>
-<select id="arquivos" name="arquivos" onclick="loadFile(this.value)" >
-    <option value="">Selecione uma produção acadêmica:</option>
+<label for="selecionarArquivos">Selecione uma produção acadêmica</label>
+<select id="arquivos" name="arquivos" onclick="loadFile(this.value)" class="form-select">
+    <option value="">Escolha uma opção</option>
     <?php
     $directoryPath = 'IAPA.CRIADOS';
 
@@ -107,13 +108,16 @@ $stmt->close();
 
 
 <form action="avaliado.php" method="post">
-<button onclick="window.location.href='avaliacao.php'" title="Permite escolher outro arquivo para avaliação">Voltar</button>
+    <a class="btn btn-outline-secondary" href="avaliacao.php" title="Permite escolher outro arquivo para avaliação"><i class="me-2 bi bi-arrow-left-right"></i> <span>Selecione outro arquivo</span></a>
     <fieldset>
         <legend>Título da produção acadêmica:</legend>
-        <textarea name="tituloproducaoacademica" id="tituloproducaoacademica" title="Escreva o Título da produção acadêmica" required></textarea>
+        <div class="form-floating ">
+             <textarea class="form-control" placeholder="Escreva o título da produção acadêmica" name="tituloproducaoacademica" id="tituloproducaoacademica" style="height: 100px" title="Escreva o título da produção acadêmica" required></textarea>
+            <label for="tituloproducaoacademica">Título da produção acadêmica</label>
+        </div>
     </fieldset>
             <br>
-            <p id="itens"></p>
+            <p class="my-4" id="itens"></p>
         <fieldset>
             <legend>Estamos quase lá, agora você precisa escolher um tópico e avaliar cada item. Ai calcularei a média para você. Quando você terminar de avaliar pressione o botão Salvar e Avançar e eu farei isso para você</legend>
             <div id="itemContainer">
@@ -123,15 +127,21 @@ $stmt->close();
 
             <div id="result"></div>
             <br>
+            <div class="form-floating mb-5" >
             <label for="Observações do avaliador(a):">Observações do avaliador(a):</label>
+            <br><br>
             <div id="observacao"></div>
+            </div>
             <div id="aprovacao"></div>
         </fieldset>
-        <button type="submit" title="" accesskey="2">Salvar e gerar parecer</button> 
+        <div class="text-end">
+             <button class="btn btn-primary" type="submit" title="" accesskey="2">Salvar e gerar parecer</button>
+        </div>
     </div>
 </form>
-<button onclick="window.location.href='home.php'" accesskey="1" title="Retorna para página inicial do IAPA">Voltar para o IAPA</button> 
-
+<div class="mt-5">
+    <button class="btn btn-link" onclick="window.location.href='home.php'" accesskey="1" title="Retorna para página inicial do IAPA"><i class="bi bi-arrow-left me-1"></i>Voltar para o IAPA</button>
+</div>
 
 <script>
     async function loadFile(fileName) {
@@ -142,21 +152,25 @@ $stmt->close();
         var observacao = document.getElementById("observacao");
         var mediarelatorio = document.getElementById("mediarelatorio");
         var aprovacao = document.getElementById("aprovacao");
+        var labelSelectArquivo = document.querySelector("label[for='selecionarArquivos']");
+        
 
             if (fileName) {
                 
+                labelSelectArquivo.style.display = "none";
                 checkboxContainer.style.display = "block"; 
                 selecionarArquivoBtn.style.display = "none";
                 orientacao.textContent = "Oi, <?php echo $pronomeTratamento; echo" "; if ($nomesocial != null){echo $nomesocial;}else{echo $nomeUsuario; echo " "; echo $sobrenomeUsuario;} ?>, agora estamos prontos para avaliar a produção acadêmica que você escolheu. se você deseja avaliar outro arquivo, pressione o botão voltar Abaixo, assinale quais as opções que se aplicam a produção acadêmica em avaliação.";
                 itens.textContent = "Agora vamos dar notas aos itens dos diferentes tópicos exigidos para sua produção acadêmica.";
-                
-                
+
+                labelSelectArquivo.class ="hidden";
                 
                 var textareaElement = document.createElement("textarea");
                     textareaElement.id = "minhaTextarea";
                     textareaElement.name = "observacaoValor";
                     textareaElement.title= "Escreva uma observação (opcional)";
                     textareaElement.value = "";
+                    textareaElement.className = "form-control";
 
 
                     observacao.appendChild(textareaElement);

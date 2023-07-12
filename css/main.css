@@ -1,18 +1,41 @@
-
-.menu-nav {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 8rem;
-    scroll-margin-top: 8rem;
+.logo a {
+    flex-direction: row !important;
+    display: flex;
 }
 
-.menu-title {
+.logo img {
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.menu-title,
+.menu-page>h2 {
     text-transform: uppercase;
     font-weight: light;
     color: var(--bs-secondary-color);
     font-size: .85rem;
 }
 
+#toc ul {
+    padding: 0;
+    margin: 0 0 2rem 0;
+    list-style: none;
+    ;
+}
+
+#toc ul li {
+    padding:  0.25rem 0;
+}
+
+#toc ul li a {
+    display: block;
+    text-decoration: none;
+}
+#toc ul li:hover {
+    background-color: #f8f9fa;
+}
+
+.menu-page h2 {}
 
 .footer {
     font-size: .825rem;

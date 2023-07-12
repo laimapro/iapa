@@ -3,13 +3,13 @@
 <div class="container col-xl-10 col-xxl-8 px-4 py-5">
   <div class="row p-5 align-items-start rounded-3 bg-white  border shadow-lg">
     <div class="col-12 col-md-4 text-center text-lg-start">
-      <?php include_once('includes/logo.php') ?>
-
-      <div class="sticky-top menu-nav ">
-        <h2 class="menu-title mt-5 mb-3" title="Confira as seções das informações necessárias para criar a conta nos links a seguir">
+      <div class="logo">
+        <?php include_once('includes/logo.php') ?>
+      </div>
+      <div class="menu-nav">
+        <h2 class="menu-title" title="Confira as seções das informações necessárias para criar a conta nos links a seguir">
           Criar conta
         </h2>
-
         <ul class="list-group list-group-flush">
           <li class="px-0 list-group-item"><a class="text-decoration-none d-block" href="#identificacao" title="Insira seu nome, sobrenome ou nome social">Identificação</a></li>
           <li class="px-0 list-group-item"><a class="text-decoration-none d-block" href="#pronomes" title="Escolha um pronome de tratamento e um pronome para referência">Pronomes</a></li>
@@ -18,10 +18,7 @@
           <li class="px-0 list-group-item"><a class="text-decoration-none d-block" href="#idiomas" title="Escolha um ou mais idiomas em que você pode avaliar uma produção acadêmica">Idioma</a></li>
         </ul>
       </div>
-
     </div>
-
-
     <div class="col-12 mx-auto col-md-8">
       <form class="p-3 border rounded-3 bg-body-tertiary" action="processa_cadastro.php" method="POST">
 
