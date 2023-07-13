@@ -329,4 +329,6 @@ header("Location: index.php");
 exit();
 }
 ?>
+</div>
+</div>
 <?php include_once('includes/footer.php') ?>
