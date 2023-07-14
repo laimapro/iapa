@@ -14,10 +14,12 @@
         <!-- <p>Para que eu saiba o que você pretende fazer, basta entrar em um dos links abaixo e eu lhe levarei rapidinho para onde você pediu.</p> -->
         <nav class="mt-5 flex-wrap justify-content-center d-inline-flex gap-2 mb-5">
             <h2 class="visually-hidden-focusable">Menu</h2>
-            <a class="btn px-4 rounded-pill btn-link" href="sobre.php" title="Saiba mais sobre este programa" accesskey="1">Sobre Este Programa</a>
-            <a class="btn px-4 rounded-pill btn-link" href="#" title="Conheça mais sobre nossa equipe" accesskey="2">Quem Somos</a>
-            <a class="btn px-4 rounded-pill btn-primary" href="login.php" title="Faça login no IAPA" accesskey="3">Inicie IAPA</a>
-            <button class="btn px-4 rounded-pill btn-link contrast-btn" onclick="toggleContrast()" title="Alterar a aparência desta página" accesskey="4"><i class="bi bi-circle-half"></i></button>
+            <ul>
+             <li>   <a class="btn px-4 rounded-pill btn-link" href="sobre.php" title="Saiba mais sobre este programa" accesskey="1">Sobre Este Programa</a></li>
+              <li>  <a class="btn px-4 rounded-pill btn-link" href="#" title="Conheça mais sobre nossa equipe" accesskey="2">Quem Somos</a></li>
+              <li>  <a class="btn px-4 rounded-pill btn-primary" href="login.php" title="Faça login no IAPA" accesskey="3">Inicie IAPA</a></li>
+            </ul>
+                <button class="btn px-4 rounded-pill btn-link contrast-btn" onclick="toggleContrast()" title="Alterar a aparência desta página" accesskey="4"><i class="bi bi-circle-half"></i></button>
         </nav>
     </div>
 </div>
