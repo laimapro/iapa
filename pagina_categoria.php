@@ -1,55 +1,55 @@
 <?php include_once('includes/head.php') ?>
 
 <?php
-    include('conexao.mysqli.php');
-    session_start();
+include('conexao.mysqli.php');
+session_start();
 
-    // Verifique se o usuário está logado (se o ID do usuário está definido na sessão)
-    if (isset($_SESSION['id'])) {
-        $idUsuario = $_SESSION['id'];
+// Verifique se o usuário está logado (se o ID do usuário está definido na sessão)
+if (isset($_SESSION['id'])) {
+    $idUsuario = $_SESSION['id'];
 
-        // Consulta para obter todos os dados do usuário com base no ID
-        $sql = "SELECT * FROM usuarios WHERE id = $idUsuario";
-        $result = $mysqli->query($sql);
+    // Consulta para obter todos os dados do usuário com base no ID
+    $sql = "SELECT * FROM usuarios WHERE id = $idUsuario";
+    $result = $mysqli->query($sql);
 
-        if ($result->num_rows > 0) {
-            // Exibe os dados do usuário
-            $row = $result->fetch_assoc();
-            $nomeUsuario = $row["nome"];
-            $sobrenomeUsuario = $row["sobrenome"];
-            $pronomeTratamento = $row["pronomeTratamento"];
-            $pronomeReferencia = $row["pronomeReferencia"];
-            $instituicao = $row["instituicao"];
-            $curso = $row["curso"];
-            $nomesocial = $row["nomesocial"];
-            $funcao = $row["funcao"];
-            $programaposgraduacao = $row["programaposgraduacao"];
+    if ($result->num_rows > 0) {
+        // Exibe os dados do usuário
+        $row = $result->fetch_assoc();
+        $nomeUsuario = $row["nome"];
+        $sobrenomeUsuario = $row["sobrenome"];
+        $pronomeTratamento = $row["pronomeTratamento"];
+        $pronomeReferencia = $row["pronomeReferencia"];
+        $instituicao = $row["instituicao"];
+        $curso = $row["curso"];
+        $nomesocial = $row["nomesocial"];
+        $funcao = $row["funcao"];
+        $programaposgraduacao = $row["programaposgraduacao"];
 ?>
 
 
-<div class="container col-xl-10 col-xxl-8 px-4 py-5">
-    <div class="row p-5 align-items-start rounded-3 bg-white  border shadow-lg">
-        <div class="col-12 col-md-4 text-center text-lg-start">
-            <?php include_once('includes/logo.php') ?>
-            <div class="menu-nav">
-            </div>
-        </div>
-        <div class="col-12 col-md-8">
-                                <span aria-label="Laboratory of Artificial Intelligence and Machine AID" lang="en-us">Laboratory of Artificial Intelligence and Machine AID</span>
-                        da Universidade Federal de Pernambuco (UFPE)
+        <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+            <div class="row p-5 align-items-start rounded-3 bg-white  border shadow-lg">
+                <div class="col-12 col-md-4 text-center text-lg-start">
+                    <?php include_once('includes/logo.php') ?>
+                    <div class="menu-nav">
+                    </div>
+                </div>
+                <div class="col-12 col-md-8">
 
-                        <h1>Instrumento de avaliação de produção Acadêmica</h1>
-                        <h3>Olá, <?php echo $pronomeTratamento; echo " ";
-                        if ($nomesocial != null) {
-                            echo $nomesocial;
-                        } else {
-                            echo $nomeUsuario; echo " "; echo $sobrenomeUsuario;
-                        }
-                        ?></h3>
+                    <p><span id="saudacao"></span>, <?php echo $pronomeTratamento;
+                                                    echo " ";
+                                                    if ($nomesocial != null) {
+                                                        echo $nomesocial;
+                                                    } else {
+                                                        echo $nomeUsuario;
+                                                        echo " ";
+                                                        echo $sobrenomeUsuario;
+                                                    }
+                                                    ?></p>
 
-                        <p><span id="saudacao"></span>!<i class="mx-2 bi bi-clock"></i>Agora são <span id="horario"></span>: <span id="horario"></span> <span id="saudacao"></span></p>
+                    <p>Agora são <span id="horario"></span>: <span id="horario"></span> <span id="saudacao"></span></p>
 
-                        <script>
+                    <!-- <script>
                             var agora = new Date();
                             var horas = agora.getHours();
 
@@ -80,15 +80,16 @@
                             // Atualize o conteúdo da span com o horário e a saudação
                             document.getElementById("horario").textContent = horas + ":" + minutos + ":" + segundos;
                             document.getElementById("saudacao").textContent = saudacao;
-                        </script>
+                        </script> -->
 
 
-                        <h1>Agora que estamos aqui, escolha uma das produções acadêmicas, pressione o botão Continuar e eu lhe levarei para o próximo passo:</h1>
+                    <p>Agora que estamos aqui, escolha uma das produções acadêmicas, pressione o botão Continuar e eu lhe levarei para o próximo passo:</p>
 
 
-                        <form action="pagina_itens.php" method="get">
-                            <label for="categorias" class="tooltip" aria-label="Escolha o tipo de produção acadêmica" role="tooltip">Produção acadêmica:</label>
-                            <select id="categorias" name="categorias">
+                    <form action="pagina_itens.php" method="get">
+
+                        <div class="form-floating mb-3">
+                            <select class="form-select" id="categorias" name="categorias">
                                 <option value="PreProjeto">Pré-projeto</option>
                                 <option value="Projeto">Projeto</option>
                                 <option value="TCC">TCC</option>
@@ -123,35 +124,50 @@
 
                                 ?>
                             </select>
+                            <label for="categorias" aria-label="Escolha o tipo de produção acadêmica" role="tooltip">Produção acadêmica:</label>
+                        </div>
 
-                            
-                            <input type="submit" Value="Inicia a Construção do IAPA Escolhido" accesskey="2" class="tooltip" aria-label="continuar" role="button">
-                        </form>
-                        <?php  if($funcao == 0 || $funcao == 2 || $funcao == 3){ ?><button onclick="window.location.href='cria_categoria.php'" accesskey="3">Não encontrou a categoria pretendida, Crie-a aqui</button> <?php } ?>
+                        <div class="text-end my-3">
 
-                        <button onclick="window.location.href='home.php'" accesskey="1" title="Volta para a página inicial do IAPA">
-                        Voltar
+
+                            <input type="submit" class="btn btn-primary" Value="Inicia a Construção do IAPA Escolhido" accesskey="2" aria-label="continuar" role="button">
+                        </div>
+
+
+
+
+                    </form>
+                    <div class="d-flex justify-content-between mt-5 px-0">
+                        
+                        <button class="btn btn-link " onclick="window.location.href='home.php'" accesskey="1" title="Volta para a página inicial do IAPA">
+                            <i class="bi bi-arrow-left me-1"></i>Voltar
                         </button>
 
-                        <script>
-                            document.getElementById("categorias").addEventListener("change", function() {
-                                document.getElementById("categoriasHidden").value = this.value;
-                            });
-                        </script>
+                        <?php if ($funcao == 0 || $funcao == 2 || $funcao == 3) { ?>
+                            <button onclick="window.location.href='cria_categoria.php'" class="btn px-0 btn-link" accesskey="3">
+                                Não encontrou a categoria pretendida, Crie-a aqui
+                            </button>
+                        <?php } ?>
+                    </div>
 
-                        <?php
-                            } else {
-                                echo "Nenhum usuário encontrado.";
-                            }
+                    <script>
+                        document.getElementById("categorias").addEventListener("change", function() {
+                            document.getElementById("categoriasHidden").value = this.value;
+                        });
+                    </script>
 
-                            $mysqli->close();
-                            } else {
-                                // Se o usuário não estiver logado, redirecione-o para a página de login
-                                header("Location: index.php");
-                                exit();
-                            }
-                            ?>
+            <?php
+        } else {
+            echo "Nenhum usuário encontrado.";
+        }
+
+        $mysqli->close();
+    } else {
+        // Se o usuário não estiver logado, redirecione-o para a página de login
+        header("Location: index.php");
+        exit();
+    }
+            ?>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-
