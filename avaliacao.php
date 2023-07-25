@@ -30,9 +30,15 @@ if (isset($_SESSION['id'])) {
     <div class="row p-5 align-items-start rounded-3 bg-white  border shadow-lg">
         <div class="col-12 col-md-4 text-center text-lg-start">
             <?php include_once('includes/logo.php') ?>
+<<<<<<< HEAD
             
             <div id="toc"></div>
             
+=======
+            <!-- @wagner - fazer com que o menu apareca após o usuário escolher um item do select -->
+            <div id="toc"></div>
+            <!-- @wagner - fazer com que o menu apareca após o usuário escolher um item do select -->
+>>>>>>> c9065dd88a7ba587f8657d0999a3dd54bb4b5440
         </div>
         <div class="col-12 mx-auto col-md-8">
             <h2 class="visually-hidden-focusable">Mensagem de boas-vindas</h2>
@@ -135,6 +141,7 @@ if (isset($_SESSION['id'])) {
         </div>
 
         <script>
+<<<<<<< HEAD
             var toc = document.getElementById("toc");
                 
                 toc.style.display = "none";
@@ -267,6 +274,142 @@ if (isset($_SESSION['id'])) {
                                 });
 
 
+=======
+            async function loadFile(fileName) {
+                var checkboxContainer = document.getElementById("checkboxContainer");
+                var selecionarArquivoBtn = document.getElementById("arquivos");
+                var orientacao = document.getElementById("orientacao");
+                var itens = document.getElementById("itens");
+                var observacao = document.getElementById("observacao");
+                var mediarelatorio = document.getElementById("mediarelatorio");
+                var aprovacao = document.getElementById("aprovacao");
+                var labelSelectArquivo = document.querySelector("label[for='selecionarArquivos']");
+                
+
+                    if (fileName) {
+                        
+                        labelSelectArquivo.style.display = "none";
+                        checkboxContainer.style.display = "block"; 
+                        selecionarArquivoBtn.style.display = "none";
+                        orientacao.textContent = "Oi, <?php echo $pronomeTratamento; echo" "; if ($nomesocial != null){echo $nomesocial;}else{echo $nomeUsuario; echo " "; echo $sobrenomeUsuario;} ?>, agora estamos prontos para avaliar a produção acadêmica que você escolheu. se você deseja avaliar outro arquivo, pressione o botão voltar Abaixo, assinale quais as opções que se aplicam a produção acadêmica em avaliação.";
+                        itens.textContent = "Agora vamos dar notas aos itens dos diferentes tópicos exigidos para sua produção acadêmica.";
+
+                        labelSelectArquivo.class ="hidden";
+                        
+                        var textareaElement = document.createElement("textarea");
+                            textareaElement.id = "minhaTextarea";
+                            textareaElement.name = "observacaoValor";
+                            textareaElement.title= "Escreva uma observação (opcional)";
+                            textareaElement.value = "";
+                            textareaElement.className = "form-control";
+
+
+                            observacao.appendChild(textareaElement);
+
+                        try {
+                            const response = await fetch(fileName);
+                            const data = await response.json();
+
+                            var itemContainer = document.getElementById("itemContainer");
+                            itemContainer.innerHTML = ""; // Limpa o conteúdo anterior
+
+                            var mediaContainer = document.getElementById("mediaContainer");
+                            mediaContainer.innerHTML = ""; // Limpa a média anterior, se houver
+
+                            var valoresAvaliados = Array(data.length).fill(5); // Array com valores padrão 5
+
+                            // @wagner - fazer com que a label finalize </label> após o input da nota
+
+                            data.forEach(function(item, index) {
+                                var div = document.createElement("li");
+                                div.className ="d-flex justify-content-between px-0 list-group-item";
+                                var itemContainer = document.getElementById("itemContainer");
+                                
+                                var label = document.createElement("input");
+                                label.type = "hidden";
+                                label.name = "label[]";
+                                label.id = "inputMensagem";
+                                label.value = item;
+                                div.appendChild(label);
+
+                                var label1 = document.createElement("label");
+                                label1.textContent = item;
+                                div.appendChild(label1);
+
+                                var input = document.createElement("input");
+                                input.type = "number";
+                                input.min = 1;
+                                input.max = 10;
+                                input.name = "nota[]";
+                                input.value = valoresAvaliados[index];
+                                input.id = "inputNota";
+                                div.appendChild(input);
+
+                                itemContainer.appendChild(div);
+
+                                var mensagemComparar = "Apresenta";
+                                var primeiraPalavraInput = item.trim().split(" ")[0];
+
+                                if (primeiraPalavraInput.toLowerCase() === mensagemComparar.toLowerCase()) {
+                                    input.remove();
+
+                                var nao = document.createElement("input");
+                                nao.type = "hidden";
+                                nao.value = "Não "+label.value.toLowerCase();
+                                nao.name = "apresenta[]";
+
+                                div.appendChild(nao);
+                                    // Criação da checkbox
+                                var apresenta = document.createElement("input");
+                                apresenta.type = "checkbox";
+                                apresenta.value = label.value;
+                                apresenta.name = "apresenta[]";
+                
+                                // Adiciona a checkbox ao elemento pai do input
+                                div.appendChild(apresenta);
+                                apresenta.addEventListener("change", function() {
+                                if (apresenta.checked) {
+                                    div.removeChild(nao);
+                                } else {
+                                    div.appendChild(nao);
+                                }
+                                });       
+                                }
+
+
+                                input.addEventListener("input", function() {
+                                    var valor = parseInt(input.value);
+                                    if (isNaN(valor) || valor < 1 || valor > 10) {
+                                    alert("Digite uma nota válida entre 1 e 10.");
+                                    input.value = valoresAvaliados[index];
+                                    return;
+                                    }
+                                    // @wagner - colocar o box de formatação seguindo este modelo 
+                                    // <div class="alert alert-danger"><strong class="d-block"><i class="bi bi-exclamation-triangle-fill me-3"></i>Média: 1.00</strong>Produção Acadêmica Reprovada</div>       
+                                    // <div class="alert alert-warning"><strong class="d-block"><i class="bi bi-check me-3"></i>Média: 6.67</strong>Produção Acadêmica Aprovada com Restrições</div>
+                                    // <div class="alert alert-success"><strong class="d-block"><i class="bi bi-trophy-fill me-3"></i></i>Média: 6.67</strong>Produção Acadêmica Aprovada</div>
+                                    valoresAvaliados[index] = valor;
+                                    var media = calcularMedia(valoresAvaliados);
+                                    localStorage.setItem("medianota", mediaContainer.textContent = "Média: " + media);
+                                    mediaContainer.textContent = "Média: " + media;
+
+                                    var mensagem = "";
+                                    mensagem.className = "alert alert-success";
+                                    if (media >= 8) {
+                                    mensagem = "Produção Acadêmica Aprovada";
+                                    // <div class="alert alert-success"><strong class="d-block"><i class="bi bi-trophy-fill me-3"></i></i>Média: 6.67</strong>Produção Acadêmica Aprovada
+
+                                    } else if (media >= 6.5) {
+                                    mensagem = "Produção Acadêmica Aprovada com Restrições";
+                                    } else {
+                                    mensagem = "Produção Acadêmica Reprovada";
+                                    }
+                                    document.getElementById("result").textContent = mensagem;
+                                });
+                                });
+
+
+>>>>>>> c9065dd88a7ba587f8657d0999a3dd54bb4b5440
                             var media = calcularMedia(valoresAvaliados);
                             mediaContainer.textContent = "Média: " + media;
                             
