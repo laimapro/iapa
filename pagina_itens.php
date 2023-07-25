@@ -134,23 +134,17 @@
                 <fieldset>
                     <legend id="hipotese"><h4 class="anchor">Hipótese</h4></legend>
                     <ul class="list-group list-group-flush">
-                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="hipotese1" value="Introdução - Hipótese: Adequação da hipótese">              <label class="d-inline form-check-label" for="hipotese1">Adequação da hipótese</label></li>
-                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="hipotese2" value="Introdução - Hipótese: Relevância da hipótese">             <label class="d-inline form-check-label" for="hipotese2">Relevância da hipótese</label></li>
+                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="hipotese1" value="Introdução - Hipótese: Adequação da hipótese">                                                <label class="d-inline form-check-label" for="hipotese1">Adequação da hipótese</label></li>
+                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="hipotese2" value="Introdução - Hipótese: Relevância da hipótese">                                               <label class="d-inline form-check-label" for="hipotese2">Relevância da hipótese</label></li>
+                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="hipotese3" value="Introdução - Hipotese Completude da Introdução e da contextualização da Produção Acadêmica">  <label class="d-inline form-check-label" for="hipotese3">Completude da Introdução e da contextualização da Produção Acadêmica</label></li>
+                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="hipotese4" value="Introdução - Hipotese Qualidade da Introdução e da contextualização da Produção Acadêmica">   <label class="d-inline form-check-label" for="hipotese4">Qualidade da Introdução e da contextualização da Produção Acadêmica</label></li>
                     </ul>
                     <div class="form-floating my-4">
-                        <textarea class="form-control" placeholder=">Novos itens aos 'Objetivos Gerais e Especificos'" id="hipoteseAdicional" style="height: 100px"></textarea>
+                        <textarea name="item[]" class="form-control" placeholder=">Novos itens aos 'Objetivos Gerais e Especificos'" id="hipoteseAdicional" style="height: 100px"></textarea>
                         <label for="hipoteseAdicional">Novos itens aos 'Objetivos Gerais e Especificos'</label>
                     </div>
                 </fieldset>
                 <!-- Introdução - Hipótese -->
-                
-                <!-- rever esses itens -->
-                <input type="checkbox" name="item[]" value="Introdução: Completude da Introdução e da contextualização da Produção Acadêmica"> Completude da Introdução e da contextualização da Produção Acadêmica<br>
-                <input type="checkbox" name="item[]" value="Introdução: Qualidade da Introdução e da contextualização da Produção Acadêmica"> Qualidade da Introdução e da contextualização da Produção Acadêmica<br>
-                <p> Deseja adicionar mais algum item?</p>
-                <textarea name="item[]" id=""></textarea>
-                <!-- rever esses itens -->
-
                 <!-- Introdução - Estado da arte -->
                 <fieldset>
                     <legend id="estadoarte"><h4 class="anchor">Estado da arte</h4></legend>
@@ -387,9 +381,11 @@
                 </fieldset>
                 
                 
-                <button type="submit" class="tooltip" aria-label="Salvar e Avançar" title="Salva e finaliza a edição deste Instrumento de Avaliação">
+                <div class="text-end my-4">
+                    <button class="btn btn-primary" type="submit" aria-label="Salvar e Avançar" title="Salva e finaliza a edição deste Instrumento de Avaliação">
                     Salvar e Avançar
-                </button>
+                    </button>
+                </div>
             </form>
         </div>
     </div>
