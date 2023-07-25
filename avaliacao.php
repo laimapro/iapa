@@ -228,6 +228,7 @@ if (isset($_SESSION['id'])) {
                                 apresenta.type = "checkbox";
                                 apresenta.value = label.value;
                                 apresenta.name = "apresenta[]";
+                                apresenta.setAttribute("aria-label", label.value); 
                 
                                 // Adiciona a checkbox ao elemento pai do input
                                 div.appendChild(apresenta);
