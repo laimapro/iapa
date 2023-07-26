@@ -26,7 +26,7 @@ if (isset($_SESSION['id'])) {
 
         $categorias = $_POST['categorias'];
 
-        $nome_arquivo = $curso.'_'.$categorias.'_'.$aleatorio;
+        $nome_arquivo = $categorias.'_'.$aleatorio;
         //echo $nome_arquivo;
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
