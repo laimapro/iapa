@@ -34,6 +34,3 @@ function addNavItem(ul, href, text) {
   listItem.appendChild(anchorItem);
   anchorItem.appendChild(textNode);
 }
-
-
-

@@ -47,7 +47,6 @@ if (isset($_SESSION['id'])) {
                                                     }
                                                     ?></p>
 
-                    <p>Agora são <span id="horario"></span>: <span id="horario"></span> <span id="saudacao"></span></p>
 
                     <!-- <script>
                             var agora = new Date();
@@ -171,3 +170,4 @@ if (isset($_SESSION['id'])) {
                 </div>
             </div>
         </div>
+<?php include_once('includes/footer.php') ?>
