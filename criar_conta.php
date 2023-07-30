@@ -7,46 +7,37 @@
         <?php include_once('includes/logo.php') ?>
       </div>
       <div class="menu-nav">
-        <h2 class="menu-title" title="Confira as seções das informações necessárias para criar a conta nos links a seguir">
-          Criar conta
-        </h2>
-        <ul class="list-group list-group-flush">
-          <li class="px-0 list-group-item"><a class="text-decoration-none d-block" href="#identificacao" title="Insira seu nome, sobrenome ou nome social">Identificação</a></li>
-          <li class="px-0 list-group-item"><a class="text-decoration-none d-block" href="#pronomes" title="Escolha um pronome de tratamento e um pronome para referência">Pronomes</a></li>
-          <li class="px-0 list-group-item"><a class="text-decoration-none d-block" href="#associacoes" title="Insira o nome da sua instituição de ensino superior e/ou  do programa de pós graduação">Associação</a></li>
-          <li class="px-0 list-group-item"><a class="text-decoration-none d-block" href="#acesso" title="Insira email, senha e a função desejada para acessar o IAPA">Acesso</a></li>
-          <li class="px-0 list-group-item"><a class="text-decoration-none d-block" href="#idiomas" title="Escolha um ou mais idiomas em que você pode avaliar uma produção acadêmica">Idioma</a></li>
-        </ul>
+        <div id="toc"></div>
       </div>
     </div>
     <div class="col-12 mx-auto col-md-8">
-      <form class="p-3 border rounded-3 bg-body-tertiary" action="processa_cadastro.php" method="POST">
+      <form action="processa_cadastro.php" method="POST">
 
         <fieldset class="mb-4">
-          <legend role="h2" id="identificacao">Identificação</legend>
+          <legend><h2 class="anchor">Identificação</h2></legend>
           <div class="row">
             <div class="col-12 col-md">
               <div class="form-floating mb-4">
                 <input class="form-control" type="text" id="nome" name="nome" aria-label="Nome" aria-required="true">
-                <label for="nome">Nome:</label>
+                <label for="nome">Nome</label>
               </div>
             </div>
             <div class="col-12 col-md">
               <div class="form-floating mb-4">
                 <input class="form-control" type="text" id="sobrenome" name="sobrenome" aria-label="Sobrenome" aria-required="true">
-                <label for="sobrenome">Sobrenome:</label>
+                <label for="sobrenome">Sobrenome</label>
               </div>
             </div>
             <div class="col-12">
               <div class="form-floating mb-4">
                 <input class="form-control" type="text" id="nomesocial" name="nomesocial" aria-label="nomesocial" aria-required="true">
-                <label for="nomesocial">Nome Social:</label>
+                <label for="nomesocial">Nome Social</label>
               </div>
             </div>
         </fieldset>
 
         <fieldset class="mb-4">
-          <legend id="pronomes">Pronomes</legend>
+          <legend><h2 class="anchor">Pronomes</h2></legend>
           <div class="row">
             <div class="col-12 col-md">
               <div class="form-floating mb-4">
@@ -61,7 +52,7 @@
                   <option value="Mestre">Mestre</option>
                   <option value="Doutor">Doutor</option>
                 </select>
-                <label for="pronomeTratamento">Pronome de tratamento:</label>
+                <label for="pronomeTratamento">Pronome de tratamento</label>
               </div>
             </div>
             <div class="col-12 col-md">
@@ -73,37 +64,37 @@
                   <option value="elu/ delu">Elu/ Delu</option>
                 </select>
 
-                <label for="pronomeReferencia">Pronome para referência:</label>
+                <label for="pronomeReferencia">Pronome para referência</label>
               </div>
             </div>
           </div>
         </fieldset>
 
         <fieldset class="mb-4">
-          <legend id="associacoes">Associação</legend>
+          <legend><h2 class="anchor">Associação</h2></legend>
           <div class="form-floating mb-3">
             <input class="form-control" type="text" id="instituicao" name="instituicao" aria-label="Instituição de ensino superior" aria-required="true" required>
-            <label for="instituicao de ensino superior">Instituição de ensino superior, Centro ou Faculdade:</label>
+            <label for="instituicao de ensino superior">Instituição de ensino superior, Centro ou Faculdade</label>
           </div>
 
           <div class="form-floating mb-3">
             <input class="form-control" type="text" id="curso" name="curso" aria-label="Curso" aria-required="true" required>
-            <label for="instituicao">Curso:</label>
+            <label for="instituicao">Curso</label>
           </div>
 
           <div class="form-floating mb-3">
             <input class="form-control" type="text" id="programadeposgraduacao" name="programadeposgraduacao" aria-label="Programa de Pós-Graduação">
-            <label for="programadeposgraduacao">Programa de Pós-Graduação (opcional):</label>
+            <label for="programadeposgraduacao">Programa de Pós-Graduação (opcional)</label>
           </div>
         </fieldset>
 
 
         <fieldset class="mb-4">
-          <legend id="acesso">Acesso</legend>
+          <legend><h2 class="anchor">Acesso</h2></legend>
 
           <div class="form-floating mb-3">
             <input class="form-control" type="email" id="email" name="email" aria-label="E-mail" aria-required="true" required>
-            <label for="email">E-mail:</label>
+            <label for="email">E-mail</label>
           </div>
 
           <div class="form-floating mb-3">
@@ -131,13 +122,13 @@
                 <option value="1">Editor</option>]
                 <option value="3">Gerente</option>
               </select>
-              <label for="funcao">Função:</label> -->
+              <label for="funcao">Função</label> -->
           </div>
         </fieldset>
 
 
         <fieldset class="mb-4">
-          <legend id="idiomas">Idiomas</legend>
+          <legend><h2 class="anchor">Idiomas</h2></legend>
 
           <div class="row">
 
@@ -162,7 +153,7 @@
           </div>
         </fieldset>
 
-        <div class="d-flex justify-content-between">
+        <div class="d-flex align-items-center justify-content-between btn-action">
           <a href="index.php" accesskey="1" title="Volta para a página inicial do IAPA"><i class="bi bi-arrow-left me-1"></i>Voltar</a>
           <button class=" btn btn-primary" type="submit" accesskey="2" title="Salva seus dados e requisita seu acesso no IAPA." onclick="aviso()">Solicitar cadastramento</button>
 

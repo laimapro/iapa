@@ -1,7 +1,7 @@
 <?php include_once('includes/head.php') ?>
 <div class="container px-4 py-5">
   <div class="p-5 rounded-3 bg-white border shadow-lg text-center">
-  <?php include_once('includes/logo.php') ?>
+    <?php include_once('includes/logo.php') ?>
     <h2 class="pt-4 mt-5 text-body-emphasis">Boas-vindas ao IAPA 👋</h2>
     <form class="col-lg-8 mx-auto p-5" id="signin" action="" method="POST">
       <h4 class="mb-3">Acesso ao Sistema</h4>
@@ -44,8 +44,8 @@
         <label for="password">Senha</label>
 
         <div class="mb-3 divCheck"></div>
-        <div class="d-flex align-items-center justify-content-between">
-        <a href="index.php"  accesskey="1" title="Volta para a página inicial do IAPA"><i class="bi bi-arrow-left me-1"></i>Voltar</a>
+        <div class="d-flex align-items-center justify-content-between btn-action">
+          <a href="index.php" accesskey="1" title="Volta para a página inicial do IAPA"><i class="bi bi-arrow-left me-1"></i>Voltar</a>
           <button class="btn btn-primary" type="submit" accesskey="2" class="tooltip" aria-label="Entrar" title="Inicia o programa IAPA">Entrar</button>
         </div>
     </form>
@@ -53,7 +53,7 @@
       Não tem conta? <a href="criar_conta.php" accesskey="3" title="Permite preencher o cadastro para usar o IAPA">Crie sua conta</a>
     </p>
 
-   
+
   </div>
 </div>
 </div>

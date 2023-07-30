@@ -50,7 +50,7 @@ gerarTokenCSRF();
     <div class="row p-5 align-items-start rounded-3 bg-white  border shadow-lg">
         <div class="col-12 col-md-4 text-center text-lg-start">
             <?php include_once('includes/logo.php') ?>
-            <div class="toc">
+            <div id="toc">
             </div>
         </div>
         <div class="col-12 mx-auto col-md-8">
@@ -81,119 +81,119 @@ gerarTokenCSRF();
                     $nomesocial = filtrarDados($mysqli, $row["nomesocial"]);
 
             ?>
-                    <p>Instrumento de avaliação de produção Acadêmica</p>
-                    <p id="orientacao"><span id="saudacao"></span>, <?php echo $pronomeTratamento;
-                                                                    echo " ";
-                                                                    if ($nomesocial != null) {
-                                                                        echo $nomesocial;
-                                                                    } else {
-                                                                        echo $nomeUsuario;
-                                                                        echo " ";
-                                                                        echo $sobrenomeUsuario;
-                                                                    } ?>
-                    <p><i class="mx-2 bi bi-clock"></i>Agora são <span id="horario"></span> <span id="horario"></span>.</p>
 
-                    <?php
-                    if ($funcao == 1 || $funcao == 3 || $funcao == 0) {
-                    ?>
+                    <p id="orientacao">
+                        <span id="saudacao"></span>, são <span id="horario"></span>, <span class="text-lowercase"><?php echo $pronomeTratamento; ?></span>
+                        <?php if ($nomesocial != null) {
+                            echo $nomesocial;
+                        } else {
+                            echo $nomeUsuario;
+                            echo " ";
+                            echo $sobrenomeUsuario;
+                        } ?>.
 
-                        <form action="#" method="post" class="pb-5" enctype="multipart/form-data">
-                            <?php
+                        <?php
+                        if ($funcao == 1 || $funcao == 3 || $funcao == 0) {
+                        ?>
+
+                    <form action="#" method="post" class="pb-5" enctype="multipart/form-data">
+                        <?php
                             // Definir token CSRF
                             gerarTokenCSRF();
-                            ?>
-                            <fieldset>
-                                <legend id="banco-prod-academica">
-                                    <h2 class="anchor">Banco de Produções Acadêmicas</h2>
-                                </legend>
+                        ?>
+                        <fieldset>
+                            <legend>
+                                <h2 class="anchor">Enviar produções acadêmica</h2>
+                            </legend>
+                            <p>Selecione um arquivo PDF para enviar para o banco de dados uma produções acadêmicas.</p>
+                            <div class="mb-3">
                                 <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
-                                <div class="mb-3">
-                                    <label for="arquivo" class="form-label">Selecione um arquivo PDF para Enviar para o Banco de Produções Acadêmicas:</label>
-                                    <input aria-describedby="arquivoHelp" class="form-control" type="file" name="arquivo" id="arquivo" accept=".pdf" required>
-                                    <div id="arquivoHelp" class="form-text">Apenas arquivos no formato PDF</div>
-                                    
-                                </div>
-                                    <button type="submit" class="btn btn-outline-primary ">Enviar Produção</button>
-                            </fieldset>
-                        </form>
+                                <label for="arquivo" class="form-label">Selecionar arquivo</label>
+                                <input aria-describedby="arquivoHelp" class="form-control" type="file" name="arquivo" id="arquivo" accept=".pdf" required>
+                                <div id="arquivoHelp" class="form-text">Apenas arquivos no formato PDF são permitidos.</div>
 
-                    <?php
-                        // Resto do processamento do formulário...
-                        if ($_SERVER["REQUEST_METHOD"] === "POST") {
-                            verificarTokenCSRF();
+                            </div>
+                            <button type="submit" class="btn btn-outline-primary ">Enviar Produção</button>
+                        </fieldset>
+                    </form>
 
-                            // Verificar o tamanho do arquivo
-                            $tamanhoMaximo = 10 * 1024 * 1024; // 10 MB
-                            if ($_FILES['arquivo']['size'] > $tamanhoMaximo) {
-                                die("O arquivo enviado é muito grande. O tamanho máximo permitido é de 10MB.");
-                            }
+                <?php
+                            // Resto do processamento do formulário...
+                            if ($_SERVER["REQUEST_METHOD"] === "POST") {
+                                verificarTokenCSRF();
 
-                            // Verificar o tipo de arquivo
-                            $tiposPermitidos = array('application/pdf');
-                            if (!in_array($_FILES['arquivo']['type'], $tiposPermitidos)) {
-                                die("Tipo de arquivo inválido. Apenas arquivos PDF são permitidos.");
-                            }
+                                // Verificar o tamanho do arquivo
+                                $tamanhoMaximo = 10 * 1024 * 1024; // 10 MB
+                                if ($_FILES['arquivo']['size'] > $tamanhoMaximo) {
+                                    die("O arquivo enviado é muito grande. O tamanho máximo permitido é de 10MB.");
+                                }
 
-                            // Diretório de destino para salvar o arquivo
-                            $targetDir = "ARQUIVOS_RECEBIDOS/";
+                                // Verificar o tipo de arquivo
+                                $tiposPermitidos = array('application/pdf');
+                                if (!in_array($_FILES['arquivo']['type'], $tiposPermitidos)) {
+                                    die("Tipo de arquivo inválido. Apenas arquivos PDF são permitidos.");
+                                }
 
-                            // Obter o nome do arquivo original
-                            $originalFileName = $_FILES['arquivo']['name'];
+                                // Diretório de destino para salvar o arquivo
+                                $targetDir = "ARQUIVOS_RECEBIDOS/";
 
-                            // Gerar um número aleatório
-                            $randomNumber = mt_rand();
+                                // Obter o nome do arquivo original
+                                $originalFileName = $_FILES['arquivo']['name'];
 
-                            // Obter a extensão do arquivo
-                            $fileExtension = pathinfo($originalFileName, PATHINFO_EXTENSION);
+                                // Gerar um número aleatório
+                                $randomNumber = mt_rand();
 
-                            // Gerar o novo nome do arquivo
-                            $fileName = $originalFileName . '_' . $randomNumber . '.' . $fileExtension;
+                                // Obter a extensão do arquivo
+                                $fileExtension = pathinfo($originalFileName, PATHINFO_EXTENSION);
 
-                            // Caminho completo do arquivo no diretório de destino
-                            $targetPath = $targetDir . $fileName;
+                                // Gerar o novo nome do arquivo
+                                $fileName = $originalFileName . '_' . $randomNumber . '.' . $fileExtension;
 
-                            // Mover o arquivo temporário para o diretório de destino
-                            if (move_uploaded_file($_FILES['arquivo']['tmp_name'], $targetPath)) {
-                                // O arquivo foi salvo com sucesso
+                                // Caminho completo do arquivo no diretório de destino
+                                $targetPath = $targetDir . $fileName;
 
-                                $sql = "INSERT INTO upload (arquivo, usuario, instituicao, curso, posgraduacao, datapostagem) VALUES (?, ?, ?, ?, ?, NOW())";
+                                // Mover o arquivo temporário para o diretório de destino
+                                if (move_uploaded_file($_FILES['arquivo']['tmp_name'], $targetPath)) {
+                                    // O arquivo foi salvo com sucesso
 
-                                // Preparar a declaração SQL
-                                $stmt = $mysqli->prepare($sql);
+                                    $sql = "INSERT INTO upload (arquivo, usuario, instituicao, curso, posgraduacao, datapostagem) VALUES (?, ?, ?, ?, ?, NOW())";
 
-                                // Atribuir os valores aos parâmetros
-                                $stmt->bind_param("sssss", $fileName, $idUsuario, $instituicao, $curso, $programadeposgraduacao);
+                                    // Preparar a declaração SQL
+                                    $stmt = $mysqli->prepare($sql);
 
-                                // Executar a consulta
-                                $stmt->execute();
+                                    // Atribuir os valores aos parâmetros
+                                    $stmt->bind_param("sssss", $fileName, $idUsuario, $instituicao, $curso, $programadeposgraduacao);
 
-                                echo "<div class='mb-5 alert alert-success d-flex align-items-center' role='alert'><i class='bi bi-check-circle-fill me-2'></i>O arquivo foi enviado e salvo com sucesso.</div>";
-                            } else {
-                                echo "<div class='mb-5 alert alert-danger d-flex align-items-center' role='alert'><i class='bi bi-exclamation-triangle-fill me-2'></i>Ocorreu um erro ao enviar o arquivo.</div>";
+                                    // Executar a consulta
+                                    $stmt->execute();
+
+                                    echo "<div class='mb-5 alert alert-success d-flex align-items-center' role='alert'><i class='bi bi-check-circle-fill me-2'></i>O arquivo foi enviado e salvo com sucesso.</div>";
+                                } else {
+                                    echo "<div class='mb-5 alert alert-danger d-flex align-items-center' role='alert'><i class='bi bi-exclamation-triangle-fill me-2'></i>Ocorreu um erro ao enviar o arquivo.</div>";
+                                }
                             }
                         }
-                    }
 
-                    echo "<fieldset class='mb-5'>
-                            <legend id='banco-prod-academica'><h3 class='anchor'>Listar Produções acadêmicas no Banco</h3></legend>";
-                    $targetDir = "ARQUIVOS_RECEBIDOS/";
+                        echo "<fieldset class='mb-5'>
+                            <legend><h3 class='anchor'>Produções acadêmicas cadastradas</h3></legend>";
+                        $targetDir = "ARQUIVOS_RECEBIDOS/";
 
-                    $avaliado = "PRODUCOES.AVALIADAS/";
+                        $avaliado = "PRODUCOES.AVALIADAS/";
 
-                    // Obtenha a lista de arquivos no diretório
-                    $fileList = glob($targetDir . "*.pdf");
+                        // Obtenha a lista de arquivos no diretório
+                        $fileList = glob($targetDir . "*.pdf");
 
-                    $Listadearquivos = glob($avaliado . "*.pdf");
+                        $Listadearquivos = glob($avaliado . "*.pdf");
 
-                    // Verifique se há arquivos no diretório
-                    if (empty($fileList)) {
-                        echo "<p>Nenhum arquivo encontrado no diretório.</p>";
-                        exit;
-                    };
-                    ?>
+                        // Verifique se há arquivos no diretório
+                        if (empty($fileList)) {
+                            echo "<p>Nenhum arquivo encontrado no diretório.</p>";
+                            exit;
+                        };
+                ?>
 
 
-                    <?php
+                <?php
                     // Obtém a lista de arquivos do banco de dados
                     $sql = "SELECT * FROM upload WHERE instituicao = ? AND curso = ? AND posgraduacao = ?";
                     $stmt = $mysqli->prepare($sql);
@@ -212,27 +212,30 @@ gerarTokenCSRF();
                     } else {
                         echo "Nenhum arquivo enviado.";
                     }
-                    ?>
-                        <button onclick="visualizarSelecionado()"class="btn btn-outline-primary ">Visualizar Produção</button>
-                    </fieldset>
+                ?>
+                <button onclick="visualizarSelecionado()" class="btn btn-outline-primary ">Visualizar Produção</button>
+                </fieldset>
 
 
-                    <script>
-                        function visualizarSelecionado() {
-                            var select = document.getElementById('arquivo_selecionado');
-                            var selecionado = select.options[select.selectedIndex].text; // Obter o nome do arquivo em vez do valor
+                <script>
+                    function visualizarSelecionado() {
+                        var select = document.getElementById('arquivo_selecionado');
+                        var selecionado = select.options[select.selectedIndex].text; // Obter o nome do arquivo em vez do valor
 
-                            if (selecionado) {
-                                window.open("ARQUIVOS_RECEBIDOS/" + selecionado, "_blank"); // Abrir o arquivo com o caminho correto
-                            } else {
-                                alert("Nenhum arquivo selecionado.");
-                            }
+                        if (selecionado) {
+                            window.open("ARQUIVOS_RECEBIDOS/" + selecionado, "_blank"); // Abrir o arquivo com o caminho correto
+                        } else {
+                            alert("Nenhum arquivo selecionado.");
                         }
-                    </script>
+                    }
+                </script>
 
-                    <?php if ($funcao == 3 || $funcao == 2 || $funcao == 0) { ?>
-                        <fieldset class='mb-5'>
-                            <legend id='banco-prod-academica'><h3 class='anchor'>Meus Pareceres:</h3></legend>
+                <?php if ($funcao == 3 || $funcao == 2 || $funcao == 0) { ?>
+                    <fieldset class='mb-5'>
+                        <legend>
+                            <h3 class='anchor'>Meus pareceres</h3>
+                        </legend>
+                        <p></p>
                         <?php
                         $sql = "SELECT * FROM avaliado WHERE idUsuario = ? AND instituicao = ? AND curso = ? AND programaposgraduacao  = ?";
                         $stmt = $mysqli->prepare($sql);
@@ -261,46 +264,45 @@ gerarTokenCSRF();
                         }
                         ?>
 
-                            <button onclick="visualizarAvaliacaoSelecionada()" class="btn btn-outline-primary ">Visualizar Parecer</button>
+                        <button onclick="visualizarAvaliacaoSelecionada()" class="btn btn-outline-primary ">Visualizar Parecer</button>
                     </fieldset>
 
 
 
-                        <script>
-                            function visualizarAvaliacaoSelecionada() {
-                                var select = document.getElementById('arquivo_avaliacao_selecionado');
-                                var selecionado = select.options[select.selectedIndex].text; // Obter o nome do arquivo em vez do valor
+                    <script>
+                        function visualizarAvaliacaoSelecionada() {
+                            var select = document.getElementById('arquivo_avaliacao_selecionado');
+                            var selecionado = select.options[select.selectedIndex].text; // Obter o nome do arquivo em vez do valor
 
-                                if (selecionado) {
-                                    window.open("PRODUCOES.AVALIADAS/" + selecionado, "_blank"); // Abrir o arquivo com o caminho correto
-                                } else {
-                                    alert("Nenhum arquivo selecionado.");
-                                }
+                            if (selecionado) {
+                                window.open("PRODUCOES.AVALIADAS/" + selecionado, "_blank"); // Abrir o arquivo com o caminho correto
+                            } else {
+                                alert("Nenhum arquivo selecionado.");
                             }
-                        </script>
-                    <?php } ?>
-                   
-                    <div class="pt-5 d-flex align-items-center justify-content-between">
+                        }
+                    </script>
+                <?php } ?>
+
+                <div class="pt-5 d-flex align-items-center justify-content-between">
                     <a href="home.php" title="Voltar para página inicial do IAPA" accesskey="1" title="Pressione 1 para voltar para a página inicial" class="">
-                    <i class="bi bi-arrow-left me-1"></i>Voltar para a página inicial
+                        <i class="bi bi-arrow-left me-1"></i>Voltar para a página inicial
                     </a>
                     <a href="avaliacao.php" title="Avançar para avaliação" accesskey="2" title="Pressione 2 para avançar para a avaliação" class="btn btn-primary">
                         Avançar para Avaliação
                     </a>
-                    </div>
+                </div>
 
-            <?php
+        <?php
                 } else {
-                    echo "Nenhum usuário encontrado.";
+                    "Nenhum usuário encontrado.";
                 }
-
                 $mysqli->close();
             } else {
                 // Se o usuário não estiver logado, redirecione-o para a página de login
                 header("Location: index.php");
                 exit();
             }
-            ?>
+        ?>
 
         </div>
     </div>

@@ -151,7 +151,7 @@ if (isset($_SESSION['id'])) {
     $dompdf->render();
 
     // Caminho completo da imagem
-    $imagem = 'img/cropped-logo.png';
+    $imagem = 'img/icon-192x192.png';
 
     // Carrega a imagem
     $image = file_get_contents($imagem);
@@ -177,12 +177,20 @@ if (isset($_SESSION['id'])) {
     file_put_contents($caminhoCompleto, $dompdf->output());
 
     // Exibe uma mensagem informando que o arquivo foi salvo com sucesso
-    echo "Parecer salvo com sucesso! <br>";
-    echo '<a href="' . $caminhoCompleto . '" download><button title="Baixa o parecer e o salva em sua pasta de download" accesskey="4">Download do parecer </button></a> <br>'; // Adiciona botão para baixar o PDF
-    echo '<a href="avaliacao.php"><button title="Retorna a página de produção acadêmica" accesskey="3">Avaliar outra produção acadêmica </button></a><br>';
-    echo '<a href="upload.php"><button title="Leva à página em que se pode visualizar seus pareceres " accesskey="2">Meus pareceres </button></a><br>';
-    echo '<a href="home.php"><button title="Volta a página inicial do IAPA" accesskey="1">Voltar para página inicial</button></a><br>';
-
+    include_once('includes/head.php');
+    echo '<div class="container px-4 py-5"><div class="p-5 rounded-3 bg-white border shadow-lg text-center">';
+    include_once('includes/logo.php');
+    echo '<p class="fs-4">Parecer salvo com sucesso!</p>';
+    echo '<div class="justify-content-center d-flex align-items-center flex-wrap flex-md-row flex-column mb-0 list-unstyled">';
+    echo '<a class="m-3 btn btn-outline-secondary" accesskey="4" href="'.$caminhoCompleto.'" title="Baixa o parecer e o salva em sua pasta de download"download> <i class="bi bi-download me-3"></i> Download do parecer </a> </li>';
+    echo '<a class="m-3 btn btn-outline-info" accesskey="3" href="avaliacao.php" title="Retorna a página de produção acadêmica"> <i class="bi bi-arrow-left-right me-3"></i> Avaliar outra produção acadêmica </a></li>';
+    echo '<a class="m-3 btn btn-outline-success" accesskey="2" href="upload.php" title="Leva à página em que se pode visualizar seus pareceres "> <i class="bi bi-journal-text me-3"></i> Meus pareceres </a></li>';
+    echo '</div>';
+    echo '<div class="btn-action"><a accesskey="1" href="home.php" title="Volta a página inicial do IAPA"><i class="bi bi-arrow-left me-1"></i>Voltar para página inicial</a></li></div>';
+    echo '</div>';
+    echo '</div>';
+    include_once('includes/footer.php');
+    
     $nomeC = "$nomeUsuario $sobrenomeUsuario";
 
     $sql1 = "INSERT INTO avaliado (avaliador, instituicao, curso, arquivo, tituloproducaoacademica, nota, programaposgraduacao, idUsuario, dataAvaliado)
@@ -200,4 +208,3 @@ if (isset($_SESSION['id'])) {
   header("Location: index.php");
   exit();
 }
-?>
