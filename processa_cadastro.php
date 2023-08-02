@@ -11,7 +11,7 @@ $instituicao = mysqli_real_escape_string($mysqli, trim($_POST["instituicao"]));
 $curso = mysqli_real_escape_string($mysqli, trim($_POST["curso"]));
 $programadeposgraduacao = mysqli_real_escape_string($mysqli, trim($_POST["programadeposgraduacao"]));
 $email = mysqli_real_escape_string($mysqli, trim($_POST["email"]));
-$senha = mysqli_real_escape_string($mysqli, trim(md5($_POST["senha"])));
+$senha = password_hash(trim($_POST["senha"]), PASSWORD_BCRYPT);
 $funcao = mysqli_real_escape_string($mysqli, trim($_POST["funcao"]));
 $idiomas = isset($_POST["idioma"]) ? $_POST["idioma"] : [];
 
