@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
     <style>
+      
         .title-producao {
             font-size: 20px;
         }
@@ -28,10 +29,13 @@
         a[href^=http]:after {
             content: " <" attr(href) ">";
         }
-
-        .icone-pdf {
-            filter: grayscale(1) contrast(1.5) brightness(1);
+        .pdf-grade,.pdf-item{
+            padding: 0 .5rem;
         }
+ol li:nth-child(even){background-color: #f2f2f2;}
+.pdf-grade{text-align: center;}
+.pdf-grade-final{padding: .5rem 0;margin: 1rem 0 2rem;}
+
     </style>
 </head>
 
@@ -57,227 +61,50 @@
         </header>
         <section class="content">
 
-            <p>Tendo lido e avaliado a produção acadêmica, de acordo com os quesitos formais pré-estabelecidos,
-                apresento meu parecer nestes termos, o trabalho avaliado. Considerando os aspectos formais exigidos para
-                a aprovação deste trabalho, julguei os quesitos que abaixo identifico e a eles aferi as seguintes notas:
-            </p>
+            <p>Tendo lido e avaliado a produção acadêmica, de acordo com os quesitos formais pré-estabelecidos, apresento meu parecer nestes termos, o trabalho avaliado. Considerando os aspectos formais exigidos para a aprovação deste trabalho, julguei os quesitos que abaixo identifico e a eles aferi as seguintes notas: </p>
 
-            <table class="table table-striped table-hover mb-3">
-                <caption class="caption-top">Itens avaliados do trabalho</caption>
-
-                <thead>
-                    <tr>
-                        <th style="width: 5%">Nº</th>
-                        <th style="width: 85%" scope="col">Caracteristicas avaliadas</th>
-                        <th scope="col">Nota</th>
-                    </tr>
-                </thead>
-                <tbody class="table-group-divider">
-                    <tr>
-                        <td>1</td>
-                        <th class="fw-normal" scope="row">Aspectos Gerais: Completude da Produção Acadêmica</th>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <th class="fw-normal" scope="row">Introdução: Qualidade da Introdução e da contextualização
-                            daProdução Acadêmica</th>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <th class="fw-normal" scope="row">Introdução - Estado da arte: Revisão da literatura</th>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <th class="fw-normal" scope="row">Aspectos Gerais: Completude da Produção Acadêmica</th>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <th class="fw-normal" scope="row">Introdução: Qualidade da Introdução e da contextualização
-                            daProdução Acadêmica</th>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <th class="fw-normal" scope="row">Introdução - Estado da arte: Revisão da literatura</th>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <th class="fw-normal" scope="row">Aspectos Gerais: Completude da Produção Acadêmica</th>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <th class="fw-normal" scope="row">Introdução: Qualidade da Introdução e da contextualização
-                            daProdução Acadêmica</th>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <th class="fw-normal" scope="row">Introdução - Estado da arte: Revisão da literatura</th>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <th class="fw-normal" scope="row">Aspectos Gerais: Completude da Produção Acadêmica</th>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <th class="fw-normal" scope="row">Introdução: Qualidade da Introdução e da contextualização
-                            daProdução Acadêmica</th>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <th class="fw-normal" scope="row">Introdução - Estado da arte: Revisão da literatura</th>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <th class="fw-normal" scope="row">Aspectos Gerais: Completude da Produção Acadêmica</th>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <th class="fw-normal" scope="row">Introdução: Qualidade da Introdução e da contextualização
-                            daProdução Acadêmica</th>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <th class="fw-normal" scope="row">Introdução - Estado da arte: Revisão da literatura</th>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <th class="fw-normal" scope="row">Aspectos Gerais: Completude da Produção Acadêmica</th>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <th class="fw-normal" scope="row">Introdução: Qualidade da Introdução e da contextualização
-                            daProdução Acadêmica</th>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <th class="fw-normal" scope="row">Introdução - Estado da arte: Revisão da literatura</th>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <th class="fw-normal" scope="row">Aspectos Gerais: Completude da Produção Acadêmica</th>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <th class="fw-normal" scope="row">Introdução: Qualidade da Introdução e da contextualização
-                            daProdução Acadêmica</th>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <th class="fw-normal" scope="row">Introdução - Estado da arte: Revisão da literatura</th>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <th class="fw-normal" scope="row">Aspectos Gerais: Completude da Produção Acadêmica</th>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <th class="fw-normal" scope="row">Introdução: Qualidade da Introdução e da contextualização
-                            daProdução Acadêmica</th>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <th class="fw-normal" scope="row">Introdução - Estado da arte: Revisão da literatura</th>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <th class="fw-normal" scope="row">Aspectos Gerais: Completude da Produção Acadêmica</th>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <th class="fw-normal" scope="row">Introdução: Qualidade da Introdução e da contextualização
-                            daProdução Acadêmica</th>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <th class="fw-normal" scope="row">Introdução - Estado da arte: Revisão da literatura</th>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <th class="fw-normal" scope="row">Aspectos Gerais: Completude da Produção Acadêmica</th>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <th class="fw-normal" scope="row">Introdução: Qualidade da Introdução e da contextualização
-                            daProdução Acadêmica</th>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <th class="fw-normal" scope="row">Introdução - Estado da arte: Revisão da literatura</th>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <th class="fw-normal" scope="row">Aspectos Gerais: Completude da Produção Acadêmica</th>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <th class="fw-normal" scope="row">Introdução: Qualidade da Introdução e da contextualização
-                            daProdução Acadêmica</th>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <th class="fw-normal" scope="row">Introdução - Estado da arte: Revisão da literatura</th>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <th class="fw-normal" scope="row">Aspectos Gerais: Completude da Produção Acadêmica</th>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <th class="fw-normal" scope="row">Introdução: Qualidade da Introdução e da contextualização
-                            daProdução Acadêmica</th>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <th class="fw-normal" scope="row">Introdução - Estado da arte: Revisão da literatura</th>
-                        <td>5</td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="2" class="text-end">Média da produção</td>
-                        <td>5,00</td>
-                    </tr>
-                </tfoot>
-            </table>
+            <ol class="list-group list-group-flush list-group-numbered">
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+            </ol>
+            <div class="pdf-grade-final px-0 align-items-center d-flex justify-content-between align-items-start"><div class="col pdf-item text-end"> Média da avaliação da produção acadêmica</div>                          <div class="col-1 fs-2 border rounded fw-bold pdf-grade">5</div></li>
         </section>
 
-        <div class="alert border">Produção Acadêmica<strong class="fs-2 d-block"><i class="bi bi-trophy-fill me-2"></i> Aprovada</strong></div>
-        <!-- <div class="alert border">Produção Acadêmica<strong class="fs-2 d-block"><i class="bi bi-exclamation-triangle-fill me-2"></i>Aprovada com restrições</strong></div>
-        <div class="alert border">Produção Acadêmica<strong class="fs-2 d-block"><i class="bi bi-x-circle-fill me-2"></i>Reprovada</strong></div> -->
+        <div class="alert alert-success">Produção Acadêmica<strong class="fs-2 d-block"><i class="bi bi-trophy-fill me-2"></i>Aprovada</strong></div>
+        <div class="alert alert-warning">Produção Acadêmica<strong class="fs-2 d-block"><i class="bi bi-exclamation-triangle-fill me-2"></i>Aprovada com restrições</strong></div>
+        <div class="alert alert-danger">Produção Acadêmica<strong class="fs-2 d-block"><i class="bi bi-x-circle-fill me-2"></i>Reprovada</strong></div>
     </div>
 </body>
 
