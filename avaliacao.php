@@ -277,12 +277,12 @@ if (isset($_SESSION['id'])) {
                                     var mensagem = "";
 
                                     if (media >= 8) {
-                                        mensagem = '<div class="alert alert-success">Produção Acadêmica<strong class="fs-2 d-block"><i class="bi bi-trophy-fill me-2"></i> Aprovada</div>';
+                                        mensagem = '<div class="alert alert-success">Produção Acadêmica<strong class="fs-2 d-block"><i class="bi bi-trophy-fill me-2"></i> Aprovada</strong></div>';
 
                                     } else if (media >= 6.5) {
-                                        mensagem = '<div class="alert alert-warning">Produção Acadêmica<strong class="fs-2 d-block"><i class="bi bi-exclamation-triangle-fill me-2"></i>Aprovada com restrições</div>';
+                                        mensagem = '<div class="alert alert-warning">Produção Acadêmica<strong class="fs-2 d-block"><i class="bi bi-exclamation-triangle-fill me-2"></i>Aprovada com restrições</strong></div>';
                                     } else {
-                                        mensagem = '<div class="alert alert-danger">Produção Acadêmica<strong class="fs-2 d-block"><i class="bi bi-x-circle-fill me-2"></i>Reprovada</div>';
+                                        mensagem = '<div class="alert alert-danger">Produção Acadêmica<strong class="fs-2 d-block"><i class="bi bi-x-circle-fill me-2"></i>Reprovada</strong></div>';
                                     }
                                     document.getElementById("result").innerHTML = mensagem;
                                 });
