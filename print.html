@@ -11,31 +11,39 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
     <style>
-      
         .title-producao {
-            font-size: 20px;
+            font-size: 22px;
         }
-
-        tr th:last-child,
-        tr td:last-child {
-            text-align: center;
+    
+        .title-avaliacao-secao {
+            font-size: 18px;
+            margin-top: 3rem;
         }
-
+    
         .iapa-info {
             color: #777;
             font-size: .825rem;
         }
-
+    
         a[href^=http]:after {
             content: " <" attr(href) ">";
         }
-        .pdf-grade,.pdf-item{
+    
+        .pdf-grade,
+        .pdf-item {
             padding: 0 .5rem;
         }
-ol li:nth-child(even){background-color: #f2f2f2;}
-.pdf-grade{text-align: center;}
-.pdf-grade-final{padding: .5rem 0;margin: 1rem 0 2rem;}
-
+    
+        ol li:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    
+        .pdf-grade {
+            text-align: center;
+        }
+    
+        .pdf-grade-final {
+        }
     </style>
 </head>
 
@@ -49,9 +57,9 @@ ol li:nth-child(even){background-color: #f2f2f2;}
         <header class="d-flex align-items-start w-100 mb-3">
             <img src="img/icon-iapa.svg" width="75px" class="icone-pdf me-3">
             <div class=" flex-fill">
-                <p class="m-0 title-producao text-uppercase fw-bold border-bottom">Lorem ipsum dolor sit amet
+                <h1 class="m-0 title-producao text-uppercase fw-bold border-bottom">Lorem ipsum dolor sit amet
                     consectetur
-                    adipisicing.</p>
+                    adipisicing.</h1>
                 <span class="mt-1 fs-6 row text-secondary">
                     <span class="col instituicao">Nome da Instituicao</span>
                     <span class="col curso">Nome da Curso</span>
@@ -60,9 +68,31 @@ ol li:nth-child(even){background-color: #f2f2f2;}
             </div>
         </header>
         <section class="content">
- 
-            <p>Tendo lido e avaliado a produção acadêmica, de acordo com os quesitos formais pré-estabelecidos, apresento meu parecer nestes termos, o trabalho avaliado. Considerando os aspectos formais exigidos para a aprovação deste trabalho, julguei os quesitos que abaixo identifico e a eles aferi as seguintes notas: </p>
+            <p>Tendo lido e avaliado a produção acadêmica, de acordo com os quesitos formais pré-estabelecidos, apresento meu parecer nestes termos, o trabalho avaliado.</p>
+            <p>Considerando os aspectos formais exigidos para a aprovação deste trabalho, julguei os quesitos que abaixo identifico e a eles aferi as seguintes notas: </p>
+            <h2 class="title-avaliacao-secao">Nome da seção 1</h2>
+            <ol class="list-group list-group-flush list-group-numbered">
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+            </ol>
 
+            <h2 class="title-avaliacao-secao">Nome da seção 2</h2>
+            <ol class="list-group list-group-flush list-group-numbered">
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+            </ol>
+
+            <h2 class="title-avaliacao-secao">Nome da seção 3</h2>
             <ol class="list-group list-group-flush list-group-numbered">
                 <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
                 <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
@@ -77,20 +107,10 @@ ol li:nth-child(even){background-color: #f2f2f2;}
                 <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
                 <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
                 <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
-                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
-                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
-                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
-                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
-                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
-                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
-                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
-                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
-                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
-                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
-                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
-                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
-                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
-                <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
+            </ol>
+
+            <h2 class="title-avaliacao-secao">Nome da seção 5</h2>
+            <ol class="list-group list-group-flush list-group-numbered">
                 <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
                 <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
                 <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
@@ -99,12 +119,19 @@ ol li:nth-child(even){background-color: #f2f2f2;}
                 <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
                 <li  class="px-0 list-group-item d-flex justify-content-between align-items-start"><div class="col ms-2 pdf-item flex-fill">Lorem ipsum dolor sit amet consectetur adipisicing.</div>  <div class="col-1 pdf-grade">5</div></li>
             </ol>
-            <div class="pdf-grade-final px-0 align-items-center d-flex justify-content-between align-items-start"><div class="col pdf-item text-end"> Média da avaliação da produção acadêmica</div>                          <div class="col-1 fs-2 border rounded fw-bold pdf-grade">5</div></li>
+
+            <h2 class="title-avaliacao-secao">Nota Final</h2>
+            <div class="pdf-grade-final px-0 align-items-center d-flex justify-content-between align-items-start">
+                <div class="col pdf-item text-end"> Média da avaliação da produção acadêmica</div>
+                <div class="col-1 fs-2 border rounded fw-bold pdf-grade">5</div>
+            </div>
+            <h2 class="title-avaliacao-secao">Situação da produção acadêmica</h2>
+                <div class="alert alert-success">Produção Acadêmica<strong class="fs-2 d-block"><i class="bi bi-trophy-fill me-2"></i>Aprovada</strong></div>
+                <div class="alert alert-warning">Produção Acadêmica<strong class="fs-2 d-block"><i class="bi bi-exclamation-triangle-fill me-2"></i>Aprovada com restrições</strong></div>
+                <div class="alert alert-danger">Produção Acadêmica<strong class="fs-2 d-block"><i class="bi bi-x-circle-fill me-2"></i>Reprovada</strong></div>
+            </div>
         </section>
 
-        <div class="alert alert-success">Produção Acadêmica<strong class="fs-2 d-block"><i class="bi bi-trophy-fill me-2"></i>Aprovada</strong></div>
-        <div class="alert alert-warning">Produção Acadêmica<strong class="fs-2 d-block"><i class="bi bi-exclamation-triangle-fill me-2"></i>Aprovada com restrições</strong></div>
-        <div class="alert alert-danger">Produção Acadêmica<strong class="fs-2 d-block"><i class="bi bi-x-circle-fill me-2"></i>Reprovada</strong></div>
     </div>
 </body>
 
