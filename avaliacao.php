@@ -179,16 +179,6 @@ if (isset($_SESSION['id'])) {
 
                         labelSelectArquivo.class = "hidden";
 
-                        var textareaElement = document.createElement("textarea");
-                        textareaElement.id = "minhaTextarea";
-                        textareaElement.name = "observacaoValor";
-                        textareaElement.title = "Escreva uma observação (opcional)";
-                        textareaElement.value = "";
-                        textareaElement.className = "d-none form-control";
-
-
-                        observacao.appendChild(textareaElement);
-
                         try {
                             const response = await fetch(fileName);
                             const data = await response.json();
