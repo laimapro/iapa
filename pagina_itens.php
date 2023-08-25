@@ -59,7 +59,7 @@
                     </ul>
 
                     <div class="form-floating my-4">
-                        <textarea class="form-control" placeholder=">Novos itens aos 'Aspectos Gerais'" id="aspectoAdicional" style="height: 100px"></textarea>
+                        <textarea class="form-control" name="item[]" placeholder=">Novos itens aos 'Aspectos Gerais'" id="aspectoAdicional" style="height: 100px"></textarea>
                         <label for="aspectoAdicional">Novos itens aos 'Aspectos Gerais'</label>
                     </div>
 
@@ -75,7 +75,7 @@
                         <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="resumo3" value="Resumo: Qualidade do resumo em língua estrangeira">    <label class="d-inline form-check-label" for="resumo3">Qualidade do resumo em língua estrangeira</label></li>
                     </ul>
                     <div class="form-floating my-4">
-                        <textarea class="form-control" placeholder=">Novos itens ao 'Resumo'" id="resumoAdicional" style="height: 100px"></textarea>
+                        <textarea class="form-control" name="item[]" placeholder=">Novos itens ao 'Resumo'" id="resumoAdicional" style="height: 100px"></textarea>
                         <label for="resumoAdicional">Novos itens ao 'Resumo'</label>
                     </div>
                 </fieldset>
@@ -88,7 +88,7 @@
                         <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="palavrachave1" value="Palavra-chave: Adequação das palavras-chaves apresentadas ao tema da Produção Acadêmica">   <label class="d-inline form-check-label" for="palavrachave1">Adequação das palavras-chaves apresentadas ao tema da Produção Acadêmica</label></li>
                     </ul>
                     <div class="form-floating my-4">
-                        <textarea class="form-control" placeholder=">Novos itens as 'Palavras-chaves'" id="palavrachaveAdicional" style="height: 100px"></textarea>
+                        <textarea class="form-control" name="item[]" placeholder=">Novos itens as 'Palavras-chaves'" id="palavrachaveAdicional" style="height: 100px"></textarea>
                         <label for="palavrachaveAdicional">Novos itens as 'Palavras-chaves'</label>
                     </div>
                 </fieldset>
@@ -105,7 +105,7 @@
                         <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="problemapesquisa3" value="Introdução - Problema de pesquisa: Contextualização do problema da pesquisa">         <label class="d-inline form-check-label" for="problemapesquisa3">Contextualização do problema da pesquisa</label></li>
                     </ul>
                     <div class="form-floating my-4">
-                        <textarea class="form-control" placeholder=">Novos itens ao 'Problema de Pesquisa'" id="palavrachaveAdicional" style="height: 100px"></textarea>
+                        <textarea class="form-control"  name="item[]" placeholder=">Novos itens ao 'Problema de Pesquisa'" id="palavrachaveAdicional" style="height: 100px"></textarea>
                         <label for="palavrachaveAdicional">Novos itens ao 'Problema de Pesquisa'</label>
                     </div>
                 </fieldset>
@@ -121,7 +121,7 @@
                         <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="objetivo4" value="Introdução - Objetivo Gerais e especificos: Qualidade dos objetivos">              <label class="d-inline form-check-label" for="objetivo4">Qualidade dos objetivos</label></li>
                     </ul>
                     <div class="form-floating my-4">
-                        <textarea class="form-control" placeholder=">Novos itens aos 'Objetivos Gerais e Especificos'" id="objetivoAdicional" style="height: 100px"></textarea>
+                        <textarea class="form-control" name="item[]" placeholder=">Novos itens aos 'Objetivos Gerais e Especificos'" id="objetivoAdicional" style="height: 100px"></textarea>
                         <label for="objetivoAdicional">Novos itens aos 'Objetivos Gerais e Especificos'</label>
                     </div>
                 </fieldset>
@@ -152,7 +152,7 @@
                         <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="estadoarte4" value="Introdução - Estado da arte: Qualidade do estado da arte">             <label class="d-inline form-check-label" for="estadoarte4">Qualidade do estado da arte</label></li>
                         </ul>
                     <div class="form-floating my-4">
-                        <textarea class="form-control" placeholder=">Novos itens a 'Justificava'" id="justificativaAdicional" style="height: 100px"></textarea>
+                        <textarea class="form-control" name="item[]" placeholder=">Novos itens a 'Justificava'" id="justificativaAdicional" style="height: 100px"></textarea>
                         <label for="justificativaAdicional">Novos itens a 'Justificava'</label>
                     </div>
                 </fieldset>  
@@ -166,7 +166,7 @@
                         <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="justificativa2" value="Justificativa: Relevancia da justificativa">     <label class="d-inline form-check-label" for="justificativa2">Relevancia da justificativa</label></li>
                     </ul>
                     <div class="form-floating my-4">
-                        <textarea class="form-control" placeholder=">Novos itens a 'Justificava'" id="justificativaAdicional" style="height: 100px"></textarea>
+                        <textarea class="form-control" name="item[]" placeholder=">Novos itens a 'Justificava'" id="justificativaAdicional" style="height: 100px"></textarea>
                         <label for="justificativaAdicional">Novos itens a 'Justificava'</label>
                     </div>
                 </fieldset>
@@ -192,7 +192,7 @@
                     </ul>
 
                     <div class="form-floating my-4">
-                        <textarea class="form-control" placeholder=">Novos itens a 'Justificava'" id="justificativaAdicional" style="height: 100px"></textarea>
+                        <textarea class="form-control" name="item[]" placeholder=">Novos itens a 'Justificava'" id="justificativaAdicional" style="height: 100px"></textarea>
                         <label for="justificativaAdicional">Novos itens a 'Justificava'</label>
                     </div>
                 </fieldset>
@@ -210,7 +210,7 @@
                     </ul>
 
                     <div class="form-floating my-4">
-                        <textarea class="form-control" placeholder=">Novos itens a 'Justificava'" id="materiaisAdicional" style="height: 100px"></textarea>
+                        <textarea class="form-control" name="item[]" placeholder=">Novos itens a 'Justificava'" id="materiaisAdicional" style="height: 100px"></textarea>
                         <label for="materiaisaAdicional">Novos itens a 'Justificava'</label>
                     </div>
                 </fieldset>
@@ -226,7 +226,7 @@
                     </ul>
 
                     <div class="form-floating my-4">
-                        <textarea class="form-control" placeholder=">Novos itens a 'Coleta de dados'" id="coletaAdicional" style="height: 100px"></textarea>
+                        <textarea class="form-control" name="item[]" placeholder=">Novos itens a 'Coleta de dados'" id="coletaAdicional" style="height: 100px"></textarea>
                         <label for="coletaAdicional">Novos itens a 'Coleta de dados'</label>
                     </div>
                 </fieldset>
@@ -246,7 +246,7 @@
                     </ul>
 
                     <div class="form-floating my-4">
-                        <textarea class="form-control" placeholder=">Novos itens aos 'Resultados'" id="coletaAdicional" style="height: 100px"></textarea>
+                        <textarea class="form-control" name="item[]" placeholder=">Novos itens aos 'Resultados'" id="coletaAdicional" style="height: 100px"></textarea>
                         <label for="coletaAdicional">Novos itens aos 'Resultados'</label>
                     </div>
                 </fieldset>
@@ -261,7 +261,7 @@
                     </ul>
 
                     <div class="form-floating my-4">
-                        <textarea class="form-control" placeholder=">Novos itens a 'Cronograma'" id="cronogramaAdicional" style="height: 100px"></textarea>
+                        <textarea class="form-control" name="item[]" placeholder=">Novos itens a 'Cronograma'" id="cronogramaAdicional" style="height: 100px"></textarea>
                         <label for="cronogramaAdicional">Novos itens ao 'Cronograma'</label>
                     </div>
                 </fieldset>
@@ -282,7 +282,7 @@
                     </ul>
 
                     <div class="form-floating my-4">
-                        <textarea class="form-control" placeholder=">Novos itens a 'Análise dos Dados'" id="coletaAdicional" style="height: 100px"></textarea>
+                        <textarea class="form-control" name="item[]" placeholder=">Novos itens a 'Análise dos Dados'" id="coletaAdicional" style="height: 100px"></textarea>
                         <label for="coletaAdicional">Novos itens a 'Análise dos Dados'</label>
                     </div>
                 </fieldset>
@@ -302,7 +302,7 @@
                     </ul>
 
                     <div class="form-floating my-4">
-                        <textarea class="form-control" placeholder=">Novos itens ao 'Orçamento'" id="orcamentoAdicional" style="height: 100px"></textarea>
+                        <textarea class="form-control" name="item[]" placeholder=">Novos itens ao 'Orçamento'" id="orcamentoAdicional" style="height: 100px"></textarea>
                         <label for="orcamentoAdicional">Novos itens ao 'Orçamento'</label>
                     </div>
                 </fieldset>
@@ -318,7 +318,7 @@
                     </ul>
 
                     <div class="form-floating my-4">
-                        <textarea class="form-control" placeholder=">Novos itens ao 'Discursão'" id="discursaoAdicional" style="height: 100px"></textarea>
+                        <textarea class="form-control" name="item[]" placeholder=">Novos itens ao 'Discursão'" id="discursaoAdicional" style="height: 100px"></textarea>
                         <label for="discursaoAdicional">Novos itens a 'Discursão'</label>
                     </div>
                 </fieldset>
@@ -333,7 +333,7 @@
                         <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="conclusao3" value="Conclusão: Coerência das conclusões com a fundamentação teorica">      <label class="d-inline form-check-label" for="conclusao3">Coerência das conclusões com a fundamentação teorica</label></li>
                     </ul>
                     <div class="form-floating my-4">
-                        <textarea class="form-control" placeholder=">Novos itens a 'Conclusão'" id="conclusaoAdicional" style="height: 100px"></textarea>
+                        <textarea class="form-control" name="item[]" placeholder=">Novos itens a 'Conclusão'" id="conclusaoAdicional" style="height: 100px"></textarea>
                         <label for="conclusaoAdicional">Novos itens a 'Conclusão'</label>
                     </div>
                 </fieldset>
@@ -347,7 +347,7 @@
                         <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="referencia2" value="Referências bibliográficas: Conformidade das referências com as normas da ABNT">                                   <label class="d-inline form-check-label" for="referencia2">Conformidade das referências com as normas da ABNT</label></li>
                     </ul>
                     <div class="form-floating my-4">
-                        <textarea class="form-control" placeholder=">Novos itens as 'Referências bibliográficas'" id="conclusaoAdicional" style="height: 100px"></textarea>
+                        <textarea class="form-control" name="item[]" placeholder=">Novos itens as 'Referências bibliográficas'" id="conclusaoAdicional" style="height: 100px"></textarea>
                         <label for="conclusaoAdicional">Novos itens as 'Referências bibliográficas'</label>
                     </div>
                 </fieldset>
@@ -372,7 +372,7 @@
                             <div class="form-floating my-4">
                         </ul>
                         <div class="form-floating my-4">
-                            <textarea class="form-control" placeholder=">Novos itens as 'Referências bibliográficas'" id="aplicacaoAdicional" style="height: 100px"></textarea>
+                            <textarea class="form-control" name="item[]" placeholder=">Novos itens as 'Definição dos itens aplicados'" id="aplicacaoAdicional" style="height: 100px"></textarea>
                             <label for="aplicacaoAdicional">Novos itens as 'Referências bibliográficas'</label>
                         </div>
                 </fieldset>
