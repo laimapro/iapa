@@ -255,7 +255,7 @@ $dompdf->setPaper('A4', 'portrait');
 $dompdf->render();
 
 $pdfOutput = $dompdf->output();
-$pdfFilePath = 'PRODUCOES.AVALIADAS/ '.$nomeArquivo;
+$pdfFilePath = 'PRODUCOES.AVALIADAS/'.$nomeArquivo;
 file_put_contents($pdfFilePath, $pdfOutput);
 
 include_once('includes/head.php');
