@@ -74,7 +74,11 @@ if (isset($_SESSION['id'])) {
 
                 // Verifique se o arquivo foi salvo com sucesso
                 if (file_exists($caminhoArquivo)) {
-                    echo "O arquivo foi salvo com sucesso na pasta IAPA.CRIADOS ";
+                    include_once('includes/head.php');
+                    echo "<body class='bg-body-secondary'><div class='container px-4 py-5'><div class='p-5 rounded-3 bg-white border shadow-lg'><div class='pb-5 text-center'><a href='index.php' class='link-body-emphasis logo text-decoration-none'>";
+                    include_once('includes/logo.php');
+                    echo "<?xml version='1.0' encoding='utf-8'?><svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' style='margin: auto; background: none; display: block; shape-rendering: auto;' width='200px' height='200px' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid'><circle cx='50' cy='50' r='0' fill='none' stroke='#85a2b6' stroke-width='2'>  <animate attributeName='r' repeatCount='indefinite' dur='1s' values='0;40' keyTimes='0;1' keySplines='0 0.2 0.8 1' calcMode='spline' begin='0s'></animate><animate attributeName='opacity' repeatCount='indefinite' dur='1s' values='1;0' keyTimes='0;1' keySplines='0.2 0 0.8 1' calcMode='spline' begin='0s'></animate></circle><circle cx='50' cy='50' r='0' fill='none' stroke='#bbcedd' stroke-width='2'>  <animate attributeName='r' repeatCount='indefinite' dur='1s' values='0;40' keyTimes='0;1' keySplines='0 0.2 0.8 1' calcMode='spline' begin='-0.5s'></animate>  <animate attributeName='opacity' repeatCount='indefinite' dur='1s' values='1;0' keyTimes='0;1' keySplines='0.2 0 0.8 1' calcMode='spline' begin='-0.5s'></animate></circle></svg>";
+                    echo "<p>O arquivo foi salvo com sucesso na pasta IAPA.CRIADOS.</p>";
                     echo '<script>
                       setTimeout(function(){
                         window.location.href = "home.php";
@@ -86,18 +90,19 @@ if (isset($_SESSION['id'])) {
                     $stmt->execute();
 
                     if ($stmt->affected_rows > 0) {
-                        echo "Dados inseridos com sucesso na tabela tipo_producao.";
+                        echo "<p>Dados inseridos com sucesso na tabela tipo_producao.</p>";
                     } else {
-                        echo "Erro ao inserir dados na tabela tipo_producao.";
+                        echo "<p>Erro ao inserir dados na tabela tipo_producao.</p>";
                     }
+                    echo "</div></div></div>";
 
                     // Fecha a declaração
                     $stmt->close();
                 } else {
-                    echo "Erro ao salvar os dados em um arquivo JSON.";
+                    echo "<p>Erro ao salvar os dados em um arquivo JSON.</p>";
                 }
             } else {
-                echo "Nenhum item selecionado.";
+                echo "<p>Nenhum item selecionado.</p>";
             }
         } else {
             echo "Erro ao salvar os dados em um arquivo JSON.";
