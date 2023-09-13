@@ -49,6 +49,29 @@
                 <fieldset class="mt-4">
                     <legend id="aspectosGerais"><h3 class="anchor">Aspectos Gerais</h3></legend>
 
+                    <fieldset>
+                        <p>Assinale quais dos itens abaixo se aplicam ao Projeto Acadêmico em avaliação. Em seguida, de uma nota de 1 a 10 para cada quesito.</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="titulo" value="Apresenta título da Produção Acadêmica">                             <label class="d-inline form-check-label" for="titulo">Apresenta título da Produção Acadêmica</label></li>
+                            <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="resumo" value="Apresenta resumo">                                                   <label class="d-inline form-check-label" for="resumo">Apresenta resumo</label></li>
+                            <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="palavrasChaves" value="Apresenta palavras-chave">                                  <label class="d-inline form-check-label" for="palavrasChaves">Apresenta palavras-chave</label></li>
+                            <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="resumoEstrangeira" value="Apresenta resumo em língua estrangeira">                  <label class="d-inline form-check-label" for="resumoEstrangeira">Apresenta resumo em língua estrangeira</label></li>
+                            <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="palavrasChavesEstrangeira" value="Apresenta palavras-chaves em língua estrangeira"> <label class="d-inline form-check-label" for="palavrasChavesEstrangeira">Apresenta palavras-chaves em língua estrangeira</label></li>
+                            <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="introducao" value="Apresenta Introdução e contextualização">                        <label class="d-inline form-check-label" for="introducao">Apresenta Introdução e contextualização</label></li>
+                            <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="objetivos" value="Apresenta objetivos e justificativa">                             <label class="d-inline form-check-label" for="objetivos">Apresenta objetivos e justificativa</label></li>
+                            <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="estadoArte" value="Apresenta estado da arte">                                       <label class="d-inline form-check-label" for="estadoArte">Apresenta estado da arte</label></li>
+                            <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="estrutura" value="Apresenta estrutura científico-metodológica">                     <label class="d-inline form-check-label" for="estrutura">Apresenta estrutura científico-metodológica</label></li>
+                            <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="analise" value="Apresenta análise, considerações ou conclusões">                    <label class="d-inline form-check-label" for="analise">Apresenta análise, considerações ou conclusões</label></li>
+                            <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="referencias" value="Apresenta referências bibliográficas">                          <label class="d-inline form-check-label" for="referencias">Apresenta referências bibliográficas</label></li>                      
+                            <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" value="Apresenta Aprovação do Comitê de Ética em Pesquisa">                             <label class="d-inline form-check-label" for="aprovacaoComite">Apresenta Aprovação do Comitê de Ética em Pesquisa</label><br>
+                            <div class="form-floating my-4">
+                        </ul>
+                        <div class="form-floating my-4">
+                            <textarea class="form-control" name="item[]" placeholder="Adicionar itens as 'Definição dos itens aplicados'" id="aplicacaoAdicional" style="height: 100px"></textarea>
+                            <label for="aplicacaoAdicional">Adicionar itens as 'Referências bibliográficas'</label>
+                        </div>
+                </fieldset>
+
                     <ul class="list-group list-group-flush">
                         <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="aspecto1" value="Aspectos Gerais: Completude da Produção Acadêmica">                               <label class="d-inline form-check-label" for="aspecto1">Completude da Produção Acadêmica</label></li>
                         <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="aspecto2" value="Aspectos Gerais: Organização das seções da Produção Acadêmica">      <label class="d-inline form-check-label" for="aspecto2">Organização das seções da Produção Acadêmica</label></li>
@@ -82,13 +105,13 @@
 
                 <!-- Palavra-chave -->
                 <fieldset>
-                    <legend id="palavrachave"><h3 class="anchor">Palavra-chave</h3></legend>
+                    <legend id="palavrachave"><h3 class="anchor">Palavras-chave</h3></legend>
                     <ul class="list-group list-group-flush">
-                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="palavrachave1" value="Palavra-chave: Adequação das palavras-chaves para o tema da Produção Acadêmica">   <label class="d-inline form-check-label" for="palavrachave1">Adequação das palavras-chaves para o tema da Produção Acadêmica</label></li>
+                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="palavrachave1" value="Palavras-chave: Adequação das palavras-chaves para o tema da Produção Acadêmica">   <label class="d-inline form-check-label" for="palavrachave1">Adequação das palavras-chaves para o tema da Produção Acadêmica</label></li>
                     </ul>
                     <div class="form-floating my-4">
                         <textarea class="form-control" name="item[]" placeholder="Adicionar itens as 'Palavras-chaves'" id="palavrachaveAdicional" style="height: 100px"></textarea>
-                        <label for="palavrachaveAdicional">Adicionar itens as 'Palavras-chaves'</label>
+                        <label for="palavrachaveAdicional">Adicionar itens as 'Palavras-chave'</label>
                     </div>
                 </fieldset>
                 <!-- Palavra-chave -->
@@ -112,15 +135,15 @@
                 
                 <!-- Objetivo Gerais e especificos -->
                 <fieldset>
-                    <legend id="objetivos"><h4>Objetivo Gerais e especificos</h4></legend>
+                    <legend id="objetivos"><h4>Objetivos Geral e especificos</h4></legend>
                     <ul class="list-group list-group-flush">
-                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="objetivo1" value="Introdução - Objetivo Gerais e especificos: Adequação dos objetivos">              <label class="d-inline form-check-label" for="objetivo1">Adequação dos objetivos</label></li>
-                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="objetivo2" value="Introdução - Objetivo Gerais e especificos: Relevancia dos objetivos">             <label class="d-inline form-check-label" for="objetivo2">Relevancia dos objetivos</label></li>
-                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="objetivo3" value="Introdução - Objetivo Gerais e especificos: Completude dos objetivos especificos"> <label class="d-inline form-check-label" for="objetivo3">Completude dos objetivos especificos</label></li>
+                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="objetivo1" value="Introdução - Objetivos Geral e especificos: Adequação dos objetivos">              <label class="d-inline form-check-label" for="objetivo1">Adequação dos objetivos</label></li>
+                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="objetivo2" value="Introdução - Objetivos Geral e especificos: Relevância dos objetivos">             <label class="d-inline form-check-label" for="objetivo2">Relevância dos objetivos</label></li>
+                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="objetivo3" value="Introdução - Objetivos Geral e especificos: Completude dos objetivos especificos"> <label class="d-inline form-check-label" for="objetivo3">Completude dos objetivos especificos</label></li>
                     </ul>
                     <div class="form-floating my-4">
                         <textarea class="form-control" name="item[]" placeholder="Adicionar itens aos 'Objetivos Gerais e Especificos'" id="objetivoAdicional" style="height: 100px"></textarea>
-                        <label for="objetivoAdicional">Adicionar itens aos 'Objetivos Gerais e Especificos'</label>
+                        <label for="objetivoAdicional">Adicionar itens aos 'Objetivos Geral e Especificos'</label>
                     </div>
                 </fieldset>
                 <!-- Objetivo Gerais e especificos -->
@@ -133,8 +156,8 @@
                         <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="hipotese2" value="Introdução - Hipótese: Relevância da hipótese">                                               <label class="d-inline form-check-label" for="hipotese2">Relevância da hipótese</label></li>
                     </ul>
                     <div class="form-floating my-4">
-                        <textarea name="item[]" class="form-control" placeholder="Adicionar itens aos 'Objetivos Gerais e Especificos'" id="hipoteseAdicional" style="height: 100px"></textarea>
-                        <label for="hipoteseAdicional">Adicionar itens aos 'Objetivos Gerais e Especificos'</label>
+                        <textarea name="item[]" class="form-control" placeholder="Adicionar itens a 'Hipótese'" id="hipoteseAdicional" style="height: 100px"></textarea>
+                        <label for="hipoteseAdicional">Adicionar itens a 'Hipótese'</label>
                     </div>
                 </fieldset>
                 <!-- Introdução - Hipótese -->
@@ -143,7 +166,7 @@
                  <fieldset>
                     <legend id="justificativa"><h3 class="anchor">Justificativa</h3></legend>
                     <ul class="list-group list-group-flush">
-                         <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="justificativa2" value="Justificativa: Relevancia da justificativa">     <label class="d-inline form-check-label" for="justificativa2">Relevancia da justificativa</label></li>
+                         <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="justificativa2" value="Justificativa: Relevância da justificativa">     <label class="d-inline form-check-label" for="justificativa2">Relevância da justificativa</label></li>
                         <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="justificativa1" value="Justificativa: Completude da justificativa">  <label class="d-inline form-check-label" for="justificativa1">Completude da justificativa</label></li>
                     </ul>
                     <div class="form-floating my-4">
@@ -158,7 +181,7 @@
                     <legend id="estadoarte"><h4 class="anchor">Estado da arte</h4></legend>
                     <ul class="list-group list-group-flush">
                         <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="estadoarte3" value="Introdução - Estado da arte: Completude / Profundidade do estado da arte">            <label class="d-inline form-check-label" for="estadoarte3">Completude / Profundidade do estado da arte</label></li>
-                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="estadoarte4" value="Introdução - Estado da arte: Relevancia / Qualidade do estado da arte">             <label class="d-inline form-check-label" for="estadoarte4">Relevancia / Qualidade do estado da arte</label></li>
+                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="estadoarte4" value="Introdução - Estado da arte: Relevância / Qualidade do estado da arte">             <label class="d-inline form-check-label" for="estadoarte4">Relevância / Qualidade do estado da arte</label></li>
                         </ul>
                     <div class="form-floating my-4">
                         <textarea class="form-control" name="item[]" placeholder="Adicionar itens a 'Estado da arte'" id="justificativaAdicional" style="height: 100px"></textarea>
@@ -174,13 +197,10 @@
                 <fieldset>
                     <legend id="sujeitos"><h4>Sujeitos</h4></legend>
                     <ul class="list-group list-group-flush">
-                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="sujeitos1" value="Metodologia - Sujeitos: Adequação do Sujeito / População do estudo">              <label class="d-inline form-check-label" for="sujeitos1">Adequação do Sujeito / População do estudo</label></li>
-                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="sujeitos2" value="Metodologia - Sujeitos: Adequação do tamanho da Amostra">                       <label class="d-inline form-check-label" for="sujeitos2">Adequação do Tamanho da Amostra</label></li>
-                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="sujeitos9" value="Metodologia - Sujeitos: Adequação do cálculo amostral">                            <label class="d-inline form-check-label" for="sujeitos9">Adequação do cálculo amostral</label></li>
                         <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="sujeitos3" value="Metodologia - Sujeitos: Adequação do Recrutamento da amostra">                     <label class="d-inline form-check-label" for="sujeitos3">Adequação do Recrutamento da amostra</label></li>
                         <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="sujeitos4" value="Metodologia - Sujeitos: Adequação da Caracterização da amostra">                                <label class="d-inline form-check-label" for="sujeitos4">Adequação da Caracterização da amostra</label></li>
-                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="sujeitos10" value="Metodologia - Sujeitos: A população / Sujeitos do estudo responde a natureza da pesquisa">   <label class="d-inline form-check-label" for="sujeitos10">A população / Sujeitos do estudo responde a natureza da pesquisa</label></li>
-                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="sujeitos11" value="Metodologia - Sujeitos: O número de sujeitos contempla a natureza da pesquisa">   <label class="d-inline form-check-label" for="sujeitos11">O número de sujeitos contempla a natureza da pesquisa</label></li>
+                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="sujeitos2" value="Metodologia - Sujeitos: Adequação do tamanho da Amostra">                       <label class="d-inline form-check-label" for="sujeitos2">Adequação do Tamanho da Amostra</label></li>
+                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="sujeitos9" value="Metodologia - Sujeitos: Adequação do cálculo amostral">                            <label class="d-inline form-check-label" for="sujeitos9">Adequação do cálculo amostral</label></li>
                     </ul>
 
                     <div class="form-floating my-4">
@@ -197,13 +217,13 @@
 
                         <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="materiais1" value="Método - Materiais e procedimentos: A descrição apresentada dos laboratórios, instrumentos e equipamentos empregados no estudo permite dizer que respondem aos pré-requisitos da pesquisa">   <label class="d-inline form-check-label" for="materiais1">A descrição apresentada dos laboratórios, instrumentos e equipamentos empregados no estudo permite dizer que respondem aos pré-requisitos da pesquisa</label></li>
                         <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="materiais2" value="Método - Materiais e procedimentos: A descrição das técnicas e dos tratamentos empregados na obtenção dos dados permitem deduzir que os procedimentos respondem à necessidade da pesquisa">   <label class="d-inline form-check-label" for="materiais2">A descrição das técnicas e dos tratamentos empregados na obtenção dos dados permitem deduzir que os procedimentos respondem à necessidade da pesquisa</label></li>
-                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="materiais3" value="Método - Materiais e procedimentos: Estrutura científico-metodológica utilizada">                                                                                                             <label class="d-inline form-check-label" for="materiais3">Estrutura científico-metodológica utilizada</label></li>
+                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="materiais3" value="Método - Materiais e procedimentos: A Estrutura científico-metodológica utilizada satisfaz a natureza do estudo">                                                                                                             <label class="d-inline form-check-label" for="materiais3">A Estrutura científico-metodológica utilizada satisfaz a natureza do estudo</label></li>
                         <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="materiais4" value="Método - Materiais e procedimentos: Os instrumentos, equipamentos e tratamentos empregados no estudo para a obtenção dos dados respondem à necessidade da pesquisa">                          <label class="d-inline form-check-label" for="materiais4">Os instrumentos, equipamentos e tratamentos empregados no estudo para a obtenção dos dados respondem à necessidade da pesquisa</label></li>
                     </ul>
 
                     <div class="form-floating my-4">
-                        <textarea class="form-control" name="item[]" placeholder="Adicionar itens a 'Justificava'" id="materiaisAdicional" style="height: 100px"></textarea>
-                        <label for="materiaisaAdicional">Adicionar itens a 'Justificava'</label>
+                        <textarea class="form-control" name="item[]" placeholder="Adicionar itens ao 'Materiais e procedimentos'" id="materiaisAdicional" style="height: 100px"></textarea>
+                        <label for="materiaisaAdicional">Adicionar itens ao 'Materiais e procedimentos'</label>
                     </div>
                 </fieldset>
                 <!-- Método - Materiais e procedimentos -->
@@ -214,7 +234,7 @@
                     <ul class="list-group list-group-flush">
                         <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="coleta1" value="Método - Coleta de dados: A coleta dos dados foi conduzida em local e tempo adequados">                                              <label class="d-inline form-check-label" for="coleta1">A coleta dos dados foi conduzida em local e tempo adequados</label></li>
                         <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="coleta2" value="Método - Coleta de dados: Os instrumentos de coleta (questionários, entrevistas etc.estão coerentes com a natureza da pesquisa)">    <label class="d-inline form-check-label" for="coleta2">Os instrumentos de coleta (questionários, entrevistas etc.estão coerentes com a natureza da pesquisa)</label></li>
-                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="coleta3" value="Método - Coleta de dados: Os Materiais: equipamentos e experimentos permitiram a coleta de dados requerida pelo estudo">             <label class="d-inline form-check-label" for="coleta3">Os Materiais: equipamentos e experimentos permitiram a coleta de dados requerida pelo estudo</label></li>
+                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="coleta3" value="Método - Coleta de dados: Os Materiais: equipamentos e experimentos permitem a coleta de dados requerida pelo estudo">             <label class="d-inline form-check-label" for="coleta3">Os Materiais: equipamentos e experimentos permitem a coleta de dados requerida pelo estudo</label></li>
                     </ul>
 
                     <div class="form-floating my-4">
@@ -224,32 +244,12 @@
                 </fieldset>
                 <!-- Método - Coleta de dados -->
                 
-                <!-- Método - Resultados -->
-                <fieldset>
-                    <legend id="resultados"><h4>Resultados</h4></legend>
-                    <ul class="list-group list-group-flush">
-                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="resultados1" value="Método - Resultados: Coerência dos resultados com o método utilizado">                                              <label class="d-inline form-check-label" for="resultados1">Coerência dos resultados com o método utilizado</label></li>
-                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="resultados2" value="Método - Resultados: Precisão dos dados coletados">                                                                 <label class="d-inline form-check-label" for="resultados2">Precisão dos dados coletados</label></li>
-                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="resultados3" value="Método - Resultados: Concisão dos dados coletados">                                                                 <label class="d-inline form-check-label" for="resultados3">Concisão dos dados coletados</label></li>
-                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="resultados4" value="Método - Resultados: Clareza dos dados coletados">                                                                  <label class="d-inline form-check-label" for="resultados4">Clareza dos dados coletados</label></li>
-                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="resultados5" value="Método - Resultados: Reprodutibilidade dos resultados obtidos">                                                     <label class="d-inline form-check-label" for="resultados5">Reprodutibilidade dos resultados obtidos</label></li>
-                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="resultados6" value="Método - Resultados: Confiabilidade e fidedignidade dos dados obtidos">                                             <label class="d-inline form-check-label" for="resultados6">Confiabilidade e fidedignidade dos dados obtidos</label></li>
-                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="resultados7" value="Método - Resultados: A qualidade das figuras, gráficos, tabelas ou esquemas usados expressão os dados obtidos">     <label class="d-inline form-check-label" for="resultados7">A qualidade das figuras, gráficos, tabelas ou esquemas usados expressão os dados obtidos</label></li>
-                    </ul>
-
-                    <div class="form-floating my-4">
-                        <textarea class="form-control" name="item[]" placeholder="Adicionar itens aos 'Resultados'" id="coletaAdicional" style="height: 100px"></textarea>
-                        <label for="coletaAdicional">Adicionar itens aos 'Resultados'</label>
-                    </div>
-                </fieldset>
-                <!-- Método - Resultados -->
-                
-                <!-- Método - Cronograma -->
-                <fieldset>
+                 <!-- Método - Cronograma -->
+                 <fieldset>
                     <legend id="resultados"><h4 class="anchor">Cronograma</h4></legend>
                     <ul class="list-group list-group-flush">
-                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="cronograma1" value="Método - Cronograma: O cronograma é viável no tempo disponível para a pesquisa">                      <label class="d-inline form-check-label" for="cronograma1">O cronograma é viável no tempo disponível para a pesquisa</label></li>
-                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="cronograma2" value="Método - Cronograma: A organização do cronograma é claraa">                                           <label class="d-inline form-check-label" for="cronograma2">A organização do cronograma é clara</label></li>
+                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="cronograma2" value="Método - Cronograma: A organização do cronograma é clara e satisfaz o escopo da pesquisa">                                           <label class="d-inline form-check-label" for="cronograma2">A organização do cronograma é clara e satisfaz o escopo da pesquisa</label></li>
+                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="cronograma1" value="Método - Cronograma: O cronograma é viável para o tempo disponível para a pesquisa">                      <label class="d-inline form-check-label" for="cronograma1">O cronograma é viável para o tempo disponível para a pesquisa</label></li>
                     </ul>
 
                     <div class="form-floating my-4">
@@ -277,7 +277,27 @@
                         <label for="orcamentoAdicional">Adicionar itens ao 'Orçamento'</label>
                     </div>
                 </fieldset>
-                <!-- Orçamento -->
+
+                <!-- Método - Resultados -->
+                <fieldset>
+                    <legend id="resultados"><h4>Resultados</h4></legend>
+                    <ul class="list-group list-group-flush">
+                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="resultados1" value="Método - Resultados: Coerência dos resultados com o método utilizado na pesquisa">                                              <label class="d-inline form-check-label" for="resultados1">Coerência dos resultados com o método utilizado na pesquisa</label></li>
+                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="resultados2" value="Método - Resultados: Precisão dos dados coletados">                                                                 <label class="d-inline form-check-label" for="resultados2">Precisão dos dados coletados</label></li>
+                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="resultados3" value="Método - Resultados: Concisão dos dados coletados">                                                                 <label class="d-inline form-check-label" for="resultados3">Concisão dos dados coletados</label></li>
+                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="resultados4" value="Método - Resultados: Clareza dos dados coletados">                                                                  <label class="d-inline form-check-label" for="resultados4">Clareza dos dados coletados</label></li>
+                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="resultados5" value="Método - Resultados: Reprodutibilidade dos resultados obtidos">                                                     <label class="d-inline form-check-label" for="resultados5">Reprodutibilidade dos resultados obtidos</label></li>
+                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="resultados6" value="Método - Resultados: Confiabilidade e fidedignidade dos dados obtidos">                                             <label class="d-inline form-check-label" for="resultados6">Confiabilidade e fidedignidade dos dados obtidos</label></li>
+                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="resultados7" value="Método - Resultados: A qualidade das figuras, gráficos, tabelas ou esquemas usados expressam os dados e resultados obtidos">     <label class="d-inline form-check-label" for="resultados7">A qualidade das figuras, gráficos, tabelas ou esquemas usados expressam os dados e resultados obtidos</label></li>
+                    </ul>
+
+                    <div class="form-floating my-4">
+                        <textarea class="form-control" name="item[]" placeholder="Adicionar itens aos 'Resultados'" id="coletaAdicional" style="height: 100px"></textarea>
+                        <label for="coletaAdicional">Adicionar itens aos 'Resultados'</label>
+                    </div>
+                </fieldset>
+                <!-- Método - Resultados -->
+                
 
                 <!-- Análise -->
                 <fieldset>
@@ -290,7 +310,7 @@
                         <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="analiseDados5" value="Análise: A análise produzida está coerente com a Discriminação/definição das variáveis estudadas">     <label class="d-inline form-check-label" for="analiseDados5">A análise produzida está coerente com a Discriminação/definição das variáveis estudadas</label></li>
                         <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="analiseDados6" value="Análise: A análise condiz com a Organização e tabulação dos dados">                                    <label class="d-inline form-check-label" for="analiseDados6">A análise condiz com a Organização e tabulação dos dados</label></li>
                         <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="analiseDados7" value="Análise: A análise feita condiz com o Tratamento e testes estatísticos utilizados">                    <label class="d-inline form-check-label" for="analiseDados7">A análise feita condiz com o Tratamento e testes estatísticos utilizados</label></li>
-                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="analiseDados8" value="Análise: O(s) Programa(s) utilizados para tabulação e análise deram conta dos resultados obtidos">     <label class="d-inline form-check-label" for="analiseDados8">O(s) Programa(s) utilizados para tabulação e análise deram conta dos resultados obtidos </label></li>
+                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="analiseDados8" value="Análise: O(s) Programa(s) utilizados para tabulação e análise dão conta dos resultados obtidos">     <label class="d-inline form-check-label" for="analiseDados8">O(s) Programa(s) utilizados para tabulação e análise dão conta dos resultados obtidos </label></li>
                     </ul>
 
                     <div class="form-floating my-4">
@@ -302,7 +322,7 @@
                 
                 <!-- Discursão -->
                 <fieldset>
-                    <legend id="discursao"><h3>Discursão</h3></legend>
+                    <legend id="discursao"><h3 class="anchor">Discursão</h3></legend>
                     <ul class="list-group list-group-flush">
                         <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="discursao1" value="Discursão: Profundidade da discursão">                               <label class="d-inline form-check-label" for="discursao1">Profundidade da discursão</label></li>
                         <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="discursao2" value="Discursão: Coerência da discursão com os dados coletados">           <label class="d-inline form-check-label" for="discursao2">Coerência da discursão com os dados coletados</label></li>
@@ -322,7 +342,7 @@
                     <ul class="list-group list-group-flush">
                         <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="conclusao1" value="Conclusão: Profundidade das conclusões">                               <label class="d-inline form-check-label" for="conclusao1">Profundidade das conclusões</label></li>
                         <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="conclusao2" value="Conclusão: Coerência das conclusões com os dados coletados">           <label class="d-inline form-check-label" for="conclusao2">Coerência das conclusões com os dados coletados</label></li>
-                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="conclusao3" value="Conclusão: Coerência das conclusões com a fundamentação teorica">      <label class="d-inline form-check-label" for="conclusao3">Coerência das conclusões com a fundamentação teorica</label></li>
+                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="conclusao3" value="Conclusão: Coerência das conclusões com a fundamentação teórica">      <label class="d-inline form-check-label" for="conclusao3">Coerência das conclusões com a fundamentação teórica</label></li>
                     </ul>
                     <div class="form-floating my-4">
                         <textarea class="form-control" name="item[]" placeholder="Adicionar itens a 'Conclusão'" id="conclusaoAdicional" style="height: 100px"></textarea>
@@ -336,7 +356,7 @@
                     <legend id="conclusao"><h3 class="anchor">Referências bibliográficas</h4></legend>
                     <ul class="list-group list-group-flush">
                         <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="referencia1" value="Referências bibliográficas: Relevância e atualidade das referências bibliográficas">                               <label class="d-inline form-check-label" for="referencia1">Relevância e atualidade das referências bibliográficas</label></li>
-                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="referencia2" value="Referências bibliográficas: Conformidade das referências com as normas da ABNT">                                   <label class="d-inline form-check-label" for="referencia2">Conformidade das referências com as normas da ABNT</label></li>
+                        <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="referencia2" value="Referências bibliográficas: Conformidade das referências bibliográficas com as normas da ABNT">                                   <label class="d-inline form-check-label" for="referencia2">Conformidade das referências bibliográficas com as normas da ABNT</label></li>
                     </ul>
                     <div class="form-floating my-4">
                         <textarea class="form-control" name="item[]" placeholder="Adicionar itens as 'Referências bibliográficas'" id="conclusaoAdicional" style="height: 100px"></textarea>
@@ -344,30 +364,6 @@
                     </div>
                 </fieldset>
                 <!-- Conclusão -->
-
-                <fieldset>
-                    <legend><h2>Definição dos itens aplicados</h2></legend>
-                        <p>Assinale quais dos itens abaixo se aplicam ao Projeto Acadêmico em avaliação:</p>
-                        <ul class="list-group list-group-flush">
-                            <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="titulo" value="Apresenta título da Produção Acadêmica">                             <label class="d-inline form-check-label" for="titulo">Apresenta título da Produção Acadêmica</label></li>
-                            <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="resumo" value="Apresenta resumo">                                                   <label class="d-inline form-check-label" for="resumo">Apresenta resumo</label></li>
-                            <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="palavrasChaves" value="Apresenta palavras-chaves">                                  <label class="d-inline form-check-label" for="palavrasChaves">Apresenta palavras-chaves</label></li>
-                            <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="resumoEstrangeira" value="Apresenta resumo em língua estrangeira">                  <label class="d-inline form-check-label" for="resumoEstrangeira">Apresenta resumo em língua estrangeira</label></li>
-                            <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="palavrasChavesEstrangeira" value="Apresenta palavras-chaves em língua estrangeira"> <label class="d-inline form-check-label" for="palavrasChavesEstrangeira">Apresenta palavras-chaves em língua estrangeira</label></li>
-                            <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="introducao" value="Apresenta Introdução e contextualização">                        <label class="d-inline form-check-label" for="introducao">Apresenta Introdução e contextualização</label></li>
-                            <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="objetivos" value="Apresenta objetivos e justificativa">                             <label class="d-inline form-check-label" for="objetivos">Apresenta objetivos e justificativa</label></li>
-                            <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="estadoArte" value="Apresenta estado da arte">                                       <label class="d-inline form-check-label" for="estadoArte">Apresenta estado da arte</label></li>
-                            <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="estrutura" value="Apresenta estrutura científico-metodológica">                     <label class="d-inline form-check-label" for="estrutura">Apresenta estrutura científico-metodológica</label></li>
-                            <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="analise" value="Apresenta análise, considerações ou conclusões">                    <label class="d-inline form-check-label" for="analise">Apresenta análise, considerações ou conclusões</label></li>
-                            <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="referencias" value="Apresenta referências bibliográficas">                          <label class="d-inline form-check-label" for="referencias">Apresenta referências bibliográficas</label></li>                      
-                            <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" value="Apresenta Aprovação do Comitê de Ética em Pesquisa">                             <label class="d-inline form-check-label" for="aprovacaoComite">Apresenta Aprovação do Comitê de Ética em Pesquisa</label><br>
-                            <div class="form-floating my-4">
-                        </ul>
-                        <div class="form-floating my-4">
-                            <textarea class="form-control" name="item[]" placeholder="Adicionar itens as 'Definição dos itens aplicados'" id="aplicacaoAdicional" style="height: 100px"></textarea>
-                            <label for="aplicacaoAdicional">Adicionar itens as 'Referências bibliográficas'</label>
-                        </div>
-                </fieldset>
                 
                 
                 <div class="text-end my-4">
