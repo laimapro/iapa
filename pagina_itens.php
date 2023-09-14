@@ -31,26 +31,28 @@
     <div class="row p-5 align-items-start rounded-3 bg-white  border shadow-lg">
         <div class="col-12 col-md-4 text-center text-lg-start">
             <?php include_once('includes/logo.php') ?>
+
+            <h4>Critérios de avaliação</h4>
             <div id="toc"></div>
 
         </div>
         <div class="col-12 mx-auto col-md-8">
-            <h2 class="visually-hidden-focusable">Mensagem de boas-vindas</h2>
-            <p><span id="saudacao"></span>, <?php echo $pronomeTratamento; echo " "; if ($nomesocial != null){echo $nomesocial;}else{echo $nomeUsuario; echo " "; echo $sobrenomeUsuario;} ?></p>
-            <p>Excelente! Estamos prontos para começar nosso trabalho. Quero dizer, o seu.</p>
+            <p><span id="saudacao"></span>, <?php echo $pronomeTratamento; echo " "; if ($nomesocial != null){echo $nomesocial;}else{echo $nomeUsuario; echo " "; echo $sobrenomeUsuario;} ?>, agora são <span id="horario"></span> </p>
+            <p>Estamos prontos para começar nosso trabalho. Quero dizer, o seu.</p>
             <p>Selecione em cada tópico, os itens que você quer que eu adicione no <strong>IAPA</strong> que você está construindo. Se nenhum item de um tópico for aplicável, apenas pule-o, e eu não o incluirei no <strong>IAPA</strong>. Não se esqueça de pressionar o botão Avançar e salvar, para eu lhe levar ao próximo passo.</p>
             <p>Está pronto, <strong><?php echo $pronomeTratamento; echo " ";  echo $nomeUsuario; ?></strong>, Então vamos trabalhar!</p>
-            
-            <h2 class="visually-hidden-focusable">Itens avaliados</h2>
+            <br>
+            <h4>Construindo os critérios de avaliação</h4>
 
             <form id="formItens" action="salvar_arquivo.php" method="POST">
                 <input type="hidden" name="categorias" value="<?php echo $categorias;?>">
+                <p>Assinale quais dos critérios abaixo devem constar neste Instrumento de avaliação para <?php echo $categorias;?>.</p>
                 <!-- Aspectos Gerais -->
                 <fieldset class="mt-4">
                     <legend id="aspectosGerais"><h3 class="anchor">Aspectos Gerais</h3></legend>
 
                     <fieldset>
-                        <p>Assinale quais dos itens abaixo se aplicam ao Projeto Acadêmico em avaliação. Em seguida, de uma nota de 1 a 10 para cada quesito.</p>
+
                         <ul class="list-group list-group-flush">
                             <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="titulo" value="Apresenta título da Produção Acadêmica">                             <label class="d-inline form-check-label" for="titulo">Apresenta título da Produção Acadêmica</label></li>
                             <li class="px-0 list-group-item"><input type="checkbox" name="item[]" class="form-check-input me-1" type="checkbox" id="resumo" value="Apresenta resumo">                                                   <label class="d-inline form-check-label" for="resumo">Apresenta resumo</label></li>

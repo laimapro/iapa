@@ -33,11 +33,11 @@ if (isset($_SESSION['id'])) {
 
                     <div id="toc"></div>
 
+            <h2>Iniciando uma avaliação</h2>
 
                 </div>
                 <div class="col-12 mx-auto col-md-8">
-               <h2 class="visually-hidden-focusable">Mensagem de boas-vindas</h2>
-                    <p id="orientacao"> Oi, <?php echo $pronomeTratamento;
+                    <p id="orientacao"><span id="saudacao"></span>, <?php echo $pronomeTratamento;
                                             echo " ";
                                             if ($nomesocial != null) {
                                                 echo $nomesocial;
@@ -45,9 +45,9 @@ if (isset($_SESSION['id'])) {
                                                 echo $nomeUsuario;
                                                 echo " ";
                                                 echo $sobrenomeUsuario;
-                                            } ?>, permita-me guiar-lhe pelos passos de nosso IAPA.</p>
+                                            } ?>. Agora são <span id="horario"></span>. Permita-me guiar-lhe pelos passos de nosso IAPA.</p>
                     <p>Para isso, preciso que você escolha um arquivo na lista de produções acadêmicas.</p>
-                    <p>Quando você fizer isso, eu imediatamente exibirei os critérios que você deverá avaliar. se não deseja julgar uma produção acadêmica agora ou se quiser avaliar outro trabalho, pressione o botão voltar e estaremos na página anterior, como em um passo de mágica.</p>
+                    <p>Quando você fizer isso, eu imediatamente exibirei os critérios que você deverá avaliar. se não deseja julgar uma produção acadêmica agora ou se quiser avaliar outro trabalho, pressione <a href="home.php" title="Retorna para página inicial do IAPA">voltar</a> e estaremos na página anterior, como em um passo de mágica.</p>
                     <?php
                     // Assuming you've already created a mysqli connection named $mysqli
 
@@ -142,7 +142,7 @@ if (isset($_SESSION['id'])) {
                     </div>
                     </form>
                     <div class="d-flex align-items-center justify-content-between btn-action">
-                        <button class="btn btn-link" onclick="window.location.href='home.php'" accesskey="1" title="Retorna para página inicial do IAPA"><i class="bi bi-arrow-left me-1"></i>Voltar para o IAPA</button>
+                        <button class="btn btn-link" onclick="window.location.href='home.php'" accesskey="1" title="Retorna para página inicial do IAPA"><i class="bi bi-arrow-left me-1"></i>Voltar</button>
                     </div>
                 </div>
             </div>

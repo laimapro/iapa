@@ -33,6 +33,7 @@ if (isset($_SESSION['id'])) {
                     <?php include_once('includes/logo.php') ?>
                     <div class="menu-nav">
                     </div>
+                    <h4>Criando um instrumento de avaliação</h4>
                 </div>
                 <div class="col-12 col-md-8">
 
@@ -45,7 +46,7 @@ if (isset($_SESSION['id'])) {
                                                         echo " ";
                                                         echo $sobrenomeUsuario;
                                                     }
-                                                    ?></p>
+                                                    ?>. Agora são <span id="horario"></span></p>
 
 
                     <!-- <script>
@@ -82,10 +83,11 @@ if (isset($_SESSION['id'])) {
                         </script> -->
 
 
-                    <p>Agora que estamos aqui, escolha uma das produções acadêmicas, pressione o botão Continuar e eu lhe levarei para o próximo passo:</p>
+                    <p>Para iniciarmos a construção de um instrumento de avaliação, escolha uma das produções acadêmicas, pressione o botão Continuar e eu lhe levarei para o próximo passo:</p>
 
 
                     <form action="pagina_itens.php" method="get">
+                        <label for="categorias" aria-label="Escolha o tipo de produção acadêmica" role="tooltip">Produções acadêmicas:</label>
 
                         <div class="form-floating mb-3">
                             <select class="form-select" id="categorias" name="categorias">
@@ -123,13 +125,13 @@ if (isset($_SESSION['id'])) {
 
                                 ?>
                             </select>
-                            <label for="categorias" aria-label="Escolha o tipo de produção acadêmica" role="tooltip">Produção acadêmica:</label>
+                           
                         </div>
 
                         <div class="text-end my-3">
 
 
-                            <input type="submit" class="btn btn-primary" Value="Inicia a Construção do IAPA Escolhido" accesskey="2" aria-label="continuar" role="button">
+                            <input type="submit" class="btn btn-primary" Value="Inicia a Construção do IAPA Escolhido" title="Segue para a página de critérios de avaliação" accesskey="2" aria-label="continuar" role="button">
                         </div>
 
 
