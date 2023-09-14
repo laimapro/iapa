@@ -32,7 +32,7 @@
     <?php include_once('includes/logo.php') ?>
     
     <p>Olá 👋 <?php echo $pronomeTratamento; ?> <strong><?php if ($nomesocial != null) {echo $nomesocial;} else {echo $nomeUsuario;echo " ";echo $sobrenomeUsuario;} ?></strong>, Agora são <span id="horario"></span> .<span id="saudacao"></span>!</p>
-    <p>Este recurso ainda não está disponível.</p><a href="home.php" accesskey="1" title="Volta para pagina inicial do IAPA">Voltar</a>
+    <p>Este recurso ainda não está disponível.</p><a href="home.php" accesskey="1" title="Volta para página inicial do IAPA">Voltar</a>
 </div>
 
 <?php
