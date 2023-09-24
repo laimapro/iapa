@@ -33,7 +33,12 @@ if (isset($_SESSION['id'])) {
                     <?php include_once('includes/logo.php') ?>
                     <div class="menu-nav">
                     </div>
-                    <h4>Criando um instrumento de avaliação</h4>
+                    <h4>Compondo Produções acadêmicas</h4><br>
+                    <div id="toc"></div>
+                    <li class="px-0 list-group-item"><a class="text-decoration-none d-block" href="IAPA_em_construcao.php" accesskey="4" title="Alt + 4: Permite editar um IAPA em construção">Editar um Instrumento de Avaliação</a></li>
+                    
+                    
+
                 </div>
                 <div class="col-12 col-md-8">
 
@@ -87,7 +92,7 @@ if (isset($_SESSION['id'])) {
 
 
                     <form action="pagina_itens.php" method="get">
-                        <label for="categorias" aria-label="Escolha o tipo de produção acadêmica" role="tooltip">Produções acadêmicas:</label>
+                        <label for="categorias" aria-label="Escolha o tipo de produção acadêmica" role="tooltip" class="anchor" >Criar um instrumento de avaliação:</label>
 
                         <div class="form-floating mb-3">
                             <select class="form-select" id="categorias" name="categorias">
@@ -139,7 +144,6 @@ if (isset($_SESSION['id'])) {
 
                     </form>
                     <div class="d-flex justify-content-between mt-5 px-0">
-                        
                         <button class="btn btn-link " onclick="window.location.href='home.php'" accesskey="1" title="Volta para a página inicial do IAPA">
                             <i class="bi bi-arrow-left me-1"></i>Voltar
                         </button>

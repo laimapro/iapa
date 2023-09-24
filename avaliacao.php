@@ -142,6 +142,8 @@ if (isset($_SESSION['id'])) {
                     </div>
                     </form>
                     <div class="d-flex align-items-center justify-content-between btn-action">
+       <li class="px-0 list-group-item"><a class="text-decoration-none d-block"  href="avaliacao_em_construcao.php" accesskey="2" title="Alt + 2: Permite retomar a avaliação de uma PA">Continuar avaliação de uma produção acadêmica</a></li>
+
                         <button class="btn btn-link" onclick="window.location.href='home.php'" accesskey="1" title="Retorna para página inicial do IAPA"><i class="bi bi-arrow-left me-1"></i>Voltar</button>
                     </div>
                 </div>
