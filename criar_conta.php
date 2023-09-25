@@ -162,9 +162,28 @@
     </div>
   </div>
   <script>
-    function aviso() {
-      window.alert("Solicitação pendente. Seu acesso será liberado assim que for aprovado. Consulte o email cadastrado!")
+  function aviso() {
+    const senha = document.getElementById('senha').value;
+
+    // Verifica se a senha atende aos critérios
+    const regexUppercase = /[A-Z]/;
+    const regexSpecialChar = /[!@#$%^&*(),.?":{}|<>]/;
+    const regexNumber = /[0-9]/;
+
+    if (
+      senha.length < 8 ||
+      !regexUppercase.test(senha) ||
+      !regexSpecialChar.test(senha) ||
+      !regexNumber.test(senha)
+    ) {
+      window.alert("A senha deve conter pelo menos 8 caracteres, incluindo uma letra maiúscula, um caractere especial e um número.");
+      event.preventDefault(); // Evita o envio do formulário se a senha não atender aos critérios
+    } else {
+      window.alert("Solicitação pendente. Seu acesso será liberado assim que for aprovado. Consulte o email cadastrado!");
     }
-  </script>
+  }
+</script>
+
+
 
   <?php include_once('includes/footer.php') ?>
