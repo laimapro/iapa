@@ -1,30 +1,16 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
+    <title>IAPA | Administrador</title>
 </head>
 <body>
-
-<div class="container">
-        <h2>Login Administrador</h2>
-
-        <form method="POST" action="processa_login.php">
-            <div class="form-group">
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="senha">Senha:</label>
-                <input type="password" id="senha" name="senha" required>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Entrar">
-            </div>
-        </form>
-    </div>
-
-
+    <h1>Login Administrador</h1>
+    <form action="processa_login.php" method="post">
+        <label for="username">E-mail:</label>
+        <input type="email" id="username" name="username" required><br>
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required><br>
+        <button type="submit">Entrar</button>
+    </form>
 </body>
 </html>

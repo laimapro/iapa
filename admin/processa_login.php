@@ -1,31 +1,38 @@
 <?php
+require '../conexao.mysqli.php';
 
-include("../conexao.mysqli.php");
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-if (isset($_POST['email']) || isset($_POST['senha'])) {
+    // Consulta para obter o hash da senha para o nome de usuário fornecido
+    $sql = "SELECT * FROM usuarios WHERE email='$username' AND funcao = 0";
+    $result = $mysqli->query($sql);
 
-    $email = $mysqli->real_escape_string($_POST['email']);
-    $senha = md5($mysqli->real_escape_string($_POST['senha']));
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $storedHash = $row["senha"];
 
-    $sql_code = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha' AND funcao = 0";
-    $sql_query = $mysqli->query($sql_code) or die("Falha na execução: " . $mysqli->error);
+        // Verifica a senha fornecida com o hash armazenado
+        if (password_verify($password, $storedHash)) {
+            echo "Login bem-sucedido!";
+            
+            if (!isset($_SESSION)) {
+                session_start();
+            }
+            $_SESSION['logado'] = true; // Definindo a sessão "logado" como verdadeira
+            $_SESSION['id'] = $row['id']; // Usar $row para acessar os dados do usuário
+            $_SESSION['nome'] = $row['nomecompleto'];
+            header("Location: home.php");
+            exit();  // Certifique-se de sair após redirecionar
 
-    $quantidade = $sql_query->num_rows;
-
-    if ($quantidade == 1) {
-        $usuario = $sql_query->fetch_assoc();
-        if (!isset($_SESSION)) {
-            session_start();
+        } else {
+            echo "Usuário ou senha incorretos.";
         }
-        $_SESSION['logado'] = true; // Definindo a sessão "logado" como verdadeira
-        $_SESSION['id'] = $usuario['id'];
-        $_SESSION['nome'] = $usuario['nomecompleto'];
-
-        header("Location: home.php");
-        exit();
     } else {
-        echo "<div class='alert alert-danger d-flex align-items-center' role='alert'><i class='bi bi-exclamation-triangle me-2' role='img' aria-label='Cuidado:'></i><div>E-mail e/ou senha inseridos estão errados</div></div>";
+        echo "Usuário ou senha incorretos.";
     }
 }
 
+$mysqli->close();
 ?>
