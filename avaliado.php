@@ -193,14 +193,14 @@ table {width: 100%;}
           foreach ($valores as $index => $valor) {
             $valorInt = intval($valor); // Converte o valor para inteiro
 
-            if ($valorInt !== 0) { // Verifica se o valor é diferente de zero
+           // Verifica se o valor é diferente de zero
               echo '<tr>';
               echo '<td width="85%" class="col ms-2 pdf-item flex-fill">' . $labels[$index] . '</td>';
               echo "<td  width='15%' class='col-1 pdf-grade'>Nota: <strong>" . $valorInt . '</strong></td>';
               echo "</tr>";
               $soma += $valorInt; // Acumula os valores para calcular a média
               $cont++; // Incrementa o contador de valores
-            }
+            
           }
           echo '</table>';
           if ($cont > 0) {

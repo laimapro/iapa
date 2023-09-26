@@ -191,7 +191,7 @@ if (isset($_SESSION['id'])) {
                             var mediaContainer = document.getElementById("mediaContainer");
                             mediaContainer.innerHTML = ""; // Limpa a média anterior, se houver
 
-                            var valoresAvaliados = Array(data.length).fill(5); // Array com valores padrão 5
+                            var valoresAvaliados = Array(data.length).fill(8); // Array com valores padrão 5
 
                             var contadorApresenta = 0; // Inicializa o contador de "apresenta[]"
 
@@ -221,8 +221,6 @@ if (isset($_SESSION['id'])) {
 
                             var input = document.createElement("input");
                             input.type = "number";
-                            input.min = 1;
-                            input.max = 10;
                             input.name = "nota[]";
                             input.value = valoresAvaliados[index];
                             input.id = "inputNota";
@@ -265,8 +263,8 @@ if (isset($_SESSION['id'])) {
 
                             input.addEventListener("input", function() {
                                 var valor = parseInt(input.value);
-                                if (isNaN(valor) || valor < 1 || valor > 10) {
-                                    alert("Digite uma nota válida entre 1 e 10.");
+                                if (isNaN(valor) || valor < 0 || valor > 10) {
+                                    alert("Só são aceitas notas de 0 a 10.");
                                     input.value = valoresAvaliados[index];
                                     return;
                                 }
@@ -277,15 +275,21 @@ if (isset($_SESSION['id'])) {
                                 mediaContainer.textContent = "Média: " + media;
 
                                 var mensagem = "";
+                                
 
-                                if (media >= 8) {
-                                    mensagem = '<div class="alert alert-success">Produção Acadêmica<strong class="fs-2 d-block"><i class="bi bi-trophy-fill me-2"></i> Aprovada</strong></div>';
-
-                                } else if (media >= 6.5) {
-                                    mensagem = '<div class="alert alert-warning">Produção Acadêmica<strong class="fs-2 d-block"><i class="bi bi-exclamation-triangle-fill me-2"></i>Aprovada com restrições</strong></div>';
-                                } else {
+                                if (media < 5.5) {
                                     mensagem = '<div class="alert alert-danger">Produção Acadêmica<strong class="fs-2 d-block"><i class="bi bi-x-circle-fill me-2"></i>Reprovada</strong></div>';
-                                }
+                                   
+                                } else if (media >= 5.5 && media < 7) {
+                                    mensagem = '<div class="alert alert-warning">Produção Acadêmica<strong class="fs-2 d-block"><i class="bi bi-exclamation-triangle-fill me-2"></i>Aprovada com restrições</strong></div>';
+                                  
+                                } else if (media >= 7) {
+                                    mensagem = '<div class="alert alert-success">Produção Acadêmica<strong class="fs-2 d-block"><i class="bi bi-trophy-fill me-2"></i> Aprovada</strong></div>';
+                                 }
+
+
+
+
                                 document.getElementById("result").innerHTML = mensagem;
                             });
                         });
@@ -320,20 +324,21 @@ if (isset($_SESSION['id'])) {
 
 
                 function calcularMedia() {
-                    var inputs = document.getElementsByName("nota[]");
-                    var soma = 0;
-                    var contador = 0;
+                var inputs = document.getElementsByName("nota[]");
+                var soma = 0;
+                var contador = 0;
 
-                    for (var i = 0; i < inputs.length; i++) {
-                        var valor = parseInt(inputs[i].value);
-                        if (!isNaN(valor)) {
-                            soma += valor;
-                            contador++;
-                        }
+                for (var i = 0; i < inputs.length; i++) {
+                    var valor = parseFloat(inputs[i].value.replace(',', '.'));
+                    if (!isNaN(valor)) {
+                        soma += valor;
+                        contador++;
                     }
-
-                    return contador > 0 ? (soma / contador).toFixed(2) : 0;
                 }
+
+                return contador > 0 ? (soma / contador).toFixed(2) : 0;
+            }
+
             </script>
 
     <?php
