@@ -215,12 +215,12 @@ if (isset($_SESSION['id'])) {
                             var label1 = document.createElement("label");
 
                             var inputArquivo = document.createElement("input");
-                            inputArquivo.type = "text";
+                            inputArquivo.type = "hidden";
                             inputArquivo.name = "documento";
                             inputArquivo.value = selecionarArquivoBtn.value;
                             inputArquivo.id = "documento";
                             div.appendChild(inputArquivo);
-                            
+
 
                             // Verifica se este é um "apresenta[]"
                             if (item.toLowerCase().startsWith("apresenta")) {
