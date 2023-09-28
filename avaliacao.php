@@ -164,6 +164,7 @@ if (isset($_SESSION['id'])) {
                     var labelSelectArquivo = document.querySelector("label[for='selecionarArquivos']");
 
                     if (fileName) {
+                        
                         toc.style.display = "";
                         labelSelectArquivo.style.display = "none";
                         checkboxContainer.style.display = "block";
@@ -180,7 +181,8 @@ if (isset($_SESSION['id'])) {
                         itens.textContent = "Agora vamos dar notas aos itens dos diferentes tópicos exigidos para sua produção acadêmica.";
 
                         labelSelectArquivo.class = "hidden";
-
+                        
+                        
                         try {
                             const response = await fetch(fileName);
                             const data = await response.json();
@@ -194,8 +196,11 @@ if (isset($_SESSION['id'])) {
                             var valoresAvaliados = Array(data.length).fill(8); // Array com valores padrão 5
 
                             var contadorApresenta = 0; // Inicializa o contador de "apresenta[]"
-
+                            
+                           
+                            
                         data.forEach(function(item, index) {
+                            
                             var div = document.createElement("li");
                             div.className = "d-flex justify-content-between px-0 list-group-item";
                             var itemContainer = document.getElementById("itemContainer");
@@ -209,6 +214,14 @@ if (isset($_SESSION['id'])) {
 
                             var label1 = document.createElement("label");
 
+                            var inputArquivo = document.createElement("input");
+                            inputArquivo.type = "text";
+                            inputArquivo.name = "documento";
+                            inputArquivo.value = selecionarArquivoBtn.value;
+                            inputArquivo.id = "documento";
+                            div.appendChild(inputArquivo);
+                            
+
                             // Verifica se este é um "apresenta[]"
                             if (item.toLowerCase().startsWith("apresenta")) {
                                 contadorApresenta++; // Incrementa o contador de "apresenta[]"
@@ -219,9 +232,12 @@ if (isset($_SESSION['id'])) {
 
                             div.appendChild(label1);
 
+                            
                             var input = document.createElement("input");
                             input.type = "number";
                             input.name = "nota[]";
+                            input.min = 0;
+                            input.max = 10;
                             input.value = valoresAvaliados[index];
                             input.id = "inputNota";
                             input.setAttribute("aria-label", item);
@@ -229,6 +245,7 @@ if (isset($_SESSION['id'])) {
 
                             itemContainer.appendChild(div);
 
+                            
                             var mensagemComparar = "Apresenta";
                             var primeiraPalavraInput = item.trim().split(" ")[0];
 
@@ -258,16 +275,15 @@ if (isset($_SESSION['id'])) {
                                     } else {
                                         div.appendChild(nao);
                                     }
+                                    
                                 });
                             }
 
+                            
                             input.addEventListener("input", function() {
+                                
                                 var valor = parseInt(input.value);
-                                if (isNaN(valor) || valor < 0 || valor > 10) {
-                                    alert("Só são aceitas notas de 0 a 10.");
-                                    input.value = valoresAvaliados[index];
-                                    return;
-                                }
+                                
 
                                 valoresAvaliados[index] = valor;
                                 var media = calcularMedia(valoresAvaliados);
@@ -289,7 +305,7 @@ if (isset($_SESSION['id'])) {
 
 
 
-
+                                 
                                 document.getElementById("result").innerHTML = mensagem;
                             });
                         });

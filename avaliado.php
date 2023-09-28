@@ -90,8 +90,42 @@ table {width: 100%;}
   // Aqui estão seus echos e prints
   echo $styles;
 
+  $texto = $_POST["documento"];
+
+// Separar o texto usando '/' como delimitador
+$partes = explode('/', $texto);
+
+// Pegar a última parte (o nome do arquivo) e remover a extensão ".json"
+$nome_arquivo = pathinfo(end($partes), PATHINFO_FILENAME);
+
+// Exibir o resultado
+//echo $nome_arquivo;
+
+
+
+
+
 
   include('conexao.mysqli.php');
+
+
+  // Preparar a consulta SQL
+$consulta_sql = "SELECT categoria FROM tipo_producao WHERE arquivo = '$nome_arquivo'";
+
+// Executar a consulta e obter o resultado
+$resultado = mysqli_query($mysqli, $consulta_sql);
+
+// Verificar se a consulta foi bem-sucedida
+if ($resultado) {
+    // Extrair o texto da categoria
+    $row = mysqli_fetch_assoc($resultado);
+    $categoria = $row['categoria'];
+
+} else {
+    
+    echo "Erro ao executar a consulta: " . mysqli_error($sua_conexao);
+}
+
 
   session_start();
 
@@ -137,10 +171,6 @@ table {width: 100%;}
 
       $dataHoraFormatadaRegiao = date('d/m/Y H:i:s');
 
-      echo "<div class='iapa-info'>
-  Parecer exarado em " . $dataHoraFormatadaRegiao . " <br> Documento gerado com ajuda do IAPA - Instrumento de Avaliação de
-  Produção Acadêmica
-  </div>";
 
 
       echo '<h1 class="iapa-title-article">' . $titulo . '</h1>';
@@ -210,7 +240,7 @@ table {width: 100%;}
             echo '<tr>';
             echo '<td style="width: 35%"><h2 class="section-grade-title" style="font-family:Arial, sans-serif">Nota Final</h2>';
             echo '<div class="section-grade-final">';
-            echo '<span>Média da produção acadêmica</span>';
+            echo '<span>Média:</span>';
             echo '<strong>' . $mediaFormatada . '</strong>';
             echo '</div></td>';
             echo '<td style="width: 2.5%"></td>';
@@ -219,14 +249,14 @@ table {width: 100%;}
             echo '<h2 class="section-grade-title" style="font-family:Arial, sans-serif">Situação da produção acadêmica</h2>';
 
             if ($mediaFormatada < 5.5) {
-              echo '<div class="alert alert-reprovado">Produção Acadêmica';
+              echo '<div class="alert alert-reprovado">'.$categoria.'';
               echo '<strong>';
               echo '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/></svg>';
               echo 'Reprovada';
               echo '</strong>';
               echo '</div>';
             } elseif ($mediaFormatada >= 5.5 && $mediaFormatada < 7) {
-              echo '<div class="alert alert-restricao">Produção Acadêmica';
+              echo '<div class="alert alert-restricao">'.$categoria.'';
               echo '<strong>';
               echo '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16"><path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>';
               echo 'Aprovada com restrições';
@@ -234,19 +264,24 @@ table {width: 100%;}
               echo '</strong>';
               echo '</div>';
             } elseif ($mediaFormatada >= 7) {
-              echo '<div class="alert alert-sucesso">Produção Acadêmica';
+              echo '<div class="alert alert-sucesso">'.$categoria.'';
               echo '<strong>';
               echo '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trophy-fill" viewBox="0 0 16 16"><path d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5c0 .538-.012 1.05-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33.076 33.076 0 0 1 2.5.5zm.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935zm10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935z"/></svg>';
               echo 'Aprovada';
               echo '</strong>';
               echo '</div>';
             }
+            
           } else {
             echo "Nenhum valor selecionado ou todos os valores são zero.";
           }
           echo '</td>';
           echo '</tr>';
           echo '</table>';
+          echo "<div class='iapa-info'>
+  Parecer exarado em " . $dataHoraFormatadaRegiao . " <br> Parecer produzido com o IAPA - Instrumento de Avaliação de
+  Produção Acadêmica
+  </div>";
         } else {
           echo "Nenhum valor selecionado.";
         }
